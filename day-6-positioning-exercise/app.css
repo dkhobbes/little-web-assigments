@@ -47,7 +47,7 @@ ul li {
   color: lightgray;
   font-size: 24px;
   line-height: 36px;
-  text-decoration: underline;
+  border-bottom: 2px solid lightgray;
 }
 
 ul li span {
