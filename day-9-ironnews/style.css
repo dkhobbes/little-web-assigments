@@ -51,7 +51,8 @@ table {
 
 header {
 	float: left;
-
+	background-color: gray;
+	font-family: Helvetica;
 }
 
 .i-logo {
@@ -63,6 +64,7 @@ header {
 
 .Iron-news {
 	float: left;
+	padding-right: 3px;
 }
 
 .nav {
@@ -71,17 +73,17 @@ header {
 }
 
 .Iron-news ul {
-	float: left;
 	overflow: auto;
+
 }
 
 .Iron-news li {
 	float: left;
-	overflow: auto;
+
 }
 
 .login {
-	float: right;
+	float: left;
 }
 
 .container {
@@ -111,4 +113,29 @@ img {
 	margin-left: 30px;
   color: gray;
   font-size: 12px;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  height: 150px;
+	overflow: auto;
+	padding-top: 20px;
+	border-top: 2px gray solid;
+}
+
+footer ul{
+  margin: 0 auto 0 auto;
+  max-width: 80%;
+  overflow: auto;
+	outline: solid green 2 px;
+}
+
+footer li{
+  background-color: ;
+  float: left;
+  color: black;
+	width: 11%;
+  text-align: center;
+	line-height: 3.4em;
 }
