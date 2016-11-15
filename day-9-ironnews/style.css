@@ -30,9 +30,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+
 }
 ol, ul {
 	list-style: none;
+
 }
 blockquote, q {
 	quotes: none;
@@ -138,4 +140,15 @@ footer li{
 	width: 11%;
   text-align: center;
 	line-height: 3.4em;
+}
+
+.search {
+	padding-top: 15px;
+}
+
+.fill-in {
+	background-color: white;
+	color: white;
+	border: 1px solid gray;
+	margin-left: 5px;
 }
