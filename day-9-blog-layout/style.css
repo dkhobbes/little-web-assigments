@@ -86,7 +86,7 @@ header img {
 
 }
 
-.fixed-link img {
+.fixed-section img {
 	height: 22px;
 }
 
@@ -98,22 +98,47 @@ header img {
 .container {
 	max-width: 70%;
 	margin: 0 auto;
-	background-color: gray;
 	padding-top: 5%;
 }
 
 .left-column {
 	max-width: 15%;
-	background-color: orange;
+	/*background-color: orange;*/
 	float: left;
 	padding-right: 5%
 }
 
 .right-column {
 	max-width: 85%;
-	background-color: blue;
+	font-family: sans-serif;
 }
 
-.bottom-pic {
-	url(Blog-image.png);
+.right-column img{
+	margin-top: 15px;
+}
+
+
+
+h1 {
+	font-size: 36px;
+	padding-bottom: 10px;
+}
+
+h2 {
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+
+.search {
+	border-top: 1px solid gray;
+	margin: 15px 0;
+	padding-top: 20px;
+}
+
+.keyword {
+	color: gray;
+	font-size: 12px;
+	text-align: left;
+	margin-top: 5px;
+	border: 1px solid gray;
 }
