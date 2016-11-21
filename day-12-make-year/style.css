@@ -51,10 +51,15 @@ table {
 This is the end of the reset
 ===========================*/
 
-@media screen and (min-width: 500px) {
+@media (max-width: 500px) {
   header {
     background-color: blue;
   }
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+
 }
 
 header {
@@ -97,6 +102,9 @@ width: 100%;
 }
 
 
+.top-crew {
+	width: 60px;
+}
 
 .join-info {
   font-size: 18px;
@@ -144,7 +152,6 @@ border: none;
   margin: 0 auto;
   padding-top: 5%;
   overflow: auto;
-  border: 1px solid black;
 }
 
 .instructors-pic img {
@@ -155,21 +162,18 @@ border: none;
   width: 31.3333%;
   float: left;
   padding-right: 2%;
-  outline: 1px solid black;
 }
 
 .middle-pic {
   width: 31.3333%;
 	padding: 0 1%;
   float: left;
-  outline: 1px solid black;
 }
 
 .right-pic {
   width: 31.3333%;
   float: left;
   padding-left: 2%;
-  outline: 1px solid black;
 }
 
 .company-info {
