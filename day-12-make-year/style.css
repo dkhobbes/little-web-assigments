@@ -86,8 +86,9 @@ width: 100%;
 
 .make-this-year {
 
-  padding-bottom: 5%;
+  padding-bottom: 8%;
   font-size: 28px;
+	padding-top: 2%;
 }
 
 .learn-how {
@@ -100,6 +101,9 @@ line-height: 1.2em;
 
 }
 
+.searching-bar {
+
+}
 
 .top-crew {
 	width: 20%;
@@ -130,6 +134,7 @@ height: auto;
 background-color: rgba(174, 92, 200, 1.0);
 border-radius: 3px;
 border: none;
+height: 100%;
 }
 
 .searching-bar {
@@ -170,6 +175,16 @@ border: none;
   padding-right: 2%;
 }
 
+.left-pic p, .middle-pic p, .right-pic p  {
+	color: gray;
+	margin-top: 3%;
+}
+
+.left-pic h1, .middle-pic h1, .right-pic h1 {
+	margin-top: 5%;
+	font-size: 20px;
+}
+
 .middle-pic {
   width: 31.3333%;
 	padding: 0 1%;
@@ -195,6 +210,10 @@ border: none;
     padding-top: 5%;
     font-size: 20px;
     line-height: 1.25em;
+}
+
+.company-info p a{
+	color: gray;
 }
 
 .founder {
