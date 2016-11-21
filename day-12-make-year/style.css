@@ -47,9 +47,15 @@ table {
 	border-spacing: 0;
 }
 
-/*//////////////////////////
+/*==========================
 This is the end of the reset
-//////////////////////////*/
+===========================*/
+
+@media screen and (min-width: 500px) {
+  header {
+    background-color: blue;
+  }
+}
 
 header {
 text-align: left;
@@ -61,7 +67,7 @@ width: 100%;
 }
 
 .top-container {
-  width: 50%;
+  width: 45%;
   margin: 0 auto;
   padding-top: 5%;
   padding-bottom: 5%;
@@ -85,10 +91,13 @@ width: 100%;
 
 }
 .text-purple {
-  color: purple;
-  border-bottom: dotted purple 5px;
+  color: rgba(174, 92, 200, 1.0);
+  border-bottom: dotted rgba(174, 92, 200, 1.0) 5px;
 
 }
+
+
+
 .join-info {
   font-size: 18px;
   padding-top: 8%;
@@ -102,11 +111,22 @@ width: 100%;
   border-radius: 3px;
   padding: 10px;
   margin-right: 2%;
-  overflow: auto;
+	float: left;
 }
 
 input {
-float: left;}
+float: left;
+width: 30%;
+height: auto;
+background-color: rgba(174, 92, 200, 1.0);
+border-radius: 3px;
+border: none;
+}
+
+.searching-bar {
+	width: auto;
+}
+
 
 .instructors {
   font-size: 22px;
@@ -115,7 +135,7 @@ float: left;}
 }
 
 .container {
-  width: 50%;
+  width: 45%;
   margin: 0 auto;
 }
 
@@ -139,7 +159,8 @@ float: left;}
 }
 
 .middle-pic {
-  width: 33.3333%;
+  width: 31.3333%;
+	padding: 0 1%;
   float: left;
   outline: 1px solid black;
 }
@@ -190,9 +211,45 @@ strong {
   border-radius: 3px;
   padding: 10px;
   margin-right: 2%;
-  overflow: auto;
+	float: left;
+	margin-bottom: 5%;
 }
 
 .bottom-end {
   margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.ending-crew {
+	font-family: serif;
+	font-size: 18px;
+overflow: auto;
+}
+
+.logos {
+margin-top: 5%;
+}
+
+.left-pic2 {
+  width: 31.3333%;
+  float: left;
+  padding-right: 2%;
+	display: inline-block;
+	text-align: center;
+}
+
+.middle-pic2 {
+  width: 31.3333%;
+	padding: 0 1%;
+  float: left;
+	display: inline-block;
+	text-align: center;
+}
+
+.right-pic2 {
+  width: 31.3333%;
+  float: left;
+  padding-left: 2%;
+	display: inline-block;
+	text-align: center;
 }
