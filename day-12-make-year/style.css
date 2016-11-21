@@ -65,7 +65,7 @@ body {
 header {
 text-align: left;
 margin: 0;
-background-color: black;
+background-color: rgba(20, 20, 20, 1.0);
 color: white;
 height: 726px;
 width: 100%;
@@ -76,7 +76,6 @@ width: 100%;
   margin: 0 auto;
   padding-top: 5%;
   padding-bottom: 5%;
-  border: dashed yellow 1px;
   font-family: sans-serif;
 }
 
@@ -92,8 +91,8 @@ width: 100%;
 }
 
 .learn-how {
-  font-size: 28px;
-
+  font-size: 48px;
+line-height: 1.2em;
 }
 .text-purple {
   color: rgba(174, 92, 200, 1.0);
@@ -103,13 +102,15 @@ width: 100%;
 
 
 .top-crew {
-	width: 60px;
+	width: 20%;
 }
 
 .join-info {
-  font-size: 18px;
-  padding-top: 8%;
+  font-size: 20px;
+  padding-top: 13%;
   padding-bottom: 5%;
+	line-height: 1.2em;
+
 }
 
 .top-search {
@@ -140,6 +141,11 @@ border: none;
   font-size: 22px;
   padding-top: 10%;
   font-weight: bold;
+}
+
+.instructors h1 {
+	font-weight: bold;
+	color: black;
 }
 
 .container {
