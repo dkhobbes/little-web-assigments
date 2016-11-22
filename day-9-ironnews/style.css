@@ -133,9 +133,11 @@ footer {
 }
 
 footer ul{
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
+	width: 60%;
   overflow: auto;
 	outline: solid green 2 px;
+
 }
 
 footer li{
