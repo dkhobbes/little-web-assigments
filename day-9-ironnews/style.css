@@ -63,7 +63,8 @@ header ul {
 }
 
 header li {
-  float: left;
+	float: left;
+
   padding: 2px;
 }
 
@@ -72,12 +73,15 @@ header li {
   font-weight: bold;
   display: inline;
   padding: 1px 2px;
+	float: left;
 }
 
 #bolded {
   font-weight: bold;
   display: inline;
-  padding-left: 3px;
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
 }
 
 #nav-bar {
