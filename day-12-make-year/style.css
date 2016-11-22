@@ -51,21 +51,6 @@ table {
 This is the end of the reset
 ===========================*/
 
-@media (max-width: 500px) {
-	body{
-		width: 100%;
-	}
-	header {
-    height: 500px;
-		width: 100%;
-  }
-	.top-container {
-	  margin: 0 auto;
-	  padding-top: 5%;
-	  padding-bottom: 5%;
-	}
-}
-
 body {
 	font-family: 'Karla', sans-serif;
 }
@@ -80,7 +65,7 @@ header {
 }
 
 .top-container {
-  width: 45%;
+  max-width: 700px;
   margin: 0 auto;
   padding-top: 5%;
   padding-bottom: 5%;
@@ -93,7 +78,6 @@ header {
 }
 
 .make-this-year {
-
   padding-bottom: 8%;
   font-size: 28px;
 	padding-top: 2%;
@@ -106,11 +90,6 @@ header {
 .text-purple {
   color: rgba(174, 92, 200, 1.0);
   border-bottom: dotted rgba(174, 92, 200, 1.0) 5px;
-
-}
-
-.searching-bar {
-
 }
 
 .top-crew {
@@ -122,7 +101,6 @@ header {
   padding-top: 13%;
   padding-bottom: 5%;
 	line-height: 1.5em;
-
 }
 
 .top-search {
@@ -155,7 +133,7 @@ input:hover {
 .searching-bar {
 	width: auto;
 }
-
+/*MQ to here*/
 
 .instructors {
   font-size: 22px;
@@ -169,7 +147,7 @@ input:hover {
 }
 
 .container {
-  width: 45%;
+  width: 700px;
   margin: 0 auto;
 }
 
@@ -301,4 +279,51 @@ strong {
   padding-left: 2%;
 	display: inline-block;
 	text-align: center;
+}
+
+/*====================================
+This is the start of the media queries
+=====================================*/
+
+@media screen and (max-width: 700px) {
+
+	body {
+		max-width: auto;
+		margin: 0px;
+	}
+
+	header, input, .left-pic, .right-pic, .middle-pic, .instructors-pic img {
+		float: none;
+		max-width: 100%;
+		overflow: auto;
+		margin: 0px;
+	}
+
+	.left-pic, .right-pic, .middle-pic {
+		max-width: 100%;
+		float: none;
+	}
+
+	.top-container {
+		max-width: 100%;
+		float: none;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	.learn-how {
+	  font-size: 36px;
+		line-height: 1.2em;
+	}
+
+	.top-search, .bottom-search, input {
+		float: none;
+		max-width: 100%;
+		overflow: auto;
+		margin: 0px;
+	}
+
+	.container {
+	padding: 20px;
+	}
 }
