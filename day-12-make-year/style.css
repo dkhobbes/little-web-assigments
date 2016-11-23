@@ -302,6 +302,13 @@ This is the start of the media queries
 	.left-pic, .right-pic, .middle-pic {
 		max-width: 100%;
 		float: none;
+		padding: 2px;
+	}
+
+	.left-pic2, .right-pic2, .middle-pic2 {
+		max-width: 100%;
+		float: none;
+		padding: 2px;
 	}
 
 	.top-container {
