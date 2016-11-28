@@ -12,3 +12,17 @@ ul {
   background-color: lightgray;
   border-radius: 5px;
 }
+
+button {
+  width: 100px;
+  background-color: blue;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+}
+
+.change-below {
+  background-color: pink;
+  border: 2px solid black;
+  padding: 20px;
+}
