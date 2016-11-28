@@ -108,9 +108,13 @@ header {
   background-color: white;
   color: gray;
   border-radius: 3px;
-  padding: 25px;
+  padding: 3px;
   margin-right: 2%;
 	float: left;
+}
+
+.top-search:hover {
+	background: white;
 }
 
 input {
