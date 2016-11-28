@@ -235,12 +235,15 @@ strong {
   background-color: lightgray;
   color: gray;
   border-radius: 3px;
-  padding: 25px;
+  padding: 3px;
   margin-right: 2%;
 	float: left;
 	margin-bottom: 5%;
 }
 
+.bottom-search:hover {
+	background: lightgray;
+}
 .bottom-search:active {
 	background-color: white;
 	outline: 1px solid lightgray;
