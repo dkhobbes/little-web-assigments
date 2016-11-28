@@ -1,0 +1,14 @@
+h1 {
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  width: 250px;
+}
+
+ul {
+  border: 1px black solid;
+  text-align: center;
+  width: 150px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
