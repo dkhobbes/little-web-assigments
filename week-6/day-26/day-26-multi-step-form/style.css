@@ -1,0 +1,13 @@
+form {
+  border: 1px solid black;
+  text-align: center;
+  width: 600px;
+  margin: 25px;
+  padding: 35px;
+}
+
+button {
+  display: block;
+  margin-left: 85px;
+  margin-top: 10px;
+}
