@@ -1,0 +1,33 @@
+form {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  display: block;
+  margin: 20px 0;
+}
+
+textarea {
+  display: block;
+  margin: 20px 0;
+
+}
+
+.colored {
+  background-color: lightblue;
+}
+
+.colored label {
+  margin: 10px 0;
+  display: inline;
+}
+
+.colored button {
+  display: inline;
+}
