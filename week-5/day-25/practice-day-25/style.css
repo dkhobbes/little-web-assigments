@@ -1,0 +1,17 @@
+.example1 {
+  background-image: url("example1.png");
+  background-position: -50px -50px;
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+}
+
+.example2 {
+    background-image: url("example2.png");
+    background-position: -50px -50px;
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+}
+
+/*trying to see if you can make an image larger from png given. ANSWER- yes with background-size, but it can cause rasteration issues. */

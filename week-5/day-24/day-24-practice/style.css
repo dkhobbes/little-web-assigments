@@ -1,0 +1,62 @@
+.block {
+  background-color: blue;
+  width: 125px;
+  color: white;
+  padding: 20px;
+}
+
+.hide {
+  background-color: transparent;
+/*another good way to do this is display: none;*/
+}
+
+.growth {
+  background-color: green;
+  padding: 20px;
+}
+
+.like-button {
+  background-image: url('facebook.jpg');
+  background-position: -175px -162px;
+  height: 16px;
+  width: 16px;
+  /*border: 1px solid black;*/
+}
+
+.calendar-button {
+  background-image: url('facebook.jpg');
+  background-position: -158px -162px;
+  height: 16px;
+  width: 16px;
+  /*border: 1px solid black;*/
+}
+
+.david-walsh {
+  background-image: url('david-walsh.jpg');
+  border: 1px solid black;
+  height: 150px;
+  width: 191.5px;
+}
+
+.david-walsh:hover {
+  background-position: -192px 0;
+}
+
+.monster {
+  background-image: url('monster.png');
+  border: 1px solid black;
+  height: 118px;
+  width: 118px;
+}
+
+.position-1 {
+  background-position: 0 0;
+}
+
+.position-2 {
+  background-position: -118px 0;
+}
+
+.position-3 {
+  background-position: -236px 0;
+}

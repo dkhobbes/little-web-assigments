@@ -1,0 +1,147 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*===========
+end of reset
+===========*/
+
+.facebook-logo {
+  background-image: url('Social-Media-buttons.png');
+  background-position: -32px -24px;
+  height: 55px;
+  width: 55px;
+  /*border: 1px solid black;*/
+}
+
+.facebook-logo:hover, .twitter-logo:hover,
+.google-logo:hover,
+.linkedin-logo:hover,
+.pintrest-logo:hover,
+.tumblr-logo:hover,
+.podcast-logo:hover {
+  opacity: .5;
+}
+
+.twitter-logo {
+  background-image: url('Social-Media-buttons.png');
+  background-position: -90px -24px;
+  height: 55px;
+  width: 55px;
+  /*border: 1px solid black;*/
+}
+
+.google-logo {
+  background-image: url('Social-Media-buttons.png');
+  background-position: -148px -24px;
+  height: 55px;
+  width: 55px;
+  /*border: 1px solid black;*/
+}
+
+.linkedin-logo {
+  background-image: url('Social-Media-buttons.png');
+  background-position: -206px -24px;
+  height: 55px;
+  width: 55px;
+  /*border: 1px solid black;*/
+}
+
+.pintrest-logo {
+  background-image: url('Social-Media-buttons.png');
+  background-position: -264px -24px;
+  height: 55px;
+  width: 55px;
+  /*border: 1px solid black;*/
+}
+
+.tumblr-logo {
+  background-image: url('Social-Media-buttons.png');
+  background-position: -323px -24px;
+  height: 55px;
+  width: 55px;
+  /*border: 1px solid black;*/
+}
+
+.podcast-logo {
+  background-image: url('Social-Media-buttons.png');
+  background-position: -380px -24px;
+  height: 55px;
+  width: 55px;
+  /*border: 1px solid black;*/
+}
+
+div {
+  float: left;
+  margin-right: 20px;
+}
+
+.container {
+  width: 100%;
+  /*background-color: lightgray;*/
+  margin: 50px;
+  padding: 30px;
+  border-radius: 25px;
+  border: 2px solid lightgray;
+}
+
+.heading {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.top-intro {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+li {
+  margin-left: 20px;
+  list-style: circle;
+}
