@@ -1,0 +1,50 @@
+$border-color: #F00;
+
+nav {
+  background-color: black;
+  overflow: auto;
+}
+
+nav li {
+  color: #FFF;
+  padding: 4px 10px 4px 0;
+  float: left;  
+  background-color: red;
+}
+
+
+
+form {
+  border: 1px solid $border-color;
+  padding: 20px;
+  width: 10%;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  display: block;
+  margin: 20px 0;
+}
+
+textarea {
+  display: block;
+  margin: 20px 0;
+
+}
+
+.colored {
+  background-color: lightblue;
+}
+
+.colored label {
+  margin: 10px 0;
+  display: inline;
+}
+
+.colored button {
+  display: inline;
+}
