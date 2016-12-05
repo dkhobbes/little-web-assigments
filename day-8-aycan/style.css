@@ -153,9 +153,9 @@ the max-width ////////////*/
 
 
 .portfolio {
-	max-width: 100%;
+	width: 100%;
 	overflow: auto;
-
+	display: inline;
 }
 
 .portfolio p {
