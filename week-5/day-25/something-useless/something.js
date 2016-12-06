@@ -1,7 +1,12 @@
-var clickPlay = document.querySelector(".Play-button");
+var playButton = document.querySelector('.Play-button');
 
-clickPlay.addEventListener("click", function());
+var trumpIntro = document.querySelector('.trump-intro');
+trumpIntro.classList.add('show');
 
+playButton.addEventListener('click', function() {
+  console.log('hi');
 
-  clickPlay.classList.add("playing-page")
-  clickPlay.classList.remove("trump-intro")
+  trumpIntro.classList.remove('show');
+  var addGamePlay = document.querySelector('.playing-page');
+  addGamePlay.classList.add('show');
+});

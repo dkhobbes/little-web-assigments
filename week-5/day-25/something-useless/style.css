@@ -15,6 +15,7 @@
   border-radius: 5px;
   box-shadow: 8px 8px 5px #888888;
   margin-bottom: 20px;
+  display: none;
 }
 
 .playing-page {
@@ -54,4 +55,8 @@
   border: 1px solid black;
   box-shadow: 2px 2px 5px #888888;
   border-radius: 3px;
+}
+
+.show {
+  display: block;
 }
