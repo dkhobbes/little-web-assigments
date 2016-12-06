@@ -11,14 +11,15 @@ button {
   display: block;
 }
 
-.name-form {
-  /*display: none;*/
-}
 
 .age-form {
-  /*display: none;*/
+  display: none;
 }
 
 .career-form {
-  /*display: none;*/
+  display: none;
+}
+
+.on {
+  display: inline-block;
 }
