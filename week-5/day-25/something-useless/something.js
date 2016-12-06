@@ -9,4 +9,7 @@ playButton.addEventListener('click', function() {
   trumpIntro.classList.remove('show');
   var addGamePlay = document.querySelector('.playing-page');
   addGamePlay.classList.add('show');
+
+  var hideStartButton = document.querySelector('.Play-button')
+  hideStartButton.classList.add('hide');
 });
