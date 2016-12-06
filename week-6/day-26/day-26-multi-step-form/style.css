@@ -10,3 +10,15 @@ button {
   margin-top: 10px;
   display: block;
 }
+
+.name-form {
+  /*display: none;*/
+}
+
+.age-form {
+  /*display: none;*/
+}
+
+.career-form {
+  /*display: none;*/
+}
