@@ -1,13 +1,18 @@
 var playButton = document.querySelector('.Play-button');
-
 var trumpIntro = document.querySelector('.trump-intro');
+var addGamePlay = document.querySelector('.playing-page');
+var winningPage = document.querySelector('.winning-page');
+var losingPage = document.querySelector('.losing-page');
+
+
+
+
 trumpIntro.classList.add('show');
 
 playButton.addEventListener('click', function() {
   console.log('hi');
 
   trumpIntro.classList.remove('show');
-  var addGamePlay = document.querySelector('.playing-page');
   addGamePlay.classList.add('show');
 
   var hideStartButton = document.querySelector('.Play-button')
@@ -21,7 +26,14 @@ var HeSaidIt = document.querySelector('.he-said-it');
 var HeDidNotSayIt = document.querySelector('.he-did-not-say-it');
 
 HeSaidIt.addEventListener('click', function() {
-
+  winningPage.classList.add('show');
+  addGamePlay.classList.add('hide');
 })
 
-var whichQuestionPosition = 
+HeDidNotSayIt.addEventListener('click', function() {
+  losingPage.classList.add('show');
+  addGamePlay.classList.add('hide');
+
+});
+
+// var whichQuestionPosition =
