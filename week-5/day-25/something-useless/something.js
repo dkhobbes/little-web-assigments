@@ -13,3 +13,15 @@ playButton.addEventListener('click', function() {
   var hideStartButton = document.querySelector('.Play-button')
   hideStartButton.classList.add('hide');
 });
+
+var quoteOneShow = document.querySelector('.quote-1');
+quoteOneShow.classList.add('show');
+
+var HeSaidIt = document.querySelector('.he-said-it');
+var HeDidNotSayIt = document.querySelector('.he-did-not-say-it');
+
+HeSaidIt.addEventListener('click', function() {
+
+})
+
+var whichQuestionPosition = 
