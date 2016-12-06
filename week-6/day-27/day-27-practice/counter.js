@@ -1,10 +1,10 @@
 (function(){
 
-  var localStorageValue = localStoreage.getItem('counter');
+  var localStorageValue = localStorage.getItem('counter');
   console.log('here it is', localStorageValue);
 
   var counter = 0;
-  if (localStorageValue !== nuull) {
+  if (localStorageValue !== null) {
     counter = Number(localStorageValue);
   }
 
@@ -19,13 +19,13 @@
   minusButton.addEventListener('click', function() {
     counter--;
     display.textContent = counter;
-    localStoreage.setItem('counter', counter);
+    localStorage.setItem('counter', counter);
   });
 
   addButton.addEventListener('click', function() {
     counter++;
     display.textContent = counter;
-    localStoreage.setItem('counter', counter);
+    localStorage.setItem('counter', counter);
 
   });
 
