@@ -1,0 +1,26 @@
+.contains-things div {
+  border: solid 1px black;
+  display: none;
+  height: 100px;
+  width: 100px;
+}
+
+.thing-1 {
+  background-color: yellow;
+}
+
+.thing-2 {
+  background-color: blue;
+}
+
+.thing-3 {
+  background-color: pink;
+}
+
+.thing-4 {
+  background-color: lightgreen;
+}
+
+.contains-things .showing {
+  display: block;
+}
