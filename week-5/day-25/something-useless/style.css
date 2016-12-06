@@ -25,6 +25,40 @@
   box-shadow: 8px 8px 5px #888888;
   margin-bottom: 20px;
   display: none;
+  text-align: center;
+}
+
+.playing-page button {
+  margin-top: 20px;
+  background-color: red;
+  color: white;
+}
+
+.playing-page p {
+  margin: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  display: none;
+  padding: 1px;
+}
+
+.right-wrong-line {
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.counting-display {
+  text-align: left;
+  border: 1px solid black;
+}
+
+.wrong-display li {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  list-style: none;
+  float: left;
 }
 
 .winning-page {
