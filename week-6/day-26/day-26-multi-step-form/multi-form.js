@@ -1,10 +1,9 @@
 
 
 (function() {
-
+console.log('hi');
   var position = 1;
   var allTheThings = document.querySelectorAll('.form-name')
-  // allTheThings.classList.add('on');
 
   var nextButton = document.querySelector('.next-button');
   var previousButton = document.querySelector('.previous-button');
@@ -12,13 +11,7 @@
   var thing = document.querySelector(selector);
   var currentlyShowing = document.querySelector('.on');
 
-  function showBasedOnCurrentPosition() {
 
-      thing.classList.add('on');
-      currentlyShowing.classList.remove('on');
-
-
-    }
 
   nextButton.addEventListener('click',function() {
       if (position < 3){
@@ -34,6 +27,11 @@
     }
   });
 
+  function showBasedOnCurrentPosition() {
 
+    currentlyShowing.classList.remove('on');
+    thing.classList.add('on');
+
+    }
 
 })();

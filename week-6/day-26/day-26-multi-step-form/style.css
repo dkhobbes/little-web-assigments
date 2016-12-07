@@ -1,31 +1,27 @@
 .contains-all div {
   border: 1px solid black;
   width: 600px;
-  margin: 25px;
+  display: none;
   padding: 35px;
   font-weight: bold;
 }
 
-button {
-  margin-top: 10px;
-  display: block;
-}
 
 .form-name {
   background-color: lightblue;
-  display: none;
+  /*display: none;*/
 }
 
 .form-age {
   background-color: pink;
-  display: none;
+  /*display: none;*/
 }
 
 .form-career {
   background-color: yellow;
-  display: none;
+  /*display: none;*/
 }
 
-.on {
+.contains-all .on {
   display: block;
 }
