@@ -13,7 +13,7 @@ button {
 
 .form-name {
   background-color: lightblue;
-  /*display: none;*/
+  display: none;
 }
 
 .form-age {

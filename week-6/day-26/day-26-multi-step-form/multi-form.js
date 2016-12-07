@@ -3,19 +3,25 @@
 (function() {
 
   var position = 1;
-
-
-
   var allTheThings = document.querySelectorAll('.form-name')
-  allTheThings.classList.add('on');
-
+  // allTheThings.classList.add('on');
 
   var nextButton = document.querySelector('.next-button');
   var previousButton = document.querySelector('.previous-button');
+  var selector = '.form-' + position;
+  var thing = document.querySelector(selector);
+  var currentlyShowing = document.querySelector('.on');
+
+  function showBasedOnCurrentPosition() {
+
+      thing.classList.add('on');
+      currentlyShowing.classList.remove('on');
+
+
+    }
 
   nextButton.addEventListener('click',function() {
       if (position < 3){
-
       position++;
       showBasedOnCurrentPosition();
       }
@@ -28,17 +34,6 @@
     }
   });
 
-  function showBasedOnCurrentPosition() {
 
-      var currentlyShowing = document.querySelector('.on');
-      currentlyShowing.classList.remove('on');
-
-      var selector = '.form-' + position;
-      console.log('selector', selector);
-
-      var thing = document.querySelector(selector);
-      thing.classList.add('on');
-
-    }
 
 })();
