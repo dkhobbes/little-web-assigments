@@ -1,12 +1,20 @@
 
+
 (function() {
 
   var position = 1;
+
+
+
+  var allTheThings = document.querySelectorAll('.form-name')
+  allTheThings.classList.add('on');
+
+
   var nextButton = document.querySelector('.next-button');
   var previousButton = document.querySelector('.previous-button');
 
   nextButton.addEventListener('click',function() {
-      if (position < 4){
+      if (position < 3){
 
       position++;
       showBasedOnCurrentPosition();
@@ -34,18 +42,3 @@
     }
 
 })();
-
-
-
-// note for now
-
-
-
-
-
- var start = document.querySelector(".next-button");
-
-start.addEventListener('click', function(){
-  var show = document.querySelector('.age-form');
-  show.classList.add('on')
-});
