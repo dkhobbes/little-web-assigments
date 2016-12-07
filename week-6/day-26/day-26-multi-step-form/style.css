@@ -7,17 +7,17 @@
 }
 
 
-.form-name {
+.formName {
   background-color: lightblue;
   /*display: none;*/
 }
 
-.form-age {
+.formAge {
   background-color: pink;
   /*display: none;*/
 }
 
-.form-career {
+.formCareer {
   background-color: yellow;
   /*display: none;*/
 }
