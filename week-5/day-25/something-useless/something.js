@@ -28,12 +28,27 @@ var HeDidNotSayIt = document.querySelector('.he-did-not-say-it');
 HeSaidIt.addEventListener('click', function() {
   winningPage.classList.add('show');
   addGamePlay.classList.add('hide');
+  correct();
 })
 
 HeDidNotSayIt.addEventListener('click', function() {
   losingPage.classList.add('show');
   addGamePlay.classList.add('hide');
-
+  wrong();
 });
+
+var correctCounter = 0;
+var wrongCounter = 0;
+
+function correct() {
+  correctCounter++;
+  console.log('correctCounter', correctCounter);
+};
+
+function wrong() {
+  wrongCounter++;
+  console.log('wrongCounter', wrongCounter);
+};
+
 
 // var whichQuestionPosition =
