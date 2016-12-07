@@ -1,9 +1,10 @@
-form {
+.contains-all div {
   border: 1px solid black;
   width: 600px;
   margin: 25px;
   padding: 35px;
   font-weight: bold;
+  display: none;
 }
 
 button {
@@ -11,15 +12,18 @@ button {
   display: block;
 }
 
-
-.age-form {
-  display: none;
+.form-name {
+  background-color: lightblue;
 }
 
-.career-form {
-  display: none;
+.form-age {
+  background-color: pink;
+}
+
+.form-career {
+  background-color: yellow;
 }
 
 .on {
-  display: inline-block;
+  display: block;
 }
