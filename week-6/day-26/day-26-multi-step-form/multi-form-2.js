@@ -1,4 +1,6 @@
-// if at first you don't succeed ... scrap everything and start over.
+/* if at first you don't succeed ... scrap everything and start over.
+Based on flippy 2 example.
+*/
 
 console.log('hi');
 
@@ -37,3 +39,10 @@ function show (selector) {
   var thing = document.querySelector(selector)
   thing.classList.add('on');
 }
+
+/* adding part two: local storage*/
+
+var value = ;
+
+value = JSON.stringify(value);
+localStorage.getItem('value', value)
