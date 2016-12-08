@@ -75,7 +75,7 @@ moveToNextButton.addEventListener('click', function(evt) {
 
 
 function validateRequired(evt, theDomElement) {
-  if (theDomElement.value === '') {
+  if (theDomElement.value === '' && ) {
     evt.preventDefault();
     theDomElement.classList.add('error');
   }
