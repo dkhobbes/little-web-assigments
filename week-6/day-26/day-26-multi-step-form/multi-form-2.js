@@ -4,6 +4,9 @@ Based on flippy 2 example.
 
 console.log('hi');
 
+var getLocalStorage = localStorage.getItem();
+/*Need to understand what variables need to go up here*/
+
 var next1 = document.querySelector('.formName .next-button');
 var next2 = document.querySelector('.formAge .next-button');
 var previous2 = document.querySelector('.formAge .previous-button');
@@ -42,7 +45,15 @@ function show (selector) {
 
 /* adding part two: local storage*/
 
-var value = ;
+/*need to set variables for part 2*/
+
+var value = /* variable goes here*/;
 
 value = JSON.stringify(value);
 localStorage.getItem('value', value)
+
+var getItBack = localStorage.getItem('value');
+console.log('I got it back', getItBack);
+
+var parsed = JSON.parse(getItBack);
+console.log(parsed);
