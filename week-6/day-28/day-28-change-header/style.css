@@ -61,6 +61,10 @@ header {
   font-weight: bold;
   color: white;
   font-size: 32px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .p-section {
