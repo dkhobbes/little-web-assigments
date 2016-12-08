@@ -57,3 +57,27 @@ console.log('I got it back', getItBack);
 
 var parsed = JSON.parse(getItBack);
 console.log(parsed);
+
+/*Adding validation: Part 3*/
+var moveToNextButton = document.querySelector('.next-button');
+
+moveToNextButton.addEventListener('click', function(evt) {
+
+  var firstNameInput = document.querySelector('.first-name');
+  var lastNameInput = document.querySelector('.last-name');
+
+  validateRequired(evt, firstNameInput);
+  validateRequired(evt, lastNameInput);
+
+});
+
+
+function validateRequired(evt, theDomElement) {
+  if (theDomElement.value === '') {
+    evt.preventDefault();
+    theDomElement.classList.add('error');
+  }
+  else {
+    theDomElement.classList.remove('error');
+  }
+}

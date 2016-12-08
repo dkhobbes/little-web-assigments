@@ -25,3 +25,7 @@
 .contains-all .on {
   display: block;
 }
+
+.error {
+	border: 1px solid red;
+}
