@@ -6,14 +6,11 @@ var thursdayDiv = document.querySelector('.thursday-div');
 
 
 clickMeButton.addEventListener('click', function() {
-  changeIt("different one");
+  thursdayDiv.textContent = "different now";
+  thursdayDiv.classList.toggle('on');
 });
 
 clickMeTooButton.addEventListener('click', function() {
-  changeIt('another option');
-});
-
-function changeIt(message) {
-  thursdayDiv.textContent = message;
+  thursdayDiv.textContent = "different now";
   thursdayDiv.classList.toggle('on');
-}
+});
