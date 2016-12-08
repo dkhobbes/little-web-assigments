@@ -1,5 +1,7 @@
 /* if at first you don't succeed ... scrap everything and start over.
 Based on flippy 2 example.
+
+Currently only part one is complete, and works.
 */
 
 console.log('hi');
