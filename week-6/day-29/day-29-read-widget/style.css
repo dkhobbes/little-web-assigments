@@ -48,3 +48,18 @@ table {
 }
 
 /*end of reset*/
+
+.p-section {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.p-section p {
+  margin-top: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 20px;
+}
