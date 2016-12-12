@@ -14,9 +14,21 @@
       console.log('the user', user);
 
       var li = document.createElement('li');
-      li.textContent = user.login;
+      // li.textContent = user.login;
+
+      var anchor = document.createElement('a');
+      anchor.textContent = user.login;
+      anchor.href = user.html_url;
+      li.appendChild(anchor);
+
+      var img = document.createElement('img');
+      img.src = user.avatar_url;
+      li.appendChild(img);
+
 
       theList.appendChild(li);
+
+
     }
 
   });
