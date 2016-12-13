@@ -49,6 +49,10 @@ table {
 
 /*end of reset*/
 
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
 .mutant-list {
 	float: left;
 	width: 30%;
@@ -59,17 +63,29 @@ table {
 	/*width: 200px;
 	margin-left: 20px;*/
 	padding: 15px;
+}
 
-
+.display li {
+	list-style-type: circle;
+	list-style-position: inside;
+	padding-left: 20px;
+	padding-top: 10px;
 }
 
 .display {
 	float: left;
 	width: 70%;
+	padding-top: 20px;
 }
 
 .display img {
 	max-height: 150px;
+	padding: 20px;
+}
+
+.display p {
+	padding-left: 20px;
+	padding-top: 10px;
 }
 
 .selected {
@@ -80,24 +96,29 @@ table {
 .ol-title {
 	background-color: black;
 	color: white;
-	/*width: 200px;*/
 	border: 1px solid black;
-	/*margin-left: 20px;
-	margin-top: 20px;*/
-	padding: 15px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 25px;
+	font-size: 36px;;
 }
 
 h2 {
 	font-weight: bold;
-	font-size: 22px;
-	/*padding: 10px;
+	font-size: 28px;
+	padding: 20px;
 	margin-bottom: 10px;
-	border-radius: 10px;
+	border-radius: 0 10px 10px 0;
 	background-color: black;
 	color: white;
-	margin-right: 5px;*/
+	margin-right: 5px;
  }
 
  h3 {
 	 font-weight: bold;
+	 padding-left: 20px;
+	 padding-top: 10px;
+	 font-size: 22px;
+
+
  }

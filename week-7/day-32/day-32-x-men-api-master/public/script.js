@@ -54,6 +54,10 @@ img.src = mutant.imageUrl;
 
 display.appendChild(img);
 
+var descriptionTitle = document.createElement('h3');
+descriptionTitle.textContent = 'Description';
+display.appendChild(descriptionTitle);
+
 var description = document.createElement('p');
 description.textContent = mutant.description;
 display.appendChild(description);
