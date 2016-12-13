@@ -1,0 +1,76 @@
+
+var promise = $.ajax({
+  url:'/api/x-men'
+});
+
+var apiData;
+var mutantList = document.querySelector('.mutant-list');
+
+promise.done(function(data) {
+  apiData = data;
+// console.log('the data', data);
+
+
+// console.log(mutantList);
+for ( var i = 0; i < data.xmen.length; i++) {
+  var mutant = data.xmen[i];
+  // console.log('mutant', mutant);
+
+  var li = document.createElement('li');
+  li.textContent = mutant.character;
+  li.setAttribute('data-index', i);
+
+  mutantList.appendChild(li);
+
+  }
+});
+
+mutantList.addEventListener('click', function(evt) {
+console.log(evt.target);
+var attr = evt.target.getAttribute('data-index');
+console.log(attr);
+
+var currentlySelected = document.querySelector('.selected');
+if (currentlySelected != null) {
+  currentlySelected.classList.remove('selected');
+
+}
+evt.target.classList.add('selected');
+
+
+var mutant = apiData.xmen[attr];
+console.log('the mutant', mutant);
+
+var display = document.querySelector('.display');
+display.innerHTML = '';
+
+var h2 = document.createElement('h2');
+h2.textContent = mutant.realName;
+
+display.appendChild(h2);
+
+var img = document.createElement('img');
+img.src = mutant.imageUrl;
+
+display.appendChild(img);
+
+var description = document.createElement('p');
+description.textContent = mutant.description;
+display.appendChild(description);
+
+var powersTitle = document.createElement('h3');
+powersTitle.textContent = 'Powers';
+display.appendChild(powersTitle);
+
+var powers = document.createElement('ul');
+// powers.textContent = mutant.powers;
+// display.appendChild(powers);
+for (var i = 0; i < mutant.powers.length; i++) {
+  var powerlist = mutant.powers[i];
+
+  var powerlistItem = document.createElement('li');
+  powerlistItem.textContent = mutant.powers[i];
+  display.appendChild(powerlistItem);
+}
+
+});
