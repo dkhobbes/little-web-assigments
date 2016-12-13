@@ -63,14 +63,16 @@ powersTitle.textContent = 'Powers';
 display.appendChild(powersTitle);
 
 var powers = document.createElement('ul');
-// powers.textContent = mutant.powers;
-// display.appendChild(powers);
+display.appendChild(powers);
+
 for (var i = 0; i < mutant.powers.length; i++) {
   var powerlist = mutant.powers[i];
 
   var powerlistItem = document.createElement('li');
+
   powerlistItem.textContent = mutant.powers[i];
-  display.appendChild(powerlistItem);
+
+  powers.appendChild(powerlistItem);
 }
 
 });
