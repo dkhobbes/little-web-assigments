@@ -25,6 +25,10 @@ for ( var i = 0; i < data.xmen.length; i++) {
   }
 });
 
+var templateTag = document.querySelector('#character-template');
+var templateHtml = templateTag.innerHTML;
+console.log(templateHtml);
+
 mutantList.addEventListener('click', function(evt) {
 console.log(evt.target);
 var attr = evt.target.getAttribute('data-index');
@@ -42,32 +46,38 @@ var mutant = apiData.xmen[attr];
 console.log('the mutant', mutant);
 
 var display = document.querySelector('.display');
-display.innerHTML = '';
+var output = Mustache.render(templateHtml, mutant);
 
-var h2 = document.createElement('h2');
-h2.textContent = mutant.realName;
+console.log(output);
+display.innerHTML = output;
 
-display.appendChild(h2);
 
-var img = document.createElement('img');
-img.src = mutant.imageUrl;
-
-display.appendChild(img);
-
-var descriptionTitle = document.createElement('h3');
-descriptionTitle.textContent = 'Description';
-display.appendChild(descriptionTitle);
-
-var description = document.createElement('p');
-description.textContent = mutant.description;
-display.appendChild(description);
-
-var powersTitle = document.createElement('h3');
-powersTitle.textContent = 'Powers';
-display.appendChild(powersTitle);
-
-var powers = document.createElement('ul');
-display.appendChild(powers);
+// display.innerHTML = '';
+//
+// var h2 = document.createElement('h2');
+// h2.textContent = mutant.realName;
+//
+// display.appendChild(h2);
+//
+// var img = document.createElement('img');
+// img.src = mutant.imageUrl;
+//
+// display.appendChild(img);
+//
+// var descriptionTitle = document.createElement('h3');
+// descriptionTitle.textContent = 'Description';
+// display.appendChild(descriptionTitle);
+//
+// var description = document.createElement('p');
+// description.textContent = mutant.description;
+// display.appendChild(description);
+//
+// var powersTitle = document.createElement('h3');
+// powersTitle.textContent = 'Powers';
+// display.appendChild(powersTitle);
+//
+// var powers = document.createElement('ul');
+// display.appendChild(powers);
 
 for (var i = 0; i < mutant.powers.length; i++) {
   var powerlist = mutant.powers[i];
@@ -76,7 +86,7 @@ for (var i = 0; i < mutant.powers.length; i++) {
 
   powerlistItem.textContent = mutant.powers[i];
 
-  powers.appendChild(powerlistItem);
+  // powers.appendChild(powerlistItem);
 }
 
 });
