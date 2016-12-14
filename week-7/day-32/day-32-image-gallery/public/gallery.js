@@ -17,5 +17,26 @@ promise.done(function(data) {
     imgLi.src = pic.thumbnail;
     thumbnailList.appendChild(imgLi);
   }
+});
+
+thumbnailList.addEventListener('click', function(evt) {
+console.log(evt.target);
+var attr = evt.target.getAttribute('data-index');
+console.log(attr);
+
+var currentlySelected = document.querySelector('.selected');
+  if (currentlySelected != null) {
+    currentlySelected.classList.remove('selected');
+  }
+    evt.target.classList.add('selected');
+
+var thumbImage = apiData.pictures[attr];
+console.log('the mutant', mutant);
+
+var display = document.querySelector('.display');
+display.innerHTML = '';
+
+
+
 
 });
