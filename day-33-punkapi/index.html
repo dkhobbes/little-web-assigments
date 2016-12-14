@@ -13,21 +13,24 @@
 
     <script type="text/html" class="beer-template">
       <li>
-        
+
+        <div>abv: {{abv}}</div>
         <div>attenuation_level: {{attenuation_level}}</div>
-        <h1>Malts</h1>
+
 
         <ol>
           {{#ingredients.malt}}
-          <li class="malt-style">{{name}}</li>
+          <li class="malt-style">Malt: {{name}}</li>
           {{/ingredients.malt}}
         </ol>
-        <h1>Hops</h1>
-
         <ol>
           {{#ingredients.hops}}
-          <li class="hop-style">{{name}}</li>
+          <li class="hop-style">Hop: {{name}}</li>
           {{/ingredients.hops}}
+
+          {{#ingredients.yeast}}
+          <li class="yeast-style">Yeast: {{name}}</li>
+          {{/ingredients.yeast}}
         </ol>
       </li>
 
