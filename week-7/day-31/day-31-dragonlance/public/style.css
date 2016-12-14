@@ -71,21 +71,26 @@ h1 {
 
 ol {
 	text-align: left;
+	padding: 10px;
 }
 
 ol li {
 	color: black;
-	padding: 20px;
+	padding: 10px;
 }
 
-ol p {
-	color: rgba(255, 240, 240, 1.0);
-}
 
 .raceP {
 	color: black;
+	padding-left: 20px;
 }
 
-.nameTitle {
+.descriptionP {
+	color: rgba(255, 240, 240, 1.0) ;
+	padding-left: 20px;
+}
+
+.name {
 	font-weight: bold;
+	font-size: 22px;
 }
