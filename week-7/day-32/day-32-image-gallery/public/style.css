@@ -48,3 +48,33 @@ table {
 }
 
 /*end of reset*/
+
+body {
+	background-image: url('background2.jpg');
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	background: linear-gradient(black, transparent);
+	border-radius: 50px 50px 0 0;
+}
+
+ul img{
+	padding: 10px;
+}
+
+.li-container {
+	margin: 0 auto;
+	width: 600px;
+}
+
+.display {
+	margin-top: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+	height: 300px;
+	color: white;
+	padding-top: 20px;
+}

@@ -12,6 +12,10 @@ promise.done(function(data) {
   for (var i = 0; i < data.pictures.length; i++) {
     var pic = data.pictures[i];
     console.log('pic', pic);
+
+    var imgLi = document.createElement('img');
+    imgLi.src = pic.thumbnail;
+    thumbnailList.appendChild(imgLi);
   }
 
 });
