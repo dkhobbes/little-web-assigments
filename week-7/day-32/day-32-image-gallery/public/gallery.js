@@ -36,7 +36,19 @@ console.log('the mutant', mutant);
 var display = document.querySelector('.display');
 display.innerHTML = '';
 
+// starting from here
+
+var fullSizeImg = document.createElement('img');
+fullSizeImg.src = thumbImage.fullSize;
+
+fullSizeImg.appendChild(img);
 
 
+var description = document.createElement('p');
+description.textContent = thumbImage.description;
+
+display.appendChild(description);
+
+// check to see if it works from here
 
 });
