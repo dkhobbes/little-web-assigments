@@ -2,8 +2,36 @@ console.log("hi");
 
 console.log('look at this', btoa('hello'));
 console.log(atob('aGVsbG8='));
+
+var nextButton = document.querySelector('.next-button');
+nextButton.addEventListener('click', function() {
+  page += 1;
+  requestData();
+
+  previousButton.classList.remove('hidden');
+});
+
+var previousButton = document.querySelector('.previous-button');
+previousButton.addEventListener('click', function() {
+
+
+  page -= 1;
+
+  if (page === 1) {
+    previousButton.classList.add('hidden');
+  }
+
+
+  requestData();
+});
+
+
+var page = 1;
+
+function requestData () {
+
 var promise = $.ajax({
-  url:'https://punkapi.com/api/v1/beers',
+  url:'https://punkapi.com/api/v1/beers?page=' + page,
   headers: {
     "Authorization": "Basic " + btoa('6a856ff113074b919ac60d98074beaac:')
 
@@ -26,3 +54,6 @@ console.log(beer);
   }
   beerStuffList.innerHTML = html;
 });
+}
+
+requestData();

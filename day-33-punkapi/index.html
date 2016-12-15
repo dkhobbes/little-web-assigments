@@ -8,6 +8,9 @@
   <body>
     <h1>Beer Me</h1>
 
+    <button class="next-button">Next page</button>
+    <button class="previous-button">Previous page</button>
+
     <ul class="beer-stuff">
     </ul>
 
@@ -17,19 +20,23 @@
         <div>abv: {{abv}}</div>
         <div>attenuation_level: {{attenuation_level}}</div>
 
-
+        <div>Malt</div>
         <ol>
           {{#ingredients.malt}}
           <li class="malt-style">Malt: {{name}}</li>
           {{/ingredients.malt}}
         </ol>
+        <div>Hops</div>
         <ol>
           {{#ingredients.hops}}
           <li class="hop-style">Hop: {{name}}</li>
           {{/ingredients.hops}}
+        </ol>
+        <div>Yeast:</div>
+        <ol>
 
           {{#ingredients.yeast}}
-          <li class="yeast-style">Yeast: {{name}}</li>
+          <li class="yeast-style"> {{name}}</li>
           {{/ingredients.yeast}}
         </ol>
       </li>
