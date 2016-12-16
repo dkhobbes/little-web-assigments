@@ -78,7 +78,16 @@ ul img{
 	color: white;
 	padding-top: 20px;
 	font-family: 'Pinyon Script', cursive;
+}
 
+.display img {
+		height: 200px;
+		margin-top: 20px;
+}
+
+.display p {
+	font-size: 18px;
+	margin: 20px
 }
 
 .selected {
