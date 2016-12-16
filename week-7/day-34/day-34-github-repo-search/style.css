@@ -47,4 +47,17 @@ table {
 
 /* end of reset */
 h1 {
-  color: red; }
+  color: red;
+  text-align: center; }
+
+div {
+  text-align: center; }
+
+ul {
+  width: 20%;
+  margin-left: 39%;
+  padding: 10px; }
+
+.boxes {
+  border: 1px solid black;
+  text-align: left; }

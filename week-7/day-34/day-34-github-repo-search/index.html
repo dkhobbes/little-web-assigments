@@ -6,17 +6,20 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>This is the home page</h1>
-    <ul class="word-list">
-    </ul>
+    <h1>Welcome to the github respository search page.</h1>
 
     <div class="">
       <input class="word-input" />
     </div>
 
+    <ul class="display-list">
+    </ul>
+
     <script type="text/html" class="link-template">
-      <div>{{}}</div>
-      <div>by: {{login}}</div>
+      <div class="boxes">
+        <li class="link-it-up"><a href="{{html_url}}">{{name}}</a></li>
+        <li><a href="{{owner.html_url}}">by: {{owner.login}}</a></li>
+      </div>
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
