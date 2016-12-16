@@ -47,4 +47,11 @@ table {
 	border-spacing: 0;
 }
 
-// end of reset
+/* end of reset */
+
+
+$color: red;
+
+h1 {
+	color: $color;
+}
