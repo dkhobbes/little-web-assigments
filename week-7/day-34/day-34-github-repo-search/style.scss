@@ -55,6 +55,7 @@ $color: red;
 h1 {
 	color: $color;
 	text-align: center;
+	margin-top: 20px;
 }
 
 div {
@@ -68,10 +69,13 @@ ul {
 }
 
 li {
-
+padding: 5px;
 }
 
 .boxes {
 	border: 1px solid black;
 	text-align: left;
+}
+input {
+	margin-top: 5px;
 }
