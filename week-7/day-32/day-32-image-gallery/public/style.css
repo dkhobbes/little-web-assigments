@@ -74,20 +74,22 @@ ul img{
 	text-align: center;
 	font-weight: bold;
 	font-size: 32px;
-	height: 300px;
+	height: 500px;
 	color: white;
 	padding-top: 20px;
 	font-family: 'Pinyon Script', cursive;
 }
 
 .display img {
-		height: 200px;
+		height: 400px;
 		margin-top: 20px;
+		border-radius: 25px;
 }
 
 .display p {
 	font-size: 18px;
-	margin: 20px
+	margin: 20px;
+	font-family: sans-serif;
 }
 
 .selected {
