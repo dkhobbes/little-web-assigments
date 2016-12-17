@@ -3,6 +3,35 @@
   var inputer =document.querySelector('.word-input');
   var displayUL = document.querySelector('.display-list');
   var display =document.querySelector('.link-template');
+  var previousClick = document.querySelector('.previous');
+  var nextClick = document.querySelector('.next');
+  var counter = document.querySelector('.counter');
+  var page = 0;
+
+
+previousClick.addEventListener('click', function() {
+  page -= 1;
+  console.log('page is now', page);
+  localStorage.setItem('page-number', page);
+  requestData();
+  counter.innerHTML = page;
+});
+
+nextClick.addEventListener('click', function() {
+  page += 1;
+  console.log('page is now', page);
+  localStorage.setItem('page-number', page);
+  requestData();
+  counter.innerHTML = page;
+});
+
+  counter.innerHTML = page;
+  console.log('page', page, 'stored value', storedValue);
+
+  var storedValue = storedValue.getItem('page-number');
+    if (storedValue !== null ) {
+      page = Number(storedValue);
+    }
 
   function requestData() {
     var promise = $.ajax({
