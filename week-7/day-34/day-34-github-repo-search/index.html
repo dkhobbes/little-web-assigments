@@ -14,11 +14,16 @@
 
     <ul class="display-list">
     </ul>
+      <div class="button-count">
+        <span class="previous">Previous</span>
+        <span class="counter"></span>
+        <span class="next">Next</span>
+      </div>
 
     <script type="text/html" class="link-template">
       <div class="boxes">
-        <li class="link-it-up"><a href="{{html_url}}">{{name}}</a></li>
-        <li><a href="{{owner.html_url}}">by: {{owner.login}}</a></li>
+        <li class="link-it-up"><a href="{{html_url}}" class="bolded">{{name}}</a></li>
+        <li><a href="{{owner.html_url}}" class="gray">by: {{owner.login}}</a></li>
       </div>
     </script>
 

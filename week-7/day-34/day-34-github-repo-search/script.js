@@ -24,22 +24,6 @@
     }
       displayUL.innerHTML = html;
 
-
-
-    // var beerStuffList= document.querySelector('.beer-stuff');
-    //   var templateScript = document.querySelector('.beer-template');
-    //   var templateHtml = templateScript.innerHTML;
-    //
-    //   var html = '';
-    //   for (var i = 0; i < data.length; i++) {
-    //     var beer = data[i];
-    // console.log(beer);
-    //     var output = Mustache.render(templateHtml, beer);
-    //     html += output;
-    //   }
-    //   beerStuffList.innerHTML = html;
-
-
     });
   }
 

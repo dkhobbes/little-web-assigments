@@ -68,3 +68,15 @@ li {
 
 input {
   margin-top: 10px; }
+
+.gray {
+  color: gray; }
+
+.bolded {
+  font-weight: bold; }
+
+.button-count {
+  color: red;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 5px; }
