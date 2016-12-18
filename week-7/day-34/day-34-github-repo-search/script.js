@@ -35,7 +35,7 @@ nextClick.addEventListener('click', function() {
 
   function requestData() {
     var promise = $.ajax({
-      url:'https://api.github.com/search/repositories?q=' + inputer.value
+      url:'https://api.github.com/search/repositories?q=' + inputer.value * 25
     });
 
     promise.done(function(data){
