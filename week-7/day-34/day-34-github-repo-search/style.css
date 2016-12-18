@@ -79,10 +79,12 @@ input {
   color: red;
   font-weight: bold;
   margin: 0 auto;
-  padding: 5px; }
+  margin-top: 20px; }
 
 .counter {
   background-color: red;
   color: white;
-  padding: 2px;
-  text-align: center; }
+  text-align: center;
+  padding: 5px;
+  height: 2px;
+  width: 2px; }

@@ -6,7 +6,7 @@
   var previousClick = document.querySelector('.previous');
   var nextClick = document.querySelector('.next');
   var counter = document.querySelector('.counter');
-  var page = 0;
+  var page = 1;
 
 
 previousClick.addEventListener('click', function() {
