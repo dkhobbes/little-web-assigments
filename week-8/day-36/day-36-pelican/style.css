@@ -1,0 +1,61 @@
+.login {
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.white-text {
+  color: white;
+}
+
+.intro-cta {
+  background-color: rgba(3, 195, 195, 1.0);
+  border: 1px solid black;
+}
+
+.intro-cta h2 p h1 img button {
+  margin-left: 200px;
+}
+
+.teaser-click {
+  text-align: center;
+}
+
+.main-cta-1 {
+  background-color: rgba(243, 241, 239, 1.0) ;
+  border: 1px solid black;
+  float: left;
+  padding: 10px;
+  overflow: hidden;
+
+}
+
+.main-cta-1 h2, p, h1, button {
+  /*background-color: rgba(3, 195, 195, 1.0);*/
+}
+
+.cta {
+  float: left;
+  width: 60%;
+}
+
+.img {
+    float: left;
+    width: 40%;
+}
+img {
+  height: 500px;
+}
+.main-cta-1 button {
+  padding: 20px;
+  width: 260px;
+  border-radius: 15px;
+}
