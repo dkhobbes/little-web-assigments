@@ -61,9 +61,28 @@ table {
 
 }
 
-.box-1:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+.box-1:hover .inner{
+  opacity: 1;
+}
 
+.box-1:hover .cover{
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.box-2:hover .inner{
+  opacity: 1;
+}
+
+.box-2:hover .cover{
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.box-3:hover .inner{
+  opacity: 1;
+}
+
+.box-3:hover .cover{
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .box-2{
@@ -115,4 +134,19 @@ h1 {
   font-family: 'Josefin Sans', sans-serif;
   margin-top: 25%;
   position: relative;
+}
+
+.inner {
+  opacity: 0;
+  padding: 15px;
+  border: 1px white solid;
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.inner:hover {
+  color: black;
+  background-color: white;
 }
