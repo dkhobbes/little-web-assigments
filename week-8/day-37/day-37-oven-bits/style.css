@@ -57,6 +57,8 @@ table {
   height: 400px;
   float: left;
   text-align: center;
+  position: relative;
+
 }
 
 .box-1:hover {
@@ -74,6 +76,8 @@ table {
   margin-left: 1%;
   margin-right: 1%;
   text-align: center;
+  position: relative;
+
 }
 .box-3{
   background-image:
@@ -84,6 +88,7 @@ table {
   height: 400px;
   float: left;
   text-align: center;
+  position: relative;
 }
 
 .cover {
@@ -97,13 +102,17 @@ table {
 
 p {
   font-size: 22px;
-  padding: 5px;
+  padding: 2px;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 2%;
+  position: relative;
 }
 
 h1 {
   font-size: 52px;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 25%;
+  position: relative;
 }
