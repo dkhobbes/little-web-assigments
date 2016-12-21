@@ -24,7 +24,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
         return React.createElement(
           "div",
           { className: "post-body" },
-          React.createElement("img", { src: "http://www.zeldman.com/wp-content/themes/zeldman/images/default.svg" }),
+          React.createElement("img", { src: this.props.bodypic }),
           React.createElement(
             "p",
             null,

@@ -14,9 +14,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
   var mountNode = document.querySelector('#firstDiv');
 
   var BlogPostHeader = window.Blog.BlogPostHeader;
-
   var BlogPostBody = window.Blog.BlogPostBody;
-
   var BlogPostRelated = window.Blog.BlogPostRelated;
 
   var BlogPost = function (_React$Component) {
@@ -31,11 +29,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     _createClass(BlogPost, [{
       key: 'render',
       value: function render() {
+
+        var dateInfo = '19 December 2016 12pm America/New_York';
+        var imageUrl = 'http://www.zeldman.com/wp-content/themes/zeldman/images/default.svg';
+
         return React.createElement(
           'div',
           { className: 'blog-post' },
-          React.createElement(BlogPostHeader, null),
-          React.createElement(BlogPostBody, null),
+          React.createElement(BlogPostHeader, { date: dateInfo }),
+          React.createElement(BlogPostBody, { bodypic: imageUrl }),
           React.createElement(BlogPostRelated, null)
         );
       }
