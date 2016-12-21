@@ -58,7 +58,18 @@ table {
   float: left;
   text-align: center;
   position: relative;
+}
 
+.box-1 h1 {
+	transition-property: margin-top;
+	transition-delay: initial;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+}
+
+.box-1:hover h1 {
+	transition-property: margin-top;
+	margin-top: 15%;
 }
 
 .box-1:hover .inner{
@@ -66,7 +77,19 @@ table {
 }
 
 .box-1:hover .cover{
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.box-2 h1 {
+	transition-property: margin-top;
+	transition-delay: initial;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+}
+
+.box-2:hover h1 {
+	transition-property: margin-top;
+	margin-top: 15%;
 }
 
 .box-2:hover .inner{
@@ -74,7 +97,19 @@ table {
 }
 
 .box-2:hover .cover{
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.box-3 h1 {
+	transition-property: margin-top;
+	transition-delay: initial;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+}
+
+.box-3:hover h1 {
+	transition-property: margin-top;
+	margin-top: 15%;
 }
 
 .box-3:hover .inner{
@@ -82,7 +117,7 @@ table {
 }
 
 .box-3:hover .cover{
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .box-2{
@@ -116,7 +151,7 @@ table {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -144,6 +179,7 @@ h1 {
   width: 60%;
   margin: 0 auto;
   margin-top: 10px;
+	border-radius: 2px;
 }
 
 .inner:hover {
