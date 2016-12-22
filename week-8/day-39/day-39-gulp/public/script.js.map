@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["console","log","wat"],"mappings":";;AAAAA,QAAQC,GAAR,CAAY,cAAZ;;AAEA,IAAIC,MAAM,SAANA,GAAM,GAAM;AACdF,UAAQC,GAAR,CAAY,mBAAZ;AACD,CAFD","file":"script.js","sourcesContent":["console.log('I am working');\n\nvar wat = () => {\n  console.log('yo arrow function');\n}\n"]}
