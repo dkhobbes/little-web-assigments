@@ -8,30 +8,17 @@
   var counter = document.querySelector('.counter');
   var page = 1;
 
+  var totalCount;
 
-previousClick.addEventListener('click', function() {
-  page -= 1;
-  console.log('page is now', page);
-  localStorage.setItem('page-number', page);
-  requestData();
-  counter.innerHTML = page;
-});
 
-nextClick.addEventListener('click', function() {
-  page += 1;
-  console.log('page is now', page);
-  localStorage.setItem('page-number', page);
-  requestData();
-  counter.innerHTML = page;
-});
 
   counter.innerHTML = page;
-  console.log('page', page, 'stored value', storedValue);
+  // console.log('page', page, 'stored value', storedValue);
 
-  var storedValue = storedValue.getItem('page-number');
-    if (storedValue !== null ) {
-      page = Number(storedValue);
-    }
+  // var storedValue = storedValue.getItem('page-number');
+  //   if (storedValue !== null ) {
+  //     page = Number(storedValue);
+  //   }
 
   function requestData() {
     var promise = $.ajax({
@@ -39,7 +26,7 @@ nextClick.addEventListener('click', function() {
     });
 
     promise.done(function(data){
-    console.log('this data', data);
+    // console.log('this data', data);
 
     var templateHtml = display.innerHTML;
 
@@ -47,23 +34,39 @@ nextClick.addEventListener('click', function() {
     var html = '';
     for (var i= 0; i < data.items.length; i++) {
       var item = data.items[i];
-      console.log(item);
+      // console.log(item);
       var output = Mustache.render(templateHtml, item);
       html += output;
     }
       displayUL.innerHTML = html;
+      totalCount =data.total_count;
 
     });
   }
 
 
   inputer.addEventListener('keyup', function(evt) {
-    console.log(evt.keyCode);
+
+    page = 1;
 
     if (evt.keyCode === 13) {
+      requestData();
       console.log('do something');
-      requestData()
     }
+  });
+
+  previousClick.addEventListener('click', function() {
+    page -= 1;
+    console.log('page is now', page);
+    requestData();
+    counter.innerHTML = page;
+  });
+
+  nextClick.addEventListener('click', function() {
+    page += 1;
+    console.log('page is now', page);
+    requestData();
+    counter.innerHTML = page;
   });
 
 })();
