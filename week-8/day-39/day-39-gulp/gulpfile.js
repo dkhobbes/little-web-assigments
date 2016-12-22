@@ -6,7 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 
 
-gulp.task('default', ['sass', 'sass:watch', 'affirm', 'start', 'babel']);
+gulp.task('default', ['sass', 'sass:watch', 'affirm', 'start', 'babel', 'babel:watch']);
 
 gulp.task('sass', function () {
   return gulp.src('./client/scss/**/*.scss')
@@ -36,7 +36,7 @@ gulp.task('babel', function() {
     return gulp.src('./client/js/**/*.js')
     .pipe(sourcemaps.init())
         .pipe(babel({
-            presets: ['es2015']
+            presets: ['es2015', 'react']
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('public'));

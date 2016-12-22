@@ -1,4 +1,8 @@
 p {
   color: red; }
 
+.this-class {
+  background-color: black;
+  color: white; }
+
 /*# sourceMappingURL=style.css.map */
