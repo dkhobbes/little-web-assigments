@@ -10,36 +10,28 @@
 
   var totalCount;
 
-
-
-  counter.innerHTML = page;
-  // console.log('page', page, 'stored value', storedValue);
-
-  // var storedValue = storedValue.getItem('page-number');
-  //   if (storedValue !== null ) {
-  //     page = Number(storedValue);
-  //   }
-
   function requestData() {
+    var searchInput = inputer.value + "&page=" + page;
+
     var promise = $.ajax({
-      url:'https://api.github.com/search/repositories?q=' + inputer.value * 25
+      url: "https://api.github.com/search/repositories?q=" + searchInput
     });
 
     promise.done(function(data){
-    // console.log('this data', data);
 
-    var templateHtml = display.innerHTML;
+    display.innerHTML = '';
 
-
-    var html = '';
     for (var i= 0; i < data.items.length; i++) {
       var item = data.items[i];
-      // console.log(item);
+      var templateHtml = display.innerHTML;
       var output = Mustache.render(templateHtml, item);
-      html += output;
+      displayUL.innerHTML= displayUL.innerHTML + output;
     }
-      displayUL.innerHTML = html;
+
       totalCount =data.total_count;
+      // pageCount.innerText = page;
+      // pageNav.style.display = "block"
+
 
     });
   }
@@ -52,6 +44,7 @@
     if (evt.keyCode === 13) {
       requestData();
       console.log('do something');
+      // prevB.classList.add("grey");
     }
   });
 
@@ -60,6 +53,13 @@
     console.log('page is now', page);
     requestData();
     counter.innerHTML = page;
+    // if (page < (totalCount / 30)){
+    //   prevB.classList.remove("grey");
+    //   page++;
+    //   getData();
+    // } else if (page >= (totalCount / 30)){
+    //   nextB.classList.add("grey")
+    // }
   });
 
   nextClick.addEventListener('click', function() {
@@ -67,6 +67,14 @@
     console.log('page is now', page);
     requestData();
     counter.innerHTML = page;
+ //    if (page > 1){
+ //     nextB.classList.remove("grey");
+ //     page--;
+ //     getData();
+ //   }
+ //
+ // });
+
   });
 
 })();
