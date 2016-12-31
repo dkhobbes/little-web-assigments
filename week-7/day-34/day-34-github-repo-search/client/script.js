@@ -19,7 +19,7 @@
 
     promise.done(function(data){
 
-    display.innerHTML = '';
+   display.innerHTML = '';
 
     for (var i= 0; i < data.items.length; i++) {
       var item = data.items[i];
