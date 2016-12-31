@@ -120,7 +120,7 @@ header {
 }
 
 input {
-	float: left;
+	float: noneee;
 	width: 30%;
 	height: auto;
 	background-color: rgba(174, 92, 200, 1.0);
@@ -296,17 +296,17 @@ This is the start of the media queries
 
 @media screen and (max-width: 700px) {
 
-	body {
-		max-width: auto;
-		margin: 0px;
-	}
+	// body {
+	// 	max-width: auto;
+	// 	margin: 0px;
+	// }
 
-	header, input, .left-pic, .right-pic, .middle-pic, .instructors-pic img {
-		float: none;
-		max-width: 100%;
-		overflow: auto;
-		margin: 0px;
-	}
+	// header, input, .left-pic, .right-pic, .middle-pic, .instructors-pic img {
+	// 	float: none;
+	// 	max-width: 100%;
+	// 	overflow: auto;
+	// 	margin: 0px;
+	// }
 
 	.left-pic, .right-pic, .middle-pic {
 		max-width: 100%;
@@ -332,7 +332,7 @@ This is the start of the media queries
 		line-height: 1.2em;
 	}
 
-	.top-search, .bottom-search, input {
+	.searching-bar {
 		float: none;
 		max-width: 100%;
 		overflow: auto;
@@ -341,5 +341,12 @@ This is the start of the media queries
 
 	.container {
 	padding: 20px;
+	}
+
+	.company-info {
+		max-width: 100%;
+		float: none;
+		margin: 0 auto;
+		padding: 20px;
 	}
 }

@@ -230,22 +230,25 @@ strong {
   width: 31.3333%;
   float: left;
   padding-right: 2%;
-  display: inline-block;
-  text-align: center; }
+  /*display: inline-block;
+  text-align: center; */
+}
 
 .middle-pic2 {
   width: 31.3333%;
   padding: 0 1%;
   float: left;
-  display: inline-block;
-  text-align: center; }
+  /*display: inline-block;
+  text-align: center; */
+}
 
 .right-pic2 {
   width: 31.3333%;
   float: left;
   padding-left: 2%;
-  display: inline-block;
-  text-align: center; }
+  /*display: inline-block;
+  text-align: center; */
+}
 
 /*====================================
 This is the start of the media queries
@@ -265,8 +268,12 @@ This is the start of the media queries
     padding: 2px; }
   .left-pic2, .right-pic2, .middle-pic2 {
     max-width: 100%;
-    float: none;
-    padding: 2px; }
+    float: left;
+    padding: 2px;
+    /*padding-top: 100px;*/
+    border: 1px solid black;
+    text-align: center;
+  }
   .top-container {
     max-width: 100%;
     float: none;
@@ -281,4 +288,5 @@ This is the start of the media queries
     overflow: auto;
     margin: 0px; }
   .container {
-    padding: 20px; } }
+    padding: 20px; }
+}
