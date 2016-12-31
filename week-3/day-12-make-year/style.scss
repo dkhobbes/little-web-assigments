@@ -120,7 +120,7 @@ header {
 }
 
 input {
-	float: noneee;
+	float: none;
 	width: 30%;
 	height: auto;
 	background-color: rgba(174, 92, 200, 1.0);
@@ -296,10 +296,10 @@ This is the start of the media queries
 
 @media screen and (max-width: 700px) {
 
-	// body {
-	// 	max-width: auto;
-	// 	margin: 0px;
-	// }
+	body {
+		max-width: auto;
+		margin: 0px;
+	}
 
 	// header, input, .left-pic, .right-pic, .middle-pic, .instructors-pic img {
 	// 	float: none;
@@ -307,6 +307,8 @@ This is the start of the media queries
 	// 	overflow: auto;
 	// 	margin: 0px;
 	// }
+
+
 
 	.left-pic, .right-pic, .middle-pic {
 		max-width: 100%;
