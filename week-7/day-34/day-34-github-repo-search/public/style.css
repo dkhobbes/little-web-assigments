@@ -88,3 +88,8 @@ input {
   padding: 5px;
   height: 2px;
   width: 2px; }
+
+.grey {
+  color: lightgrey;
+  border: lightgrey;
+  background-color: #ebebeb; }

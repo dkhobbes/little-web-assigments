@@ -6,6 +6,7 @@
   var previousClick = document.querySelector('.previous');
   var nextClick = document.querySelector('.next');
   var counter = document.querySelector('.counter');
+  var buttonCount = document.querySelector('.button-count');
   var page = 1;
 
   var totalCount;
@@ -19,7 +20,7 @@
 
     promise.done(function(data){
 
-   display.innerHTML = '';
+    display.innerHTML = '';
 
     for (var i= 0; i < data.items.length; i++) {
       var item = data.items[i];
@@ -29,13 +30,10 @@
     }
 
       totalCount =data.total_count;
-      // pageCount.innerText = page;
-      // pageNav.style.display = "block"
-
-
+      counter.innerText = page;
+      buttonCount.style.display = "block"
     });
   }
-
 
   inputer.addEventListener('keyup', function(evt) {
 
@@ -43,38 +41,38 @@
 
     if (evt.keyCode === 13) {
       requestData();
-      console.log('do something');
-      // prevB.classList.add("grey");
+      console.log(page);
+      previousClick.classList.add("grey");
     }
+
   });
 
   previousClick.addEventListener('click', function() {
     page -= 1;
-    console.log('page is now', page);
+    console.log(page);
     requestData();
     counter.innerHTML = page;
-    // if (page < (totalCount / 30)){
-    //   prevB.classList.remove("grey");
-    //   page++;
-    //   getData();
-    // } else if (page >= (totalCount / 30)){
-    //   nextB.classList.add("grey")
-    // }
+    if (page < (totalCount / 30)){
+      previousClick.classList.remove("grey");
+      page++;
+      getData();
+    }
+    else if (page >= (totalCount / 30)){
+      nextB.classList.add("grey")
+    }
   });
 
   nextClick.addEventListener('click', function() {
     page += 1;
-    console.log('page is now', page);
+    console.log(page);
     requestData();
     counter.innerHTML = page;
- //    if (page > 1){
- //     nextB.classList.remove("grey");
- //     page--;
- //     getData();
- //   }
- //
- // });
+    if (page > 1){
+     nextClick.classList.remove("grey");
+     page--;
+     getData();
+   }
 
-  });
+ });
 
 })();
