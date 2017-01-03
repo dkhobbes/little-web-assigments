@@ -20,7 +20,7 @@
 
     promise.done(function(data){
 
-    display.innerHTML = '';
+    displayUL.innerHTML = '';
 
     for (var i= 0; i < data.items.length; i++) {
       var item = data.items[i];
@@ -48,7 +48,7 @@
   });
 
   previousClick.addEventListener('click', function() {
-    page -= 1;
+    page -- 1;
     console.log(page);
     requestData();
     counter.innerHTML = page;
@@ -63,7 +63,7 @@
   });
 
   nextClick.addEventListener('click', function() {
-    page += 1;
+    page ++ 1;
     console.log(page);
     requestData();
     counter.innerHTML = page;
