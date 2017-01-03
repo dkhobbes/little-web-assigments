@@ -47,30 +47,28 @@
 
   });
 
-  previousClick.addEventListener('click', function() {
-    page -- 1;
-    console.log(page);
-    requestData();
-    counter.innerHTML = page;
+  nextClick.addEventListener('click', function() {
+    // page -= 1;
+    // requestData();
+    // counter.innerHTML = page;
     if (page < (totalCount / 30)){
       previousClick.classList.remove("grey");
       page++;
-      getData();
+      requestData();
     }
     else if (page >= (totalCount / 30)){
-      nextB.classList.add("grey")
+      nextClick.classList.add("grey")
     }
   });
 
-  nextClick.addEventListener('click', function() {
-    page ++ 1;
-    console.log(page);
-    requestData();
-    counter.innerHTML = page;
+  previousClick.addEventListener('click', function() {
+    // page += 1;
+    // requestData();
+    // counter.innerHTML = page;
     if (page > 1){
      nextClick.classList.remove("grey");
      page--;
-     getData();
+     requestData();
    }
 
  });

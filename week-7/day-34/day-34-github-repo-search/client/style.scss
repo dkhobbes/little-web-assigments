@@ -79,7 +79,9 @@ input {
   color: red;
   font-weight: bold;
   margin: 0 auto;
-  margin-top: 20px; }
+  margin-top: 20px;
+  display: none;
+ }
 
 .counter {
   background-color: red;
@@ -87,9 +89,10 @@ input {
   text-align: center;
   padding: 5px;
   height: 2px;
-  width: 2px; }
+  width: 2px;
+}
 
-  .grey {
+.grey {
   color: lightgrey;
   border: lightgrey;
   background-color: #ebebeb; }
