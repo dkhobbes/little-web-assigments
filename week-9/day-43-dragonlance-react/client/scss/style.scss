@@ -1,0 +1,25 @@
+@import 'reset';
+
+p {
+  color: red;
+}
+
+.name-api {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.race-api {
+  font-style: italic;
+}
+
+.description-api {
+  line-height: 2em;
+}
+
+.characters-api {
+  width: 960px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 10px;
+}
