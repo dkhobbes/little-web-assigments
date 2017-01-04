@@ -10,10 +10,10 @@ class AppComponent extends React.Component {
     };
   }
 
-  toggle() {
-    if(this.state.currentClass === 'on-state') {
+  toggle(){
+    if(this.state.currentClass === 'on-state'){
       this.setState({
-        currentClassc: 'start-state'
+        currentClass: 'start-state'
       });
     }
     else {
@@ -24,7 +24,7 @@ class AppComponent extends React.Component {
   }
 
   render() {
-    return <div className={this.state.currentClass} onClick={() => {this.toggle(); }}>"Click this to toggle in React!"</div>;
+    return <div className={this.state.currentClass} onClick={() => {this.toggle(); }}>Click this to toggle in React</div>;
   }
 }
 

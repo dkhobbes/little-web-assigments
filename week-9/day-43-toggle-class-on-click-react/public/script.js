@@ -31,7 +31,7 @@ var AppComponent = function (_React$Component) {
     value: function toggle() {
       if (this.state.currentClass === 'on-state') {
         this.setState({
-          currentClassc: 'start-state'
+          currentClass: 'start-state'
         });
       } else {
         this.setState({
@@ -49,7 +49,7 @@ var AppComponent = function (_React$Component) {
         { className: this.state.currentClass, onClick: function onClick() {
             _this2.toggle();
           } },
-        '"Click this to toggle in React!"'
+        'Click this to toggle in React'
       );
     }
   }]);
