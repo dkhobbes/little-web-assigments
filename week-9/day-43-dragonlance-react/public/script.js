@@ -52,11 +52,6 @@ var AppComponent = function (_React$Component) {
         'div',
         { className: 'dragonlance-api' },
         React.createElement(
-          'h1',
-          null,
-          'Github!'
-        ),
-        React.createElement(
           'button',
           { onClick: function onClick() {
               return _this3.clicky();

@@ -29,7 +29,6 @@ class AppComponent extends React.Component {
 
   render() {
     return <div className="dragonlance-api">
-      <h1>Github!</h1>
       <button onClick={() => this.clicky()}>load data</button>
       <ul className={this.state.characterClass}>{this.state.apiResult.characters.map((char, index) => { return <li key={index}><div className="name-api">{char.name}</div><div className="race-api">{char.race}</div><div className="description-api">{char.description}</div></li>; })}</ul>
     </div>
