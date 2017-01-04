@@ -1,10 +1,10 @@
 'use strict';
 
-(function(){
+(function () {
 
-  var inputer =document.querySelector('.word-input');
+  var inputer = document.querySelector('.word-input');
   var displayUL = document.querySelector('.display-list');
-  var display =document.querySelector('.link-template');
+  var display = document.querySelector('.link-template');
   var previousClick = document.querySelector('.previous');
   var nextClick = document.querySelector('.next');
   var counter = document.querySelector('.counter');
@@ -20,24 +20,24 @@
       url: "https://api.github.com/search/repositories?q=" + searchInput
     });
 
-    promise.done(function(data){
+    promise.done(function (data) {
 
-    displayUL.innerHTML = '';
+      displayUL.innerHTML = '';
 
-    for (var i= 0; i < data.items.length; i++) {
-      var item = data.items[i];
-      var templateHtml = display.innerHTML;
-      var output = Mustache.render(templateHtml, item);
-      displayUL.innerHTML= displayUL.innerHTML + output;
-    }
+      for (var i = 0; i < data.items.length; i++) {
+        var item = data.items[i];
+        var templateHtml = display.innerHTML;
+        var output = Mustache.render(templateHtml, item);
+        displayUL.innerHTML = displayUL.innerHTML + output;
+      }
 
-      totalCount =data.total_count;
+      totalCount = data.total_count;
       counter.innerText = page;
-      buttonCount.style.display = "block"
+      buttonCount.style.display = "block";
     });
   }
 
-  inputer.addEventListener('keyup', function(evt) {
+  inputer.addEventListener('keyup', function (evt) {
 
     page = 1;
 
@@ -46,35 +46,30 @@
       console.log(page);
       previousClick.classList.add("grey");
     }
-
   });
 
-  nextClick.addEventListener('click', function() {
+  nextClick.addEventListener('click', function () {
     // page -= 1;
     // requestData();
     // counter.innerHTML = page;
-    if (page < (totalCount / 30)){
+    if (page < totalCount / 30) {
       previousClick.classList.remove("grey");
       page++;
       requestData();
-    }
-    else if (page >= (totalCount / 30)){
-      nextClick.classList.add("grey")
+    } else if (page >= totalCount / 30) {
+      nextClick.classList.add("grey");
     }
   });
 
-  previousClick.addEventListener('click', function() {
+  previousClick.addEventListener('click', function () {
     // page += 1;
     // requestData();
     // counter.innerHTML = page;
-    if (page > 1){
-     nextClick.classList.remove("grey");
-     page--;
-     requestData();
-   }
-
- });
-
+    if (page > 1) {
+      nextClick.classList.remove("grey");
+      page--;
+      requestData();
+    }
+  });
 })();
-
 //# sourceMappingURL=script.js.map

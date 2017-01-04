@@ -1,4 +1,4 @@
-(function(){
+(() => {
 
   var inputer =document.querySelector('.word-input');
   var displayUL = document.querySelector('.display-list');
@@ -18,7 +18,7 @@
       url: "https://api.github.com/search/repositories?q=" + searchInput
     });
 
-    promise.done(function(data){
+    promise.done((data) => {
 
     displayUL.innerHTML = '';
 
@@ -35,7 +35,7 @@
     });
   }
 
-  inputer.addEventListener('keyup', function(evt) {
+  inputer.addEventListener('keyup',(evt) => {
 
     page = 1;
 
@@ -47,7 +47,7 @@
 
   });
 
-  nextClick.addEventListener('click', function() {
+  nextClick.addEventListener('click', () => {
     // page -= 1;
     // requestData();
     // counter.innerHTML = page;
@@ -61,7 +61,7 @@
     }
   });
 
-  previousClick.addEventListener('click', function() {
+  previousClick.addEventListener('click', () => {
     // page += 1;
     // requestData();
     // counter.innerHTML = page;
