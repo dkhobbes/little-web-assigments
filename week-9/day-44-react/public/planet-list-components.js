@@ -51,27 +51,15 @@ window.SW = window.SW || {};
             React.createElement('img', { src: 'https://s-media-cache-ak0.pinimg.com/736x/58/19/d9/5819d950c07b93e41f314655838038dc.jpg', className: 'sw-logo' }),
             React.createElement(
               'div',
-              null,
+              { className: 'climate' },
               'Climate: ',
               this.props.planet.climate
             ),
             React.createElement(
               'div',
               null,
-              'Created: ',
-              this.props.planet.created
-            ),
-            React.createElement(
-              'div',
-              null,
               'Diameter: ',
               this.props.planet.diameter
-            ),
-            React.createElement(
-              'div',
-              null,
-              'Edited: ',
-              this.props.planet.edited
             ),
             React.createElement(
               'div',
@@ -127,7 +115,11 @@ window.SW = window.SW || {};
           { className: currentClass, onClick: function onClick() {
               _this2.toggle();
             } },
-          this.props.planet.name,
+          React.createElement(
+            'div',
+            { className: 'name' },
+            this.props.planet.name
+          ),
           extraInfo
         );
       }
@@ -185,7 +177,7 @@ window.SW = window.SW || {};
         if (this.state != null) {
           theList = React.createElement(
             'ul',
-            null,
+            { className: 'theList' },
             this.state.apiResult.results.map(function (planet, index) {
               return React.createElement(PlanetListItem, { key: index, planet: planet });
             })
@@ -200,7 +192,26 @@ window.SW = window.SW || {};
             null,
             'Planet List'
           ),
-          theList
+          theList,
+          React.createElement(
+            'div',
+            { className: 'text' },
+            React.createElement(
+              'h1',
+              null,
+              'Star Wars Planets'
+            ),
+            React.createElement(
+              'p',
+              { className: 'paragraph' },
+              'Tatooine, Alderaan, Hoth, Bespin, and Yavin are names of Star Wars planets that all fans are quite familiar with nowadays. With Star Wars Rebels and several new movies on their way, we\u2019ll soon get acquainted with new planets we might have never heard of before. Or perhaps the names of these planets will sound familiar after all.'
+            ),
+            React.createElement(
+              'p',
+              { className: 'paragraph' },
+              'The Dark Horse Comics adaptation of The Star Wars brings to life the rough draft from 1974 by George Lucas, and the series enables us to get a better look at planets that appeared in the early imaginings of The Star Wars, such as Aquilae and Ophuchi. With the recent release of The Making of Return of the Jedi the circle of the classic \u201Cmaking of\u201D books by Jonathan Rinzler is complete. This trilogy offers a great amount of information about the different drafts that were written for the films.'
+            )
+          )
         );
       }
     }]);

@@ -45,20 +45,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-p {
-  color: red; }
-
 .planet-list {
   padding: 10px;
   border: 1px solid black;
   background-color: black;
-  color: white; }
+  color: white;
+  font-size: 28px;
+  font-family: 'Galada', cursive;
+  height: 100%;
+  overflow: auto; }
 
 li {
   outline: 1px solid black;
   padding: 10px;
   background-color: white;
-  color: black; }
+  color: black;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  width: 400px; }
 
 .planet div {
   margin-left: 10px; }
@@ -72,10 +76,39 @@ img {
   height: 380px; }
 
 .sw-logo {
-  width: 15%;
-  height: 180px;
+  width: 142px;
+  height: 142px;
   float: left;
   border-radius: 10px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  margin-top: 4px; }
+
+.planet .name {
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px; }
+
+.paragraph {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  padding: 15px;
+  font-size: 18px; }
+
+.theList {
+  width: 33%;
+  float: left; }
+
+.text {
+  width: 60%;
+  float: left; }
+
+header {
+  background-color: gray;
+  height: 30px;
+  position: fixed;
+  width: 100%;
+  font-family: 'Galada', cursive;
+  padding-left: 5px;
+  padding-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */
