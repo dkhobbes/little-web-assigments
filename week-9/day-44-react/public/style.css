@@ -50,16 +50,32 @@ p {
 
 .planet-list {
   padding: 10px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  background-color: black;
+  color: white; }
 
 li {
   outline: 1px solid black;
-  padding: 10px; }
-
-.moreInfo {
-  color: green; }
+  padding: 10px;
+  background-color: white;
+  color: black; }
 
 .planet div {
   margin-left: 10px; }
+
+.star-wars {
+  background-image: url("http://nerdreactor.com/wp-content/uploads/2015/10/star_wars_the_force_awakens_horizontal_poster_header.jpg");
+  background-size: auto; }
+
+img {
+  width: 100%;
+  height: 380px; }
+
+.sw-logo {
+  width: 15%;
+  height: 180px;
+  float: left;
+  border-radius: 10px;
+  margin-right: 5px; }
 
 /*# sourceMappingURL=style.css.map */

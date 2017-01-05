@@ -27,6 +27,7 @@ window.SW = window.SW || {};
         currentClass += ' on';
 
         extraInfo = <div>
+          <img src= "https://s-media-cache-ak0.pinimg.com/736x/58/19/d9/5819d950c07b93e41f314655838038dc.jpg" className="sw-logo"/>
           <div>Climate: {this.props.planet.climate}</div>
           <div>Created: {this.props.planet.created}</div>
           <div>Diameter: {this.props.planet.diameter}</div>

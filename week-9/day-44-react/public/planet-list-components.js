@@ -48,6 +48,7 @@ window.SW = window.SW || {};
           extraInfo = React.createElement(
             'div',
             null,
+            React.createElement('img', { src: 'https://s-media-cache-ak0.pinimg.com/736x/58/19/d9/5819d950c07b93e41f314655838038dc.jpg', className: 'sw-logo' }),
             React.createElement(
               'div',
               null,
