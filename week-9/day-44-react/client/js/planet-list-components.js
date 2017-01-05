@@ -1,7 +1,47 @@
 window.SW = window.SW || {};
 
 (function() {
-  console.log('hi');
+
+  class PlanetListItem extends React.Component {
+
+    constructor() {
+      super();
+      this.state = {
+        isSelected: false
+      };
+    }
+
+    toggle() {
+      console.log('hi');
+      this.setState({
+        isSelected: !this.state.isSelected
+      })
+    }
+
+    render() {
+      var currentClass = 'planet';
+      var extraInfo;
+
+      var selectedClass;
+      if (this.state.isSelected) {
+        currentClass += ' on';
+
+        extraInfo = <div>
+          <div>Climate: {this.props.planet.climate}</div>
+          <div>Created: {this.props.planet.created}</div>
+          <div>Diameter: {this.props.planet.diameter}</div>
+          <div>Edited: {this.props.planet.edited}</div>
+          <div>Gravity: {this.props.planet.gravity}</div>
+          <div>Orbital-Period: {this.props.planet.orbital_period}</div>
+        </div>
+      }
+
+      return <li className={currentClass} onClick={() => {this.toggle(); }}>
+      {this.props.planet.name}
+      {extraInfo}
+      </li>
+    }
+  }
 
   class PlanetListComponent extends React.Component {
 
@@ -14,8 +54,8 @@ window.SW = window.SW || {};
       this.getTheData();
     }
 
-    componentWillunmount() {
-      console.log('AppComponent.ComponentWillunmount');
+    componentWillUnmount() {
+      console.log('AppComponent.ComponentWillUnmount');
     }
 
     getTheData() {
@@ -41,8 +81,8 @@ window.SW = window.SW || {};
 
       if (this.state != null) {
         theList = <ul>
-        {this.state.apiResult.results.map((planet, index) => { return <li key={index}>{planet.name}</li>; })}
-        </ul>
+        {this.state.apiResult.results.map((planet, index) => { return <PlanetListItem key={index} planet={planet}/>; })}
+        </ul>;
       }
 
       return <div className="planet-list">
@@ -50,16 +90,6 @@ window.SW = window.SW || {};
 
         {theList}
       </div>
-    }
-  }
-
-  var mountNode = document.querySelector('#react-root');
-
-  class AppComponent extends React.Component {
-    render() {
-      return <div>
-        <PlanetListComponent />
-      </div>;
     }
   }
 

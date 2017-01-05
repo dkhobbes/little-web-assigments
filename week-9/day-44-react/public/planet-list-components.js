@@ -11,10 +11,98 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 window.SW = window.SW || {};
 
 (function () {
-  console.log('hi');
+  var PlanetListItem = function (_React$Component) {
+    _inherits(PlanetListItem, _React$Component);
 
-  var PlanetListComponent = function (_React$Component) {
-    _inherits(PlanetListComponent, _React$Component);
+    function PlanetListItem() {
+      _classCallCheck(this, PlanetListItem);
+
+      var _this = _possibleConstructorReturn(this, (PlanetListItem.__proto__ || Object.getPrototypeOf(PlanetListItem)).call(this));
+
+      _this.state = {
+        isSelected: false
+      };
+      return _this;
+    }
+
+    _createClass(PlanetListItem, [{
+      key: 'toggle',
+      value: function toggle() {
+        console.log('hi');
+        this.setState({
+          isSelected: !this.state.isSelected
+        });
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _this2 = this;
+
+        var currentClass = 'planet';
+        var extraInfo;
+
+        var selectedClass;
+        if (this.state.isSelected) {
+          currentClass += ' on';
+
+          extraInfo = React.createElement(
+            'div',
+            null,
+            React.createElement(
+              'div',
+              null,
+              'Climate: ',
+              this.props.planet.climate
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Created: ',
+              this.props.planet.created
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Diameter: ',
+              this.props.planet.diameter
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Edited: ',
+              this.props.planet.edited
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Gravity: ',
+              this.props.planet.gravity
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Orbital-Period: ',
+              this.props.planet.orbital_period
+            )
+          );
+        }
+
+        return React.createElement(
+          'li',
+          { className: currentClass, onClick: function onClick() {
+              _this2.toggle();
+            } },
+          this.props.planet.name,
+          extraInfo
+        );
+      }
+    }]);
+
+    return PlanetListItem;
+  }(React.Component);
+
+  var PlanetListComponent = function (_React$Component2) {
+    _inherits(PlanetListComponent, _React$Component2);
 
     function PlanetListComponent() {
       _classCallCheck(this, PlanetListComponent);
@@ -29,9 +117,9 @@ window.SW = window.SW || {};
         this.getTheData();
       }
     }, {
-      key: 'componentWillunmount',
-      value: function componentWillunmount() {
-        console.log('AppComponent.ComponentWillunmount');
+      key: 'componentWillUnmount',
+      value: function componentWillUnmount() {
+        console.log('AppComponent.ComponentWillUnmount');
       }
     }, {
       key: 'getTheData',
@@ -41,14 +129,14 @@ window.SW = window.SW || {};
     }, {
       key: 'getTheData',
       value: function getTheData() {
-        var _this2 = this;
+        var _this4 = this;
 
         $.ajax({
           url: 'http://swapi.co/api/planets'
         }).done(function (data) {
           console.log('got data', data);
 
-          _this2.setState({
+          _this4.setState({
             apiResult: data
           });
         });
@@ -64,11 +152,7 @@ window.SW = window.SW || {};
             'ul',
             null,
             this.state.apiResult.results.map(function (planet, index) {
-              return React.createElement(
-                'li',
-                { key: index },
-                planet.name
-              );
+              return React.createElement(PlanetListItem, { key: index, planet: planet });
             })
           );
         }
@@ -87,31 +171,6 @@ window.SW = window.SW || {};
     }]);
 
     return PlanetListComponent;
-  }(React.Component);
-
-  var mountNode = document.querySelector('#react-root');
-
-  var AppComponent = function (_React$Component2) {
-    _inherits(AppComponent, _React$Component2);
-
-    function AppComponent() {
-      _classCallCheck(this, AppComponent);
-
-      return _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).apply(this, arguments));
-    }
-
-    _createClass(AppComponent, [{
-      key: 'render',
-      value: function render() {
-        return React.createElement(
-          'div',
-          null,
-          React.createElement(PlanetListComponent, null)
-        );
-      }
-    }]);
-
-    return AppComponent;
   }(React.Component);
 
   SW.PlanetListComponent = PlanetListComponent;
