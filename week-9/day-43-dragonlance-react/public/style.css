@@ -54,14 +54,15 @@ body {
 
 .name-api {
   font-weight: bold;
-  font-size: 32px; }
+  font-size: 32px;
+  margin-top: 20px; }
 
 .race-api {
   font-style: italic;
   font-size: 22px; }
 
 .description-api {
-  line-height: 4em; }
+  line-height: 3em; }
 
 .characters-api {
   width: 960px;
@@ -86,7 +87,8 @@ h1 {
   text-align: center;
   font-weight: bold;
   font-size: 36px;
-  color: white; }
+  color: white;
+  text-shadow: 7px 7px rgba(0, 0, 0, 0.3); }
 
 .dragonlance-api {
   text-align: center;
