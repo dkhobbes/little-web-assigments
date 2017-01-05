@@ -83,6 +83,40 @@ window.SW = window.SW || {};
               null,
               'Orbital-Period: ',
               this.props.planet.orbital_period
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Population: ',
+              this.props.planet.population
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Rotation-period: ',
+              this.props.planet.rotation_period
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Surface-Water: ',
+              this.props.planet.surface_water
+            ),
+            React.createElement(
+              'div',
+              null,
+              'Terrain: ',
+              this.props.planet.terrain
+            ),
+            React.createElement(
+              'div',
+              null,
+              React.createElement(
+                'a',
+                { target: '_blank', href: this.props.planet.url },
+                this.props.planet.name,
+                ' URL link'
+              )
             )
           );
         }

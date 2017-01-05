@@ -33,6 +33,12 @@ window.SW = window.SW || {};
           <div>Edited: {this.props.planet.edited}</div>
           <div>Gravity: {this.props.planet.gravity}</div>
           <div>Orbital-Period: {this.props.planet.orbital_period}</div>
+          <div>Population: {this.props.planet.population}</div>
+          <div>Rotation-period: {this.props.planet.rotation_period}</div>
+          <div>Surface-Water: {this.props.planet.surface_water}</div>
+          <div>Terrain: {this.props.planet.terrain}</div>
+          <div><a target="_blank" href={this.props.planet.url}>{this.props.planet.name} URL link</a></div>
+
         </div>
       }
 
@@ -87,7 +93,6 @@ window.SW = window.SW || {};
 
       return <div className="planet-list">
         <h1>Planet List</h1>
-
         {theList}
       </div>
     }
