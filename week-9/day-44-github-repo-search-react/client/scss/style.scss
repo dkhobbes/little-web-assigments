@@ -1,5 +1,21 @@
 @import 'reset';
 
-p {
-  color: red;
+.Title {
+text-align: center;
+margin-top: 20px;
+margin-bottom: 10px;
+font-size: 22px;
+font-weight: bold;
+}
+
+.search-bar {
+margin-left: 45%;
+}
+
+.results {
+  width: 250px;
+}
+
+.box {
+  border: 1px solid black;
 }

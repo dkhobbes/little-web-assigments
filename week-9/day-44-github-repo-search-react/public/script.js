@@ -23,16 +23,6 @@ window.SW = window.SW || {};
     }
 
     _createClass(AppComponent, [{
-      key: 'componentDidMount',
-      value: function componentDidMount() {
-        console.log('AppComponent.componentDidMount');
-      }
-    }, {
-      key: 'componentWillUnmount',
-      value: function componentWillUnmount() {
-        console.log('AppComponent.componentWillUnmount');
-      }
-    }, {
       key: 'render',
       value: function render() {
         console.log('AppComponent.render');

@@ -16,12 +16,21 @@ window.SW = window.SW || {};
     function InputComponent() {
       _classCallCheck(this, InputComponent);
 
-      return _possibleConstructorReturn(this, (InputComponent.__proto__ || Object.getPrototypeOf(InputComponent)).apply(this, arguments));
+      var _this = _possibleConstructorReturn(this, (InputComponent.__proto__ || Object.getPrototypeOf(InputComponent)).call(this));
+
+      _this.state = {
+        apiResult: {
+          items: []
+        }
+      };
+      return _this;
     }
 
     _createClass(InputComponent, [{
       key: 'keyUpHappening',
       value: function keyUpHappening(evt) {
+        var _this2 = this;
+
         console.log('key up happening', evt.keyCode);
 
         if (evt.keyCode === 13) {
@@ -29,23 +38,51 @@ window.SW = window.SW || {};
             url: 'https://api.github.com/search/users?q=' + this.myInput.value
           }).done(function (data) {
             console.log('github data?', data);
+            _this2.setState({
+              apiResult: data
+            });
           });
         }
       }
     }, {
       key: 'render',
       value: function render() {
-        var _this2 = this;
+        var _this3 = this;
+
+        console.log('render', this.state);
 
         return React.createElement(
           'div',
-          null,
-          'Input goes here',
+          { className: 'search-bar' },
           React.createElement('input', { onKeyUp: function onKeyUp(evt) {
-              _this2.keyUpHappening(evt);
+              _this3.keyUpHappening(evt);
             }, ref: function ref(input) {
-              _this2.myInput = input;
-            } })
+              _this3.myInput = input;
+            } }),
+          React.createElement(
+            'ul',
+            { className: 'results' },
+            this.state.apiResult.items.map(function (info) {
+              return React.createElement(
+                'li',
+                { className: 'box', key: info.id },
+                React.createElement(
+                  'div',
+                  { className: 'name-api' },
+                  info.login
+                ),
+                React.createElement(
+                  'div',
+                  { className: 'login-api' },
+                  React.createElement(
+                    'a',
+                    { target: '_blank', href: info.html_url },
+                    info.html_url
+                  )
+                )
+              );
+            })
+          )
         );
       }
     }]);

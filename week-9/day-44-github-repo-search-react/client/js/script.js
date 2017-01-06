@@ -5,14 +5,6 @@ window.SW = window.SW || {};
 
   class AppComponent extends React.Component {
 
-    componentDidMount() {
-     console.log('AppComponent.componentDidMount');
-   }
-
-   componentWillUnmount() {
-     console.log('AppComponent.componentWillUnmount');
-   }
-
     render() {
       console.log('AppComponent.render');
 
