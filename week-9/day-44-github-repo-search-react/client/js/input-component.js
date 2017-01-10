@@ -12,7 +12,7 @@ class InputComponent extends React.Component {
     }
   }
 
-  
+
 
   keyUpHappening(evt) {
       console.log('key up happening', evt.keyCode);
