@@ -21,12 +21,23 @@ window.SW = window.SW || {};
 
     getTheData() {
       $.ajax({
-        url: 'http://api.brewerydb.com/v2/?key=f4b03113073283a320e1c5d0630a4d0d',
-        dataType: 'jsonp',
-        jsonp: 'jsonp'
+        url: "/api/beer"
+
       })
       .done((data) => {
         console.log('got data', data);
+
+        var dataAsObjects = JSON.parse(data);
+        var beerUL = document.querySelector(".beer-info");
+        console.log('beerMe', dataAsObjects);
+
+        dataAsObjects.data.forEach(function(beerMe){
+          console.log('beerMe', dataAsObjects);
+          var li = document.createElement('li');
+          li.textContent = beerMe.name;
+          beerUL.appendChild(li);
+        });
+
 
         this.setState({
           apiResult: data
@@ -39,7 +50,7 @@ window.SW = window.SW || {};
 
       if (this.state != null) {
         theList = <ul className="theList">
-        {this.state.apiResult.results.map((beer, index) => { return <BeerStuff key={index} beer={beer}/>; })}
+        {this.state.apiResult.data.map((beer, index) => { return <BeerStuff key={index} beer={beer}/>; })}
         </ul>;
       }
 
