@@ -41,7 +41,8 @@ window.SW = window.SW || {};
         var _this2 = this;
 
         $.ajax({
-          url: 'http://api.brewerydb.com/v2/'
+          url: 'http://api.brewerydb.com/v2/?key=f4b03113073283a320e1c5d0630a4d0d',
+          dataType: 'jsonp'
         }).done(function (data) {
           console.log('got data', data);
 
@@ -73,7 +74,6 @@ window.SW = window.SW || {};
             null,
             'Beer Test'
           ),
-          theList,
           React.createElement(
             'div',
             { className: 'text' },

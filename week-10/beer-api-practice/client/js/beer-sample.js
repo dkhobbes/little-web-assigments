@@ -21,7 +21,8 @@ window.SW = window.SW || {};
 
     getTheData() {
       $.ajax({
-        url: 'http://api.brewerydb.com/v2/'
+        url: 'http://api.brewerydb.com/v2/?key=f4b03113073283a320e1c5d0630a4d0d',
+        dataType: 'jsonp'
       })
       .done((data) => {
         console.log('got data', data);
@@ -44,7 +45,6 @@ window.SW = window.SW || {};
       return <div className="planet-list">
             <h1>Beer Test</h1>
 
-              {theList}
               <div className="text">
               <h1>Beer Samples</h1>
               </div>
