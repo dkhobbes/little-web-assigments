@@ -55,7 +55,7 @@ setInterval(function() {
     x+= 3;
   }
   else {
-    x+= 3;
+    x-= 3;
   }
   if (x > 400) {
     direction = 'left';
