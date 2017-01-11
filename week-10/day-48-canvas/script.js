@@ -42,5 +42,32 @@ context.closePath();
 context.fill();
 context.stroke();
 
+//Canvas 2
+
 var canvas2 = document.querySelector('#canvas-2');
 var context = canvas2.getContext('2d');
+
+var x = 0;
+var direction = 'right';
+
+setInterval(function() {
+  if (direction === 'right') {
+    x+= 3;
+  }
+  else {
+    x+= 3;
+  }
+  if (x > 400) {
+    direction = 'left';
+  }
+  else if (x < 0) {
+    direction = 'right';
+  }
+
+  context.clearRect(0, 0, 400, 400);
+
+  context.beginPath();
+  context.arc(x, 100, 25, .25 * Math.PI, 1.75 * Math.PI, false);
+  context.lineTo(x, 100);
+  context.fill();
+}, 10);
