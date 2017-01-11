@@ -22,7 +22,8 @@ window.SW = window.SW || {};
     getTheData() {
       $.ajax({
         url: 'http://api.brewerydb.com/v2/?key=f4b03113073283a320e1c5d0630a4d0d',
-        dataType: 'jsonp'
+        dataType: 'jsonp',
+        jsonp: 'jsonp'
       })
       .done((data) => {
         console.log('got data', data);
