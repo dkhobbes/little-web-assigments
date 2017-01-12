@@ -48,4 +48,15 @@ table {
 p {
   color: red; }
 
+.beer-info {
+  padding: 15px; }
+
+.beer-info li {
+  padding: 5px;
+  border: 1px solid black;
+  width: 400px; }
+
+.search-bar {
+  margin-left: 15px; }
+
 /*# sourceMappingURL=style.css.map */

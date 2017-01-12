@@ -33,11 +33,6 @@ window.SW = window.SW || {};
     }, {
       key: 'getTheData',
       value: function getTheData() {
-        console.log('load the planets');
-      }
-    }, {
-      key: 'getTheData',
-      value: function getTheData() {
         var _this2 = this;
 
         $.ajax({
@@ -71,7 +66,7 @@ window.SW = window.SW || {};
           theList = React.createElement(
             'ul',
             { className: 'theList' },
-            this.state.apiResult.data.map(function (beer, index) {
+            this.state.apiResult.map(function (beer, index) {
               return React.createElement(BeerStuff, { key: index, beer: beer });
             })
           );
@@ -80,20 +75,7 @@ window.SW = window.SW || {};
         return React.createElement(
           'div',
           { className: 'planet-list' },
-          React.createElement(
-            'h1',
-            null,
-            'Beer Test'
-          ),
-          React.createElement(
-            'div',
-            { className: 'text' },
-            React.createElement(
-              'h1',
-              null,
-              'Beer Samples'
-            )
-          )
+          React.createElement('div', { className: 'text' })
         );
       }
     }]);

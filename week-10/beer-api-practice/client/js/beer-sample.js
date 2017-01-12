@@ -1,5 +1,8 @@
 window.SW = window.SW || {};
 (function() {
+
+
+
   class BeerSampleComponent extends React.Component{
 
     constructor() {
@@ -15,9 +18,6 @@ window.SW = window.SW || {};
       console.log('AppComponent.ComponentWillUnmount');
     }
 
-    getTheData() {
-      console.log('load the planets');
-    }
 
     getTheData() {
       $.ajax({
@@ -50,15 +50,13 @@ window.SW = window.SW || {};
 
       if (this.state != null) {
         theList = <ul className="theList">
-        {this.state.apiResult.data.map((beer, index) => { return <BeerStuff key={index} beer={beer}/>; })}
+        {this.state.apiResult.map((beer, index) => { return <BeerStuff key={index} beer={beer}/>; })}
         </ul>;
       }
 
       return <div className="planet-list">
-            <h1>Beer Test</h1>
 
               <div className="text">
-              <h1>Beer Samples</h1>
               </div>
           </div>
     }
