@@ -6,13 +6,23 @@
     <meta charset="utf-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0px;
+      }
+    </style>
   </head>
 
   <body>
 
-    <h1>Templated Project</h1>
-
-    <p>If this is red, the css is generated and working. If you see text below, then React is up and running and all is probably well in the world.</p>
 
     <input class="search-bar" placeholder="type in your beer" />
     <ul class="beer-info">
@@ -20,6 +30,19 @@
     </ul>
 
     <div id="react-root"></div>
+    <div id="map"></div>
+
+    <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 38.032936, lng: -97.9130348},
+        zoom: 5
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZY0c162bVcdL_3HsFc8XKCGiQlvfLT1A&callback=initMap"
+  async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.js"></script>
