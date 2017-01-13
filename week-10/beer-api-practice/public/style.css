@@ -49,12 +49,16 @@ p {
   color: red; }
 
 .beer-info {
-  padding: 15px; }
+  padding: 15px;
+  z-index: 1;
+  position: fixed; }
 
 .beer-info li {
   padding: 5px;
   border: 1px solid black;
-  width: 400px; }
+  width: 400px;
+  background-color: white;
+  color: black; }
 
 .search-bar {
   margin-left: 15px; }
