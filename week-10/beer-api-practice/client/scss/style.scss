@@ -21,3 +21,25 @@ p {
 .search-bar {
 margin-left: 15px;
 }
+
+header {
+  background-image: url("http://static.wixstatic.com/media/3a2b8a_eacb5a8513be4664ab079dbdc64bf530~mv2.jpg");
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+
+input {
+  left: 5px;
+  top: 15%;
+  position: fixed;
+}
+
+.title {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
