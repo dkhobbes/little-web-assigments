@@ -34,7 +34,7 @@ window.SW = window.SW || {};
           dataAsObjects.data.forEach(function(beerMe){
             console.log('beerMe', dataAsObjects);
             var li = document.createElement('li');
-            li.textContent = beerMe.breweries.name;
+            li.textContent = beerMe.name;
             beerUL.appendChild(li);
           });
 
