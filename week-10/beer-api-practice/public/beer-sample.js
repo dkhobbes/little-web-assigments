@@ -37,7 +37,6 @@ window.SW = window.SW || {};
 
         $.ajax({
           url: "/api/beer"
-
         }).done(function (data) {
           console.log('got data', data);
 

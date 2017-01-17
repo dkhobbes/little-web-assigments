@@ -19,30 +19,30 @@ window.SW = window.SW || {};
     }
 
 
-    getTheData() {
-      $.ajax({
-        url: "/api/beer"
+    getTheData(evt) {
+      if (evt.keyCode === 13) {
+        $.ajax({
+          url: "/api/beer"
+        })
+        .done((data) => {
+          console.log('got data', data);
 
-      })
-      .done((data) => {
-        console.log('got data', data);
-
-        var dataAsObjects = JSON.parse(data);
-        var beerUL = document.querySelector(".beer-info");
-        console.log('beerMe', dataAsObjects);
-
-        dataAsObjects.data.forEach(function(beerMe){
+          var dataAsObjects = JSON.parse(data);
+          var beerUL = document.querySelector(".beer-info");
           console.log('beerMe', dataAsObjects);
-          var li = document.createElement('li');
-          li.textContent = beerMe.name;
-          beerUL.appendChild(li);
-        });
 
+          dataAsObjects.data.forEach(function(beerMe){
+            console.log('beerMe', dataAsObjects);
+            var li = document.createElement('li');
+            li.textContent = beerMe.name;
+            beerUL.appendChild(li);
+          });
 
-        this.setState({
-          apiResult: data
+          this.setState({
+            apiResult: data
+          });
         });
-      });
+      }
     }
 
     render(){
@@ -54,11 +54,8 @@ window.SW = window.SW || {};
         </ul>;
       }
 
-      return <div className="planet-list">
-
-              <div className="text">
-              </div>
-          </div>
+      return <div className="search-bar">
+        <input onKeyUp={(evt) => { this.getTheData(evt); }} ref={(input) => { this.myInput = input; }} />
     }
   }
   SW.BeerSampleComponent = BeerSampleComponent;
