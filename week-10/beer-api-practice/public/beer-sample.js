@@ -32,33 +32,37 @@ window.SW = window.SW || {};
       }
     }, {
       key: 'getTheData',
-      value: function getTheData() {
+      value: function getTheData(evt) {
         var _this2 = this;
 
-        $.ajax({
-          url: "/api/beer"
-        }).done(function (data) {
-          console.log('got data', data);
+        if (evt.keyCode === 13) {
+          $.ajax({
+            url: "/api/beer"
+          }).done(function (data) {
+            console.log('got data', data);
 
-          var dataAsObjects = JSON.parse(data);
-          var beerUL = document.querySelector(".beer-info");
-          console.log('beerMe', dataAsObjects);
-
-          dataAsObjects.data.forEach(function (beerMe) {
+            var dataAsObjects = JSON.parse(data);
+            var beerUL = document.querySelector(".beer-info");
             console.log('beerMe', dataAsObjects);
-            var li = document.createElement('li');
-            li.textContent = beerMe.name;
-            beerUL.appendChild(li);
-          });
 
-          _this2.setState({
-            apiResult: data
+            dataAsObjects.data.forEach(function (beerMe) {
+              console.log('beerMe', dataAsObjects);
+              var li = document.createElement('li');
+              li.textContent = beerMe.breweries.name;
+              beerUL.appendChild(li);
+            });
+
+            _this2.setState({
+              apiResult: data
+            });
           });
-        });
+        }
       }
     }, {
       key: 'render',
       value: function render() {
+        var _this3 = this;
+
         console.log('render', this.state);
 
         if (this.state != null) {
@@ -73,8 +77,12 @@ window.SW = window.SW || {};
 
         return React.createElement(
           'div',
-          { className: 'planet-list' },
-          React.createElement('div', { className: 'text' })
+          { className: 'search-bar' },
+          React.createElement('input', { onKeyUp: function onKeyUp(evt) {
+              _this3.getTheData(evt);
+            }, ref: function ref(input) {
+              _this3.myInput = input;
+            } })
         );
       }
     }]);

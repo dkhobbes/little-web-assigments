@@ -34,7 +34,7 @@ window.SW = window.SW || {};
           dataAsObjects.data.forEach(function(beerMe){
             console.log('beerMe', dataAsObjects);
             var li = document.createElement('li');
-            li.textContent = beerMe.name;
+            li.textContent = beerMe.breweries.name;
             beerUL.appendChild(li);
           });
 
@@ -56,6 +56,7 @@ window.SW = window.SW || {};
 
       return <div className="search-bar">
         <input onKeyUp={(evt) => { this.getTheData(evt); }} ref={(input) => { this.myInput = input; }} />
+        </div>
     }
   }
   SW.BeerSampleComponent = BeerSampleComponent;
