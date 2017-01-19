@@ -35,42 +35,49 @@ window.SW = window.SW || {};
       value: function getTheData(evt) {
         var _this2 = this;
 
-        if (evt.keyCode === 13) {
-          $.ajax({
-            url: "/api/beer"
-          }).done(function (data) {
-            console.log('got data', data);
+        // if (evt.keyCode === 13) {
+        $.ajax({
+          url: "/api/beer"
+        }).done(function (data) {
+          // console.log('got data', data);
 
-            var dataAsObjects = JSON.parse(data);
-            var beerUL = document.querySelector(".beer-info");
-            console.log('beerMe', dataAsObjects);
+          var dataAsObjects = JSON.parse(data);
+          // var beerUL = document.querySelector(".beer-info");
+          // console.log('beerMe', dataAsObjects);
+          //
+          // dataAsObjects.data.forEach(function(beerMe){
+          //   console.log('beerMe', dataAsObjects);
+          //   var li = document.createElement('li');
+          //   li.textContent = beerMe.name;
+          //   beerUL.appendChild(li);
+          // });
 
-            dataAsObjects.data.forEach(function (beerMe) {
-              console.log('beerMe', dataAsObjects);
-              var li = document.createElement('li');
-              li.textContent = beerMe.name;
-              beerUL.appendChild(li);
-            });
-
-            _this2.setState({
-              apiResult: data
-            });
+          _this2.setState({
+            apiResult: dataAsObjects
           });
-        }
+        });
+        // }
       }
     }, {
       key: 'render',
       value: function render() {
         var _this3 = this;
 
-        console.log('render', this.state);
+        // console.log('render', this.state);
+        var theList;
 
         if (this.state != null) {
+          console.log(this.state);
           theList = React.createElement(
             'ul',
             { className: 'theList' },
-            this.state.apiResult.map(function (beer, index) {
-              return React.createElement(BeerStuff, { key: index, beer: beer });
+            this.state.apiResult.data.map(function (beer, index) {
+              return React.createElement(
+                'li',
+                { key: index },
+                ' ',
+                beer.abv
+              );
             })
           );
         }
@@ -78,6 +85,7 @@ window.SW = window.SW || {};
         return React.createElement(
           'div',
           { className: 'search-bar' },
+          '// ',
           React.createElement('input', { onKeyUp: function onKeyUp(evt) {
               _this3.getTheData(evt);
             }, ref: function ref(input) {

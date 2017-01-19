@@ -45,9 +45,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-p {
-  color: red; }
-
 .beer-info {
   padding: 15px;
   z-index: 1;
@@ -60,26 +57,36 @@ p {
   background-color: white;
   color: black; }
 
-.search-bar {
-  margin-left: 15px; }
+.side-bar {
+  width: 15%;
+  height: 100%;
+  background-color: green;
+  float: left; }
 
-header {
-  background-image: url("http://static.wixstatic.com/media/3a2b8a_eacb5a8513be4664ab079dbdc64bf530~mv2.jpg");
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 150px; }
+#Title-beer {
+  font-size: 24px;
+  font-weight: bold; }
 
-input {
-  left: 5px;
-  top: 15%;
-  position: fixed; }
+#control {
+  float: left;
+  color: black;
+  width: 15%;
+  height: 100%;
+  background-color: lightblue; }
 
-.title {
-  padding-top: 20px;
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  color: white; }
+#control h2, p {
+  padding: 20px 30px 10px 30px; }
+
+#control input[type=text] {
+  width: 60%;
+  height: 30px;
+  font-size: 16px;
+  background-color: azure;
+  border: 1px solid black;
+  margin-left: 30px; }
+
+#control button {
+  margin-left: 30px;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */
