@@ -9,6 +9,7 @@
        * element that contains the map. */
       #map {
         height: 100%;
+        width: 85%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -16,9 +17,56 @@
         margin: 0;
         padding: 0px;
       }
+
+      .side-bar {
+        width: 15%;
+        height: 100%;
+        background-color: green;
+        float: left;
+      }
+
+      #control{
+		float: left;
+		color: black;
+		width: 15%;
+    height: 100%;
+    background-color: lightblue;
+		/*padding: 50px 30px 10px 30px;*/
+	}
+
+	#control input[type=text]{
+		width: 60%;
+		height: 40px;
+		font-size: 24px;
+		background-color: lightgrey;
+		border: 1px solid black;
+	}
+
+  #control button {
+
+  }
+
     </style>
   </head>
   <body>
+    <div id="control">
+		<h2>Find Local Breweries</h2>
+		<p>We'll help you locate your closest brewery. Simply type in your zip code below to begin...</p>
+		<form method="get" id="chooseZip">
+			<!-- <button type="submit" class="learnButton">Use current location</button> -->
+			<div class="clear"></div>
+			<div class="zipSearch">
+				<input id="textZip" type="text" name="zip" placeholder="enter your zip code" autofocus>
+				<button type="submit" class="learnButton">Search</button>
+			</div>
+			<div class="clear"></div>
+		</form>
+
+
+
+		<div class="clear"></div>
+		<div id="results"></div>
+	</div>
     <div id="map"></div>
     <script>
       var map;
