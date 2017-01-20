@@ -53,11 +53,12 @@ window.SW = window.SW || {};
         console.log(this.state);
         theList = <ul className="theList">
 
-        {this.state.apiResult.data.map((beer, index) => { return <li key={index}> {beer.abv}</li>  })}
+        {this.state.apiResult.data.map((nested) => { return nested.breweries.map((beer, index) => {return <li key={index}> {beer.name} (status: {beer.status})</li> }) })}
         </ul>;
       }
 
-      return <div className="search-bar">
+      return <div>
+        {theList}
         </div>
     }
   }

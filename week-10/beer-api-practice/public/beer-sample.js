@@ -69,18 +69,27 @@ window.SW = window.SW || {};
           theList = React.createElement(
             'ul',
             { className: 'theList' },
-            this.state.apiResult.data.map(function (beer, index) {
-              return React.createElement(
-                'li',
-                { key: index },
-                ' ',
-                beer.abv
-              );
+            this.state.apiResult.data.map(function (nested) {
+              return nested.breweries.map(function (beer, index) {
+                return React.createElement(
+                  'li',
+                  { key: index },
+                  ' ',
+                  beer.name,
+                  ' (status: ',
+                  beer.status,
+                  ')'
+                );
+              });
             })
           );
         }
 
-        return React.createElement('div', { className: 'search-bar' });
+        return React.createElement(
+          'div',
+          null,
+          theList
+        );
       }
     }]);
 

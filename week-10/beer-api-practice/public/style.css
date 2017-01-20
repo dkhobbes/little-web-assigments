@@ -114,4 +114,12 @@ table {
   text-align: center;
   padding: 10px; }
 
+.theList {
+  padding: 10px; }
+
+.theList li {
+  color: black;
+  background-color: white;
+  padding: 5px; }
+
 /*# sourceMappingURL=style.css.map */
