@@ -61,8 +61,6 @@ window.SW = window.SW || {};
     }, {
       key: 'render',
       value: function render() {
-        var _this3 = this;
-
         // console.log('render', this.state);
         var theList;
 
@@ -82,16 +80,7 @@ window.SW = window.SW || {};
           );
         }
 
-        return React.createElement(
-          'div',
-          { className: 'search-bar' },
-          '// ',
-          React.createElement('input', { onKeyUp: function onKeyUp(evt) {
-              _this3.getTheData(evt);
-            }, ref: function ref(input) {
-              _this3.myInput = input;
-            } })
-        );
+        return React.createElement('div', { className: 'search-bar' });
       }
     }]);
 
