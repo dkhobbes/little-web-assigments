@@ -70,15 +70,30 @@ window.SW = window.SW || {};
             'ul',
             { className: 'theList' },
             this.state.apiResult.data.map(function (nested) {
-              return nested.breweries.map(function (beer, index) {
+              return nested.breweries.map(function (brewery, index) {
                 return React.createElement(
                   'li',
                   { key: index },
                   ' ',
-                  beer.name,
+                  brewery.name,
                   ' (status: ',
-                  beer.status,
-                  ')'
+                  brewery.status,
+                  ')',
+                  React.createElement(
+                    'ol',
+                    null,
+                    brewery.locations.map(function (location, index) {
+                      return React.createElement(
+                        'li',
+                        { key: index },
+                        ' (latitude: ',
+                        location.latitude,
+                        ', longitude: ',
+                        location.longitude,
+                        ') '
+                      );
+                    })
+                  )
                 );
               });
             })
