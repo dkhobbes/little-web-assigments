@@ -1,30 +1,26 @@
-// // window.SW = window.SW || {};
-// // (function() {
-// //
-// //   class Documentation1 extends React.Component {
-// //
-// //
-// //     render() {
-// //      var list;
-//           if (this.state !== null) {
-//             list = <ul>
-//               {this.state.apiData.results.map((beer, index) => {
-//                 return <li key={index}>{beer.name} (abv: {person.abv})
-//                   <h3>Starships</h3>
-//                   <ol>
-//                     {person.starships.map((ship, index) => {
-//                       return <li key={index}>{ship}</li>
-//                     })}
-//                   </ol>
-//                 </li>
-//               })}
-//             </ul>
-// //     }
-// //     return <div>
-// //             <h2>Example 1:</h2>
-// //             <p>This is for whatever</p>
-// //             {list}
-// //           </div>
-// //   }
-// //   window.SW.Documentation1 = Documentation1;
-// // })();
+// render(){
+//   // console.log('render', this.state);
+//   var theList;
+//
+//   if (this.state != null) {
+//     console.log(this.state);
+//     theList = <ul className="theList">
+//
+//     {this.state.apiResult.data.map((nested) => {
+//       return nested.breweries.map((brewery, index) => {
+//         return <li key={index}> {brewery.name} (status: {brewery.status})
+//           <ol>
+//             {brewery.locations.map((location, index) => {
+//               return <li key={index}> (latitude: {location.latitude}, longitude: {location.longitude}) </li>
+//             })}
+//           </ol>
+//         </li>
+//       })
+//     })}
+//     </ul>;
+//   }
+//
+//   return <div>
+//     {theList}
+//     </div>
+// }
