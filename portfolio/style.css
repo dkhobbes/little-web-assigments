@@ -72,3 +72,16 @@ end of reset
 header div:hover {
   border-bottom: 2px solid rgb(0,150,200);
 }
+
+h1 {
+  margin-top: 60px;
+  font-size: 200px;
+}
+
+.ending-bar {
+  width: 960px;
+  border-bottom: 2px solid rgb(0,50,100);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
