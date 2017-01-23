@@ -63,6 +63,7 @@ end of reset
   float: left;
   text-align: center;
   margin-left: 5px;
+	font-family: font-family: 'Lato', sans-serif;
 }
 
 .nav-1 {
@@ -77,9 +78,17 @@ header div:hover {
   margin-top: 60px;
   font-size: 140px;
 	font-family: 'Monoton', cursive;
-
-  /*color: rgb(0,50,100);*/
+	text-align: center;
+  color: rgb(0,50,100);
 }
+
+.info-me {
+	margin: 0 auto;
+	width: 960px;
+}
+
+#space {
+padding-top: 30px;}
 
 .ending-bar {
   width: 960px;
@@ -96,6 +105,7 @@ footer {
 	height: 100px;
 	width: 100%;
 	margin-top: 30px;
+	font-family: 'Lato', sans-serif;
 }
 
 footer img {
@@ -106,7 +116,16 @@ footer img {
 
 #copywrite {
 	margin-top: 40px;
+	font-family: 'Lato', sans-serif;
 }
+
+.project {
+	width: 200px;
+	height: 200px;
+	outline: 1px solid black;
+}
+
+
 /*adding in show more and show less */
 
 .container{
@@ -115,7 +134,7 @@ footer img {
   transition-duration: 2s;
   overflow: hidden;
   font-family: sans-serif;
-  width: 60%;
+  width: 100%;
   margin-top: 25px;
   /*margin-left: 20px;
   margin-right: 20px;*/
@@ -129,6 +148,7 @@ span{
   font-size: 13px;
   padding-top: 5px;
   line-height: 1.5em;
+	font-family: 'Lato', sans-serif;
 }
 
 .read-more-trigger{
@@ -157,13 +177,14 @@ span{
   font-size: 13px;
   padding-left: 5px;
   display: inline;
+	font-family: 'Lato', sans-serif;
 }
 
 .show-container{
   transition-property: overflow, max-height;
-  font-family: sans-serif;
   margin-top: 25px;
-  width: 60%;
+  width: 100%;
+	font-family: 'Lato', sans-serif;
   /*margin-left: 20px;
   margin-right: 20px;*/
 }
