@@ -75,7 +75,9 @@ header div:hover {
 
 #name-holder {
   margin-top: 60px;
-  font-size: 200px;
+  font-size: 140px;
+	font-family: 'Monoton', cursive;
+
   /*color: rgb(0,50,100);*/
 }
 
