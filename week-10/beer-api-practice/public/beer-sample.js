@@ -10,6 +10,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 window.SW = window.SW || {};
 (function () {
+  var breweryId = []; //returned from the API
+  var allLatlng = []; //returned from the API
+  var allMarkers = []; //returned from the API
+  var breweryName = []; //returned from the API
+  var infowindow = null;
+  var pos;
+  var userCords;
+  var tempMarkerHolder = [];
+
   var BeerSampleComponent = function (_React$Component) {
     _inherits(BeerSampleComponent, _React$Component);
 
@@ -26,11 +35,6 @@ window.SW = window.SW || {};
         this.getTheData();
       }
     }, {
-      key: 'componentWillUnmount',
-      value: function componentWillUnmount() {
-        console.log('AppComponent.ComponentWillUnmount');
-      }
-    }, {
       key: 'getTheData',
       value: function getTheData(evt) {
         var _this2 = this;
@@ -39,10 +43,33 @@ window.SW = window.SW || {};
         $.ajax({
           url: "/api/beer"
         }).done(function (data) {
-          // console.log('got data', data);
+          console.log('got data');
 
           var dataAsObjects = JSON.parse(data);
+          //Start geolocation
+          if (navigator.geolocation) {
+            var error = function error(err) {
+              // console.warn('ERROR(' + err.code + '): ' + err.message);
+              console.log("error-test");
+            };
 
+            var success = function success(pos) {
+              userCords = pos.coords;
+              // return userCords;
+              console.log("sucess-test", pos);
+            };
+
+            // Get the user's current position
+
+
+            console.log(navigator.geolocation);
+
+            navigator.geolocation.getCurrentPosition(success, error);
+            // console.log(pos.latitude + " " + pos.longitude);
+          } else {
+            alert('Geolocation is not supported in your browser');
+          }
+          //End Geo location
           _this2.setState({
             apiResult: dataAsObjects
           });
