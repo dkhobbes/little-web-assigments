@@ -116,12 +116,14 @@ footer img {
 
 #copywrite {
 	margin-top: 40px;
+	margin-left: 20px;
+	float: left;
 	font-family: 'Lato', sans-serif;
 }
 
 .project {
-	width: 200px;
-	height: 200px;
+	width: 350px;
+	height: 250px;
 	outline: 1px solid black;
 }
 
