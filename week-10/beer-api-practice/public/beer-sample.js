@@ -42,15 +42,6 @@ window.SW = window.SW || {};
           // console.log('got data', data);
 
           var dataAsObjects = JSON.parse(data);
-          // var beerUL = document.querySelector(".beer-info");
-          // console.log('beerMe', dataAsObjects);
-          //
-          // dataAsObjects.data.forEach(function(beerMe){
-          //   console.log('beerMe', dataAsObjects);
-          //   var li = document.createElement('li');
-          //   li.textContent = beerMe.name;
-          //   beerUL.appendChild(li);
-          // });
 
           _this2.setState({
             apiResult: dataAsObjects
@@ -69,34 +60,18 @@ window.SW = window.SW || {};
           theList = React.createElement(
             'ul',
             { className: 'theList' },
-            this.state.apiResult.data.map(function (nested) {
-              return nested.breweries.map(function (brewery, index) {
-                return React.createElement(
-                  'li',
-                  { key: index },
-                  ' ',
-                  brewery.name,
-                  ' (status: ',
-                  brewery.status,
-                  ')',
-                  React.createElement(
-                    'ol',
-                    null,
-                    brewery.locations.map(function (location, index) {
-                      return React.createElement(
-                        'li',
-                        { key: index },
-                        ' (latitude: ',
-                        location.latitude,
-                        ', longitude: ',
-                        location.longitude,
-                        ') '
-                      );
-                    })
-                  )
-                );
-              });
-            })
+            this.state.apiResult.data.map(function (brewery, index) {
+              return React.createElement(
+                'li',
+                { key: index },
+                ' (latitude: ',
+                brewery.latitude,
+                ') (longitude: ',
+                brewery.longitude,
+                ')'
+              );
+            }),
+            ')}'
           );
         }
 

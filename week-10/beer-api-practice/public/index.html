@@ -6,23 +6,6 @@
     <meta charset="utf-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-        width: 85%;
-
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0px;
-      }
-
-
-    </style>
   </head>
 
   <body>
@@ -34,19 +17,19 @@
       <!-- <button type="submit" class="learnButton">Use current location</button> -->
       <div class="clear"></div>
       <div class="zipSearch">
-        <input id="textZip" type="text" name="zip" placeholder="enter zip code" autofocus>
-        <button type="submit" class="learnButton">Search</button>
+        <button type="submit" class="learnButton">Use current location</button>
+        <!-- <input id="textZip" type="text" name="zip" placeholder="enter zip code" autofocus>
+        <button type="submit" class="learnButton">Search</button> -->
       </div>
       <div class="clear"></div>
     </form>
 
-    <div class="clear"></div>
-    <div id="results"></div>
- </div>
+    <!-- <div class="clear"></div>
+    <div id="results"></div> -->
+    </div>
 
 
     <ul class="beer-info"></ul>
-
     <div id="react-root"></div>
     <div id="map"></div>
     <div class="example"></div>
@@ -65,7 +48,7 @@
         zoom: 5
       });
     }
-  </script>
+    </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZY0c162bVcdL_3HsFc8XKCGiQlvfLT1A&callback=initMap"
   async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
