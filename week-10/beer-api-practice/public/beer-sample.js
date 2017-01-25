@@ -102,11 +102,7 @@ window.SW = window.SW || {};
           );
         }
 
-        return React.createElement(
-          'div',
-          null,
-          theList
-        );
+        return React.createElement('div', null);
       }
     }]);
 

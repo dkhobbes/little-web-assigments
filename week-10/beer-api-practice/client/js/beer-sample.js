@@ -76,7 +76,7 @@ window.SW = window.SW || {};
       }
 
       return <div>
-        {theList}
+        {/*{theList}*/}
         </div>
     }
   }
