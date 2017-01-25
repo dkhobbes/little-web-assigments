@@ -56,7 +56,7 @@ window.SW = window.SW || {};
             var success = function success(pos) {
               userCords = pos.coords;
               // return userCords;
-              console.log("sucess-test", pos);
+              console.log("sucess-test", pos.coords);
             };
 
             // Get the user's current position
