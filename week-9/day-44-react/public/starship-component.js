@@ -11,13 +11,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 window.SW = window.SW || {};
 
 (function () {
-  var PlanetListItem = function (_React$Component) {
-    _inherits(PlanetListItem, _React$Component);
+  var StarshipListItem = function (_React$Component) {
+    _inherits(StarshipListItem, _React$Component);
 
-    function PlanetListItem() {
-      _classCallCheck(this, PlanetListItem);
+    function StarshipListItem() {
+      _classCallCheck(this, StarshipListItem);
 
-      var _this = _possibleConstructorReturn(this, (PlanetListItem.__proto__ || Object.getPrototypeOf(PlanetListItem)).call(this));
+      var _this = _possibleConstructorReturn(this, (StarshipListItem.__proto__ || Object.getPrototypeOf(StarshipListItem)).call(this));
 
       _this.state = {
         isSelected: false
@@ -25,7 +25,7 @@ window.SW = window.SW || {};
       return _this;
     }
 
-    _createClass(PlanetListItem, [{
+    _createClass(StarshipListItem, [{
       key: 'toggle',
       value: function toggle() {
         console.log('hi');
@@ -38,7 +38,7 @@ window.SW = window.SW || {};
       value: function render() {
         var _this2 = this;
 
-        var currentClass = 'planet';
+        var currentClass = 'starship';
         var extraInfo;
 
         var selectedClass;
@@ -52,58 +52,22 @@ window.SW = window.SW || {};
             React.createElement(
               'div',
               { className: 'climate' },
-              'Climate: ',
-              this.props.planet.climate
+              'Name: ',
+              this.props.starship.name
             ),
             React.createElement(
               'div',
               null,
-              'Diameter: ',
-              this.props.planet.diameter
-            ),
-            React.createElement(
-              'div',
-              null,
-              'Gravity: ',
-              this.props.planet.gravity
-            ),
-            React.createElement(
-              'div',
-              null,
-              'Orbital-Period: ',
-              this.props.planet.orbital_period
-            ),
-            React.createElement(
-              'div',
-              null,
-              'Population: ',
-              this.props.planet.population
-            ),
-            React.createElement(
-              'div',
-              null,
-              'Rotation-period: ',
-              this.props.planet.rotation_period
-            ),
-            React.createElement(
-              'div',
-              null,
-              'Surface-Water: ',
-              this.props.planet.surface_water
-            ),
-            React.createElement(
-              'div',
-              null,
-              'Terrain: ',
-              this.props.planet.terrain
+              'Model: ',
+              this.props.starship.model
             ),
             React.createElement(
               'div',
               null,
               React.createElement(
                 'a',
-                { target: '_blank', href: this.props.planet.url },
-                this.props.planet.name,
+                { target: '_blank', href: this.props.starship.url },
+                this.props.starship.name,
                 ' URL link'
               )
             )
@@ -118,26 +82,26 @@ window.SW = window.SW || {};
           React.createElement(
             'div',
             { className: 'name' },
-            this.props.planet.name
+            this.props.starship.name
           ),
           extraInfo
         );
       }
     }]);
 
-    return PlanetListItem;
+    return StarshipListItem;
   }(React.Component);
 
-  var PlanetListComponent = function (_React$Component2) {
-    _inherits(PlanetListComponent, _React$Component2);
+  var StarshipListComponent = function (_React$Component2) {
+    _inherits(StarshipListComponent, _React$Component2);
 
-    function PlanetListComponent() {
-      _classCallCheck(this, PlanetListComponent);
+    function StarshipListComponent() {
+      _classCallCheck(this, StarshipListComponent);
 
-      return _possibleConstructorReturn(this, (PlanetListComponent.__proto__ || Object.getPrototypeOf(PlanetListComponent)).call(this));
+      return _possibleConstructorReturn(this, (StarshipListComponent.__proto__ || Object.getPrototypeOf(StarshipListComponent)).call(this));
     }
 
-    _createClass(PlanetListComponent, [{
+    _createClass(StarshipListComponent, [{
       key: 'componentDidMount',
       value: function componentDidMount() {
         console.log('AppComponent.ComponentDidMount');
@@ -151,7 +115,7 @@ window.SW = window.SW || {};
     }, {
       key: 'getTheData',
       value: function getTheData() {
-        console.log('load the planets');
+        console.log('load the starships');
       }
     }, {
       key: 'getTheData',
@@ -159,7 +123,7 @@ window.SW = window.SW || {};
         var _this4 = this;
 
         $.ajax({
-          url: 'http://swapi.co/api/planets/'
+          url: 'http://swapi.co/api/starships/'
         }).done(function (data) {
           console.log('got data', data);
 
@@ -178,8 +142,8 @@ window.SW = window.SW || {};
           theList = React.createElement(
             'ul',
             { className: 'theList' },
-            this.state.apiResult.results.map(function (planet, index) {
-              return React.createElement(PlanetListItem, { key: index, planet: planet });
+            this.state.apiResult.results.map(function (starship, index) {
+              return React.createElement(StarshipListItem, { key: index, starship: starship });
             })
           );
         }
@@ -190,7 +154,7 @@ window.SW = window.SW || {};
           React.createElement(
             'h1',
             null,
-            'Planet List'
+            'Starships List'
           ),
           theList,
           React.createElement(
@@ -199,26 +163,26 @@ window.SW = window.SW || {};
             React.createElement(
               'h1',
               null,
-              'Star Wars Planets'
+              'Star Wars Starships'
             ),
             React.createElement(
               'p',
               { className: 'paragraph' },
-              'Tatooine, Alderaan, Hoth, Bespin, and Yavin are names of Star Wars planets that all fans are quite familiar with nowadays. With Star Wars Rebels and several new movies on their way, we\u2019ll soon get acquainted with new planets we might have never heard of before. Or perhaps the names of these planets will sound familiar after all.'
+              'Starships ...'
             ),
             React.createElement(
               'p',
               { className: 'paragraph' },
-              'The Dark Horse Comics adaptation of The Star Wars brings to life the rough draft from 1974 by George Lucas, and the series enables us to get a better look at planets that appeared in the early imaginings of The Star Wars, such as Aquilae and Ophuchi. With the recent release of The Making of Return of the Jedi the circle of the classic \u201Cmaking of\u201D books by Jonathan Rinzler is complete. This trilogy offers a great amount of information about the different drafts that were written for the films.'
+              'The Dark Horse Comics adaptation...'
             )
           )
         );
       }
     }]);
 
-    return PlanetListComponent;
+    return StarshipListComponent;
   }(React.Component);
 
-  SW.PlanetListComponent = PlanetListComponent;
+  SW.StarshipListComponent = StarshipListComponent;
 })();
-//# sourceMappingURL=planet-list-components.js.map
+//# sourceMappingURL=starship-component.js.map

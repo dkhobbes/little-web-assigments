@@ -10,7 +10,8 @@ window.SW = window.SW || {};
 
     render() {
       return <div>
-        <SW.PlanetListComponent />
+      <SW.PlanetListComponent />
+
       </div>;
     }
   }

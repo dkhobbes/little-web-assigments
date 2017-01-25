@@ -69,7 +69,7 @@ window.SW = window.SW || {};
 
     getTheData() {
       $.ajax({
-        url: 'http://swapi.co/api/planets'
+        url: 'http://swapi.co/api/planets/'
       })
       .done((data) => {
         console.log('got data', data);
