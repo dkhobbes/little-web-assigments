@@ -94,7 +94,7 @@ if (window.SWRouter === undefined) {window.SWRouter = {}; }
           {theList}
           <div className="text">
           <h1>Star Wars Starships</h1>
-          <p className="paragraph">Starships ...</p>
+          <p className="paragraph">Starships info here.</p>
           <p className="paragraph">The Dark Horse Comics adaptation...</p>
           </div>
       </div>
