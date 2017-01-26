@@ -1,4 +1,4 @@
-window.SW = window.SW || {};
+if (window.SWRouter === undefined) {window.SWRouter = {}; }
 
 (function() {
 
@@ -109,6 +109,6 @@ window.SW = window.SW || {};
     }
   }
 
-  SW.PlanetListComponent = PlanetListComponent;
+  SWRouter.PlanetListComponent = PlanetListComponent;
 
 })();

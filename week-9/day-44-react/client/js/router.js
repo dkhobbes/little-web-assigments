@@ -1,4 +1,4 @@
-window.SW = window.SW || {};
+if (window.SWRouter === undefined) {window.SWRouter = {}; }
 
 var mountNode = document.querySelector('#react-root');
 

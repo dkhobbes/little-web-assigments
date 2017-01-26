@@ -1,4 +1,4 @@
-window.SW = window.SW || {};
+if (window.SWRouter === undefined) {window.SWRouter = {}; }
 
 (function() {
 
@@ -101,6 +101,6 @@ window.SW = window.SW || {};
     }
   }
 
-  SW.StarshipListComponent = StarshipListComponent;
+  SWRouter.StarshipListComponent = StarshipListComponent;
 
 })();
