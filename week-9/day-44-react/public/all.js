@@ -59,6 +59,42 @@ if (window.SWRouter === undefined) {
                 { to: '/starships' },
                 'starships'
               )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/films' },
+                'films'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/people' },
+                'people'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/vehicles' },
+                'vehicles'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/species' },
+                'species'
+              )
             )
           ),
           React.createElement(
@@ -75,6 +111,230 @@ if (window.SWRouter === undefined) {
   }(React.Component);
 
   SWRouter.AppComponent = AppComponent;
+})();
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+if (window.SWRouter === undefined) {
+  window.SWRouter = {};
+}
+(function () {
+  var FilmComponent = function (_React$Component) {
+    _inherits(FilmComponent, _React$Component);
+
+    function FilmComponent() {
+      _classCallCheck(this, FilmComponent);
+
+      return _possibleConstructorReturn(this, (FilmComponent.__proto__ || Object.getPrototypeOf(FilmComponent)).apply(this, arguments));
+    }
+
+    _createClass(FilmComponent, [{
+      key: 'render',
+      value: function render() {
+        console.log('rendering FilmComponent');
+
+        return React.createElement(
+          'div',
+          null,
+          React.createElement(
+            'header',
+            null,
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/' },
+                'home'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/planets' },
+                'planets'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/starships' },
+                'starships'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/films' },
+                'films'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/people' },
+                'people'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/vehicles' },
+                'vehicles'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/species' },
+                'species'
+              )
+            )
+          ),
+          React.createElement(
+            'p',
+            null,
+            'The app component'
+          )
+        );
+      }
+    }]);
+
+    return FilmComponent;
+  }(React.Component);
+
+  SWRouter.FilmComponent = FilmComponent;
+})();
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+if (window.SWRouter === undefined) {
+  window.SWRouter = {};
+}
+(function () {
+  var PeopleComponent = function (_React$Component) {
+    _inherits(PeopleComponent, _React$Component);
+
+    function PeopleComponent() {
+      _classCallCheck(this, PeopleComponent);
+
+      return _possibleConstructorReturn(this, (PeopleComponent.__proto__ || Object.getPrototypeOf(PeopleComponent)).apply(this, arguments));
+    }
+
+    _createClass(PeopleComponent, [{
+      key: 'render',
+      value: function render() {
+        console.log('rendering FilmComponent');
+
+        return React.createElement(
+          'div',
+          null,
+          React.createElement(
+            'header',
+            null,
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/' },
+                'home'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/planets' },
+                'planets'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/starships' },
+                'starships'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/films' },
+                'films'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/people' },
+                'people'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/vehicles' },
+                'vehicles'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/species' },
+                'species'
+              )
+            )
+          ),
+          React.createElement(
+            'p',
+            null,
+            'The app component'
+          )
+        );
+      }
+    }]);
+
+    return PeopleComponent;
+  }(React.Component);
+
+  SWRouter.PeopleComponent = PeopleComponent;
 })();
 'use strict';
 
@@ -297,6 +557,42 @@ if (window.SWRouter === undefined) {
                 { to: '/starships' },
                 'starships'
               )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/films' },
+                'films'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/people' },
+                'people'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/vehicles' },
+                'vehicles'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/species' },
+                'species'
+              )
             )
           ),
           React.createElement(
@@ -332,6 +628,118 @@ if (window.SWRouter === undefined) {
   }(React.Component);
 
   SWRouter.PlanetListComponent = PlanetListComponent;
+})();
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+if (window.SWRouter === undefined) {
+  window.SWRouter = {};
+}
+(function () {
+  var SpeciesComponent = function (_React$Component) {
+    _inherits(SpeciesComponent, _React$Component);
+
+    function SpeciesComponent() {
+      _classCallCheck(this, SpeciesComponent);
+
+      return _possibleConstructorReturn(this, (SpeciesComponent.__proto__ || Object.getPrototypeOf(SpeciesComponent)).apply(this, arguments));
+    }
+
+    _createClass(SpeciesComponent, [{
+      key: 'render',
+      value: function render() {
+        console.log('rendering FilmComponent');
+
+        return React.createElement(
+          'div',
+          null,
+          React.createElement(
+            'header',
+            null,
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/' },
+                'home'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/planets' },
+                'planets'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/starships' },
+                'starships'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/films' },
+                'films'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/people' },
+                'people'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/vehicles' },
+                'vehicles'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/species' },
+                'species'
+              )
+            )
+          ),
+          React.createElement(
+            'p',
+            null,
+            'The app component'
+          )
+        );
+      }
+    }]);
+
+    return SpeciesComponent;
+  }(React.Component);
+
+  SWRouter.SpeciesComponent = SpeciesComponent;
 })();
 'use strict';
 
@@ -518,6 +926,42 @@ if (window.SWRouter === undefined) {
                 { to: '/starships' },
                 'starships'
               )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/films' },
+                'films'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/people' },
+                'people'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/vehicles' },
+                'vehicles'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/species' },
+                'species'
+              )
             )
           ),
           React.createElement(
@@ -554,6 +998,118 @@ if (window.SWRouter === undefined) {
 
   SWRouter.StarshipListComponent = StarshipListComponent;
 })();
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+if (window.SWRouter === undefined) {
+  window.SWRouter = {};
+}
+(function () {
+  var VehiclesComponent = function (_React$Component) {
+    _inherits(VehiclesComponent, _React$Component);
+
+    function VehiclesComponent() {
+      _classCallCheck(this, VehiclesComponent);
+
+      return _possibleConstructorReturn(this, (VehiclesComponent.__proto__ || Object.getPrototypeOf(VehiclesComponent)).apply(this, arguments));
+    }
+
+    _createClass(VehiclesComponent, [{
+      key: 'render',
+      value: function render() {
+        console.log('rendering FilmComponent');
+
+        return React.createElement(
+          'div',
+          null,
+          React.createElement(
+            'header',
+            null,
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/' },
+                'home'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/planets' },
+                'planets'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/starships' },
+                'starships'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/films' },
+                'films'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/people' },
+                'people'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/vehicles' },
+                'vehicles'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/species' },
+                'species'
+              )
+            )
+          ),
+          React.createElement(
+            'p',
+            null,
+            'The app component'
+          )
+        );
+      }
+    }]);
+
+    return VehiclesComponent;
+  }(React.Component);
+
+  SWRouter.VehiclesComponent = VehiclesComponent;
+})();
 "use strict";
 
 if (window.SWRouter === undefined) {
@@ -572,7 +1128,11 @@ if (window.SWRouter === undefined) {
         { history: ReactRouter.hashHistory },
         React.createElement(Route, { path: "/", component: SWRouter.AppComponent }),
         React.createElement(Route, { path: "/planets", component: SWRouter.PlanetListComponent }),
-        React.createElement(Route, { path: "/starships", component: SWRouter.StarshipListComponent })
+        React.createElement(Route, { path: "/starships", component: SWRouter.StarshipListComponent }),
+        React.createElement(Route, { path: "/species", component: SWRouter.StarshipListComponent }),
+        React.createElement(Route, { path: "/people", component: SWRouter.StarshipListComponent }),
+        React.createElement(Route, { path: "/vehicles", component: SWRouter.StarshipListComponent }),
+        React.createElement(Route, { path: "/films", component: SWRouter.StarshipListComponent })
     );
 
     ReactDOM.render(router, mountNode);

@@ -11,6 +11,10 @@ var router = <Router history={ReactRouter.hashHistory}>
     <Route path="/" component={SWRouter.AppComponent} />
     <Route path="/planets" component={SWRouter.PlanetListComponent} />
     <Route path="/starships" component={SWRouter.StarshipListComponent} />
+    <Route path="/species" component={SWRouter.StarshipListComponent} />
+    <Route path="/people" component={SWRouter.StarshipListComponent} />
+    <Route path="/vehicles" component={SWRouter.StarshipListComponent} />
+    <Route path="/films" component={SWRouter.StarshipListComponent} />
   </Router>;
 
 ReactDOM.render(router, mountNode);

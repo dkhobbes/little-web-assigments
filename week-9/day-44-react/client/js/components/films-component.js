@@ -1,9 +1,8 @@
 if (window.SWRouter === undefined) {window.SWRouter = {}; }
-
 (function(){
-  class AppComponent extends React.Component {
+  class FilmComponent extends React.Component {
     render() {
-      console.log('rendering AppComponent');
+      console.log('rendering FilmComponent');
 
       return <div>
       <header>
@@ -16,11 +15,9 @@ if (window.SWRouter === undefined) {window.SWRouter = {}; }
         <div className="tabs"><ReactRouter.Link to={'/species'}>species</ReactRouter.Link></div>
       </header>
         <p>The app component</p>
-
-        {this.props.children}
-
       </div>;
     }
   }
-  SWRouter.AppComponent = AppComponent;
+  SWRouter.FilmComponent = FilmComponent;
+  
 })();
