@@ -86,6 +86,7 @@ if (window.SWRouter === undefined) {window.SWRouter = {}; }
       return <div className="planet-list">
       <div className="image-holder"></div>
       <header>
+        <div className="tabs"><ReactRouter.Link to={'/'}>home</ReactRouter.Link></div>
         <div className="tabs"><ReactRouter.Link to={'/planets'}>planets</ReactRouter.Link></div>
         <div className="tabs"><ReactRouter.Link to={'/starships'}>starships</ReactRouter.Link></div>
       </header>
