@@ -92,7 +92,10 @@ window.SW = window.SW || {};
 
       return <div className="planet-list">
         <div className="image-holder"></div>
-        <header><div className="tabs">planets</div><div className="tabs">starships</div></header>
+        <header>
+          <div className="tabs"><ReactRouter.Link to={'/planets'}>planets</ReactRouter.Link></div>
+          <div className="tabs"><ReactRouter.Link to={'/starships'}>starships</ReactRouter.Link></div>
+        </header>
 
         <h1>Planet List</h1>
 

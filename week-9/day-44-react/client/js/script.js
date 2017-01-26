@@ -1,22 +1,15 @@
 window.SW = window.SW || {};
 
+var mountNode = document.querySelector('#react-root');
 
-(function() {
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var IndexRoute = ReactRouter.IndexRoute;
 
-  var mountNode = document.querySelector('#react-root');
+var router = <Router history={ReactRouter.hashHistory}>
+    <Route path="/" component={RouterDemo.PlanetListComponent} />
+    <Route path="/starship" component={RouterDemo.StarshipListComponent} />
+  </Router>;
 
-
-  class AppComponent extends React.Component {
-
-    render() {
-      return <div>
-      <SW.PlanetListComponent />
-
-      </div>;
-    }
-  }
-
-
-  ReactDOM.render(<AppComponent />, mountNode);
-
+ReactDOM.render(router, mountNode);
 })();
