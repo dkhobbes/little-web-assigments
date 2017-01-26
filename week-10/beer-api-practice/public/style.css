@@ -48,7 +48,7 @@ table {
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
-  height: 730px;
+  height: 750px;
   width: 85%; }
 
 /* Optional: Makes the sample page fill the window. */
@@ -56,18 +56,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0px; }
-
-.beer-info {
-  padding: 15px;
-  z-index: 1;
-  position: fixed; }
-
-.beer-info li {
-  padding: 5px;
-  border: 1px solid black;
-  width: 400px;
-  background-color: white;
-  color: black; }
 
 #Title-beer {
   font-size: 24px;
@@ -77,7 +65,7 @@ html, body {
   float: left;
   color: black;
   width: 15%;
-  height: 730px;
+  height: 750px;
   background-color: #bda17c; }
 
 #control h2, p {
@@ -132,7 +120,8 @@ html, body {
 header {
   height: 80px;
   width: 100%;
-  background-color: #643200; }
+  background-color: #643200;
+  z-index: 1; }
 
 .nav-tabs {
   padding: 5px;

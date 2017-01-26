@@ -59,6 +59,10 @@ class Map extends React.Component {
                 userCords = pos.coords;
                 // return userCords;
                 console.log("sucess-test", pos.coords);
+
+                //call API with GPS coordinates
+                //add markers with breweries that fit in GPS coordinates
+                //add onclick event with box of info on breweries
               }
 
               // Get the user's current position
