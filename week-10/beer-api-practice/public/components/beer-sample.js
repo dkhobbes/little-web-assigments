@@ -139,6 +139,30 @@ window.SW = window.SW || {};
           "div",
           null,
           React.createElement(
+            "header",
+            null,
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              "home"
+            ),
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              "locator"
+            ),
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              "abv"
+            ),
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              "ibu"
+            )
+          ),
+          React.createElement(
             "div",
             { id: "control" },
             React.createElement(

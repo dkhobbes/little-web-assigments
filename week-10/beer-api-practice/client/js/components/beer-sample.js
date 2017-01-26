@@ -92,6 +92,12 @@ class Map extends React.Component {
       }
 
       return <div>
+      <header>
+        <div className="nav-tabs">home</div>
+        <div className="nav-tabs">locator</div>
+        <div className="nav-tabs">abv</div>
+        <div className="nav-tabs">ibu</div>
+      </header>
       <div id="control">
         <h2 id="Title-beer">Find Local Breweries</h2>
         <p>We will help you locate your closest brewery. Simply type in your zip code below to begin, and map my beer.</p>
