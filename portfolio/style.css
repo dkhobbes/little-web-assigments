@@ -127,6 +127,9 @@ footer img {
 	outline: 1px solid black;
 }
 
+.shown {
+	padding-left: 10px;
+}
 
 /*adding in show more and show less */
 
