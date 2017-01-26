@@ -91,6 +91,9 @@ window.SW = window.SW || {};
       }
 
       return <div className="planet-list">
+        <div className="image-holder"></div>
+        <header><div className="tabs">planets</div><div className="tabs">starships</div></header>
+
         <h1>Planet List</h1>
 
           {theList}

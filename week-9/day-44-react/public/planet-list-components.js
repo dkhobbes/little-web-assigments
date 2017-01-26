@@ -187,6 +187,21 @@ window.SW = window.SW || {};
         return React.createElement(
           'div',
           { className: 'planet-list' },
+          React.createElement('div', { className: 'image-holder' }),
+          React.createElement(
+            'header',
+            null,
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              'planets'
+            ),
+            React.createElement(
+              'div',
+              { className: 'tabs' },
+              'starships'
+            )
+          ),
           React.createElement(
             'h1',
             null,
