@@ -10,57 +10,30 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 window.SW = window.SW || {};
 (function () {
-  var AbvComponent = function (_React$Component) {
-    _inherits(AbvComponent, _React$Component);
+  var IbuComponent = function (_React$Component) {
+    _inherits(IbuComponent, _React$Component);
 
-    function AbvComponent() {
-      _classCallCheck(this, AbvComponent);
+    function IbuComponent() {
+      _classCallCheck(this, IbuComponent);
 
-      return _possibleConstructorReturn(this, (AbvComponent.__proto__ || Object.getPrototypeOf(AbvComponent)).call(this));
+      return _possibleConstructorReturn(this, (IbuComponent.__proto__ || Object.getPrototypeOf(IbuComponent)).call(this));
     }
 
-    _createClass(AbvComponent, [{
+    _createClass(IbuComponent, [{
       key: 'componentDidMount',
       value: function componentDidMount() {
         console.log('AppComponent.ComponentDidMount');
       }
     }, {
-      key: 'getTheData',
-      value: function getTheData(evt) {
-        var _this2 = this;
-
-        // if (evt.keyCode === 13) {
-        $.ajax({
-          url: "/api/abv"
-        }).done(function (data) {
-          console.log('got data');
-
-          var dataAsObjects = JSON.parse(data);
-
-          _this2.setState({
-            apiResult: dataAsObjects
-          });
-        });
-        // }
-      }
-    }, {
       key: 'render',
       value: function render() {
-        return React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'p',
-            null,
-            'test'
-          )
-        );
+        return React.createElement('div', null);
       }
     }]);
 
-    return AbvComponent;
+    return IbuComponent;
   }(React.Component);
 
-  SW.AbvComponent = AbvComponent;
+  SW.IbuComponent = IbuComponent;
 })();
-//# sourceMappingURL=abv.js.map
+//# sourceMappingURL=ibu.js.map

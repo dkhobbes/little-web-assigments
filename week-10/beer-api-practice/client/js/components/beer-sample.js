@@ -9,6 +9,22 @@ window.SW = window.SW || {};
 	var userCords;
 	var tempMarkerHolder = [];
 
+class Map extends React.Component {
+  componentDidMount() {
+    console.log("sanity check");
+    new google.maps.Map(this.map, {
+      center: {lat: 38.032936, lng: -97.9130348},
+      scrollwheel: false,
+      zoom: 5
+    });
+  }
+  render() {
+    return (
+      <div id="map" ref={(map) => { this.map = map; }}></div>
+    )
+  }
+}
+
 
   class BeerSampleComponent extends React.Component{
 
@@ -76,8 +92,21 @@ window.SW = window.SW || {};
       }
 
       return <div>
+      <div id="control">
+        <h2 id="Title-beer">Find Local Breweries</h2>
+        <p>We will help you locate your closest brewery. Simply type in your zip code below to begin, and map my beer.</p>
+        <form method="get" id="chooseZip">
+          <button type="submit" className="learnButton">Use current location</button>
+        </form>
+      </div>
+      <Map />
+      <div className="example"></div>
+      <div className="example-2">
+      <p>Although precise numbers from the 19th century are difficult to confirm, this is almost certainly the first time the United States has crossed the 4,000 brewery barrier since the 1870s.<br></br><span>September 28, 2015</span><span>By Bart Watson</span><span>www.brewersassociation.org</span>
+      </p>
+      </div>
         {/*{theList}*/}
-        </div>
+      </div>
     }
   }
   SW.BeerSampleComponent = BeerSampleComponent;

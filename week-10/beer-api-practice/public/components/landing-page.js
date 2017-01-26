@@ -10,57 +10,30 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 window.SW = window.SW || {};
 (function () {
-  var AbvComponent = function (_React$Component) {
-    _inherits(AbvComponent, _React$Component);
+  var LandingPageComponent = function (_React$Component) {
+    _inherits(LandingPageComponent, _React$Component);
 
-    function AbvComponent() {
-      _classCallCheck(this, AbvComponent);
+    function LandingPageComponent() {
+      _classCallCheck(this, LandingPageComponent);
 
-      return _possibleConstructorReturn(this, (AbvComponent.__proto__ || Object.getPrototypeOf(AbvComponent)).call(this));
+      return _possibleConstructorReturn(this, (LandingPageComponent.__proto__ || Object.getPrototypeOf(LandingPageComponent)).call(this));
     }
 
-    _createClass(AbvComponent, [{
+    _createClass(LandingPageComponent, [{
       key: 'componentDidMount',
       value: function componentDidMount() {
         console.log('AppComponent.ComponentDidMount');
       }
     }, {
-      key: 'getTheData',
-      value: function getTheData(evt) {
-        var _this2 = this;
-
-        // if (evt.keyCode === 13) {
-        $.ajax({
-          url: "/api/abv"
-        }).done(function (data) {
-          console.log('got data');
-
-          var dataAsObjects = JSON.parse(data);
-
-          _this2.setState({
-            apiResult: dataAsObjects
-          });
-        });
-        // }
-      }
-    }, {
       key: 'render',
       value: function render() {
-        return React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'p',
-            null,
-            'test'
-          )
-        );
+        return React.createElement('div', null);
       }
     }]);
 
-    return AbvComponent;
+    return LandingPageComponent;
   }(React.Component);
 
-  SW.AbvComponent = AbvComponent;
+  SW.LandingPageComponent = LandingPageComponent;
 })();
-//# sourceMappingURL=abv.js.map
+//# sourceMappingURL=landing-page.js.map

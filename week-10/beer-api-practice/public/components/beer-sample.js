@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -19,8 +19,41 @@ window.SW = window.SW || {};
   var userCords;
   var tempMarkerHolder = [];
 
-  var BeerSampleComponent = function (_React$Component) {
-    _inherits(BeerSampleComponent, _React$Component);
+  var Map = function (_React$Component) {
+    _inherits(Map, _React$Component);
+
+    function Map() {
+      _classCallCheck(this, Map);
+
+      return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).apply(this, arguments));
+    }
+
+    _createClass(Map, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        console.log("sanity check");
+        new google.maps.Map(this.map, {
+          center: { lat: 38.032936, lng: -97.9130348 },
+          scrollwheel: false,
+          zoom: 5
+        });
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        return React.createElement("div", { id: "map", ref: function ref(map) {
+            _this2.map = map;
+          } });
+      }
+    }]);
+
+    return Map;
+  }(React.Component);
+
+  var BeerSampleComponent = function (_React$Component2) {
+    _inherits(BeerSampleComponent, _React$Component2);
 
     function BeerSampleComponent() {
       _classCallCheck(this, BeerSampleComponent);
@@ -29,15 +62,15 @@ window.SW = window.SW || {};
     }
 
     _createClass(BeerSampleComponent, [{
-      key: 'componentDidMount',
+      key: "componentDidMount",
       value: function componentDidMount() {
         console.log('AppComponent.ComponentDidMount');
         this.getTheData();
       }
     }, {
-      key: 'getTheData',
+      key: "getTheData",
       value: function getTheData(evt) {
-        var _this2 = this;
+        var _this4 = this;
 
         // if (evt.keyCode === 13) {
         $.ajax({
@@ -70,14 +103,14 @@ window.SW = window.SW || {};
             alert('Geolocation is not supported in your browser');
           }
           //End Geo location
-          _this2.setState({
+          _this4.setState({
             apiResult: dataAsObjects
           });
         });
         // }
       }
     }, {
-      key: 'render',
+      key: "render",
       value: function render() {
         // console.log('render', this.state);
         var theList;
@@ -85,24 +118,77 @@ window.SW = window.SW || {};
         if (this.state != null) {
           console.log(this.state);
           theList = React.createElement(
-            'ul',
-            { className: 'theList' },
+            "ul",
+            { className: "theList" },
             this.state.apiResult.data.map(function (brewery, index) {
               return React.createElement(
-                'li',
+                "li",
                 { key: index },
-                ' (latitude: ',
+                " (latitude: ",
                 brewery.latitude,
-                ') (longitude: ',
+                ") (longitude: ",
                 brewery.longitude,
-                ')'
+                ")"
               );
             }),
-            ')}'
+            ")}"
           );
         }
 
-        return React.createElement('div', null);
+        return React.createElement(
+          "div",
+          null,
+          React.createElement(
+            "div",
+            { id: "control" },
+            React.createElement(
+              "h2",
+              { id: "Title-beer" },
+              "Find Local Breweries"
+            ),
+            React.createElement(
+              "p",
+              null,
+              "We will help you locate your closest brewery. Simply type in your zip code below to begin, and map my beer."
+            ),
+            React.createElement(
+              "form",
+              { method: "get", id: "chooseZip" },
+              React.createElement(
+                "button",
+                { type: "submit", className: "learnButton" },
+                "Use current location"
+              )
+            )
+          ),
+          React.createElement(Map, null),
+          React.createElement("div", { className: "example" }),
+          React.createElement(
+            "div",
+            { className: "example-2" },
+            React.createElement(
+              "p",
+              null,
+              "Although precise numbers from the 19th century are difficult to confirm, this is almost certainly the first time the United States has crossed the 4,000 brewery barrier since the 1870s.",
+              React.createElement("br", null),
+              React.createElement(
+                "span",
+                null,
+                "September 28, 2015"
+              ),
+              React.createElement(
+                "span",
+                null,
+                "By Bart Watson"
+              ),
+              React.createElement(
+                "span",
+                null,
+                "www.brewersassociation.org"
+              )
+            )
+          )
+        );
       }
     }]);
 
