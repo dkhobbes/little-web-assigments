@@ -63,7 +63,7 @@ li {
   font-family: 'Lato', sans-serif;
   width: 400px; }
 
-.planet div {
+.planet div, .starship div {
   margin-left: 10px; }
 
 .star-wars {
@@ -82,7 +82,7 @@ img {
   margin-right: 5px;
   margin-top: 4px; }
 
-.planet .name {
+.planet .name, .starship .name {
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
   font-size: 24px; }

@@ -22,7 +22,7 @@ li {
   width: 400px;
 }
 
-.planet div{
+.planet div, .starship div{
   margin-left: 10px;
 }
 
@@ -46,7 +46,7 @@ img {
 
 }
 
-.planet .name {
+.planet .name, .starship .name {
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
   font-size: 24px;
