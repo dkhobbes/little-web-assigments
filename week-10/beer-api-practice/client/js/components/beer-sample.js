@@ -1,4 +1,4 @@
-window.SW = window.SW || {};
+if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 (function() {
   var breweryId = []; //returned from the API
 	var allLatlng = []; //returned from the API
@@ -60,6 +60,7 @@ class Map extends React.Component {
                 // return userCords;
                 console.log("sucess-test", pos.coords);
 
+
                 //call API with GPS coordinates
                 //add markers with breweries that fit in GPS coordinates
                 //add onclick event with box of info on breweries
@@ -97,10 +98,10 @@ class Map extends React.Component {
 
       return <div>
       <header>
-        <div className="nav-tabs">home</div>
-        <div className="nav-tabs">locator</div>
-        <div className="nav-tabs">abv</div>
-        <div className="nav-tabs">ibu</div>
+        <div className="nav-tabs"><ReactRouter.Link to={'/'}>home</ReactRouter.Link></div>
+        <div className="nav-tabs"><ReactRouter.Link to={'/locator'}>locator</ReactRouter.Link></div>
+        <div className="nav-tabs"><ReactRouter.Link to={'/abv'}>abv</ReactRouter.Link></div>
+        <div className="nav-tabs"><ReactRouter.Link to={'/ibu'}>ibu</ReactRouter.Link></div>
       </header>
       <div id="control">
         <h2 id="Title-beer">Find Local Breweries</h2>
@@ -119,5 +120,5 @@ class Map extends React.Component {
       </div>
     }
   }
-  SW.BeerSampleComponent = BeerSampleComponent;
+  BeerRouter.BeerSampleComponent = BeerSampleComponent;
 })();
