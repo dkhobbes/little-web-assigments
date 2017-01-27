@@ -12,6 +12,8 @@ var router = <Router history={ReactRouter.hashHistory}>
       <Route path="/locator" component={BeerRouter.BeerSampleComponent} />
       <Route path="/abv" component={BeerRouter.AbvComponent} />
       <Route path="/ibu" component={BeerRouter.IbuComponent} />
+      <Route path="/history" component={BeerRouter.HistoryComponent} />
+
     </Router>;
 
 ReactDOM.render(router, mountNode);

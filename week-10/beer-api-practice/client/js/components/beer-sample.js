@@ -102,6 +102,7 @@ class Map extends React.Component {
         <div className="nav-tabs"><ReactRouter.Link to={'/locator'}>locator</ReactRouter.Link></div>
         <div className="nav-tabs"><ReactRouter.Link to={'/abv'}>abv</ReactRouter.Link></div>
         <div className="nav-tabs"><ReactRouter.Link to={'/ibu'}>ibu</ReactRouter.Link></div>
+        <div className="nav-tabs"><ReactRouter.Link to={'/history'}>history</ReactRouter.Link></div>
       </header>
       <div id="control">
         <h2 id="Title-beer">Find Local Breweries</h2>

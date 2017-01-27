@@ -144,4 +144,11 @@ a:visited {
   text-decoration: none;
   color: white; }
 
+.history-bar {
+  float: right;
+  color: black;
+  width: 15%;
+  height: 750px;
+  background-color: #bda17c; }
+
 /*# sourceMappingURL=style.css.map */

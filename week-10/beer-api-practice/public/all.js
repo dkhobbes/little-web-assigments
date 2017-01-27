@@ -89,6 +89,15 @@ if (window.BeerRouter === undefined) {
                 { to: '/ibu' },
                 'ibu'
               )
+            ),
+            React.createElement(
+              'div',
+              { className: 'nav-tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/history' },
+                'history'
+              )
             )
           )
         );
@@ -284,6 +293,15 @@ if (window.BeerRouter === undefined) {
                 { to: '/ibu' },
                 "ibu"
               )
+            ),
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/history' },
+                "history"
+              )
             )
           ),
           React.createElement(
@@ -344,6 +362,167 @@ if (window.BeerRouter === undefined) {
   }(React.Component);
 
   BeerRouter.BeerSampleComponent = BeerSampleComponent;
+})();
+"use strict";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+if (window.BeerRouter === undefined) {
+  window.BeerRouter = {};
+}
+(function () {
+  var MapHistory = function (_React$Component) {
+    _inherits(MapHistory, _React$Component);
+
+    function MapHistory() {
+      _classCallCheck(this, MapHistory);
+
+      return _possibleConstructorReturn(this, (MapHistory.__proto__ || Object.getPrototypeOf(MapHistory)).apply(this, arguments));
+    }
+
+    _createClass(MapHistory, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        console.log("sanity check");
+        new google.maps.Map(this.map, {
+          center: { lat: 38.032936, lng: -97.9130348 },
+          scrollwheel: false,
+          zoom: 5
+        });
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        return React.createElement("div", { id: "map", ref: function ref(map) {
+            _this2.map = map;
+          } });
+      }
+    }]);
+
+    return MapHistory;
+  }(React.Component);
+
+  var HistoryComponent = function (_React$Component2) {
+    _inherits(HistoryComponent, _React$Component2);
+
+    function HistoryComponent() {
+      _classCallCheck(this, HistoryComponent);
+
+      return _possibleConstructorReturn(this, (HistoryComponent.__proto__ || Object.getPrototypeOf(HistoryComponent)).call(this));
+    }
+
+    _createClass(HistoryComponent, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        console.log('AppComponent.ComponentDidMount');
+      }
+    }, {
+      key: "getTheData",
+      value: function getTheData(evt) {
+        var _this4 = this;
+
+        // if (evt.keyCode === 13) {
+        $.ajax({
+          url: "/api/abv"
+        }).done(function (data) {
+          console.log('got data');
+
+          var dataAsObjects = JSON.parse(data);
+
+          _this4.setState({
+            apiResult: dataAsObjects
+          });
+        });
+        // }
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        return React.createElement(
+          "div",
+          null,
+          React.createElement(
+            "header",
+            null,
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/' },
+                "home"
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/locator' },
+                "locator"
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/abv' },
+                "abv"
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/ibu' },
+                "ibu"
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "nav-tabs" },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/history' },
+                "history"
+              )
+            )
+          ),
+          React.createElement("div", { className: "history-bar" }),
+          React.createElement(MapHistory, null),
+          React.createElement(
+            "div",
+            { className: "example-2" },
+            React.createElement(
+              "p",
+              null,
+              "The beer brewing industry is a major economic driver in America. There are more than 2,800 breweries in the U.S. responsible for $246.5 billion in economic output in 2012 alone. Directly and indirectly, breweries create more than 2 million American jobs. For every 1 job in a brewery, 45 indirect jobs are created in agriculture, transportation, distributing, business, packaging, machinery, and retail. But the effects of climate change are beginning to threaten the industry, putting both jobs and the future of great beer at risk.",
+              React.createElement("br", null),
+              React.createElement(
+                "span",
+                null,
+                "www.ceres.org/declaration/about/climate-declaration-campaigns/brewery"
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return HistoryComponent;
+  }(React.Component);
+
+  BeerRouter.HistoryComponent = HistoryComponent;
 })();
 'use strict';
 
@@ -416,6 +595,15 @@ if (window.BeerRouter === undefined) {
                 ReactRouter.Link,
                 { to: '/ibu' },
                 'ibu'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'nav-tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/history' },
+                'history'
               )
             )
           )
@@ -500,6 +688,15 @@ if (window.BeerRouter === undefined) {
                 { to: '/ibu' },
                 'ibu'
               )
+            ),
+            React.createElement(
+              'div',
+              { className: 'nav-tabs' },
+              React.createElement(
+                ReactRouter.Link,
+                { to: '/history' },
+                'history'
+              )
             )
           )
         );
@@ -530,7 +727,8 @@ if (window.BeerRouter === undefined) {
             React.createElement(Route, { path: "/", component: BeerRouter.LandingPageComponent }),
             React.createElement(Route, { path: "/locator", component: BeerRouter.BeerSampleComponent }),
             React.createElement(Route, { path: "/abv", component: BeerRouter.AbvComponent }),
-            React.createElement(Route, { path: "/ibu", component: BeerRouter.IbuComponent })
+            React.createElement(Route, { path: "/ibu", component: BeerRouter.IbuComponent }),
+            React.createElement(Route, { path: "/history", component: BeerRouter.HistoryComponent })
       );
 
       ReactDOM.render(router, mountNode);
