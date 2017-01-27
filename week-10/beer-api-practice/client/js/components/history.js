@@ -54,7 +54,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         <div className="history-bar"></div>
         <MapHistory />
         <div className="example-2">
-        <p>The beer brewing industry is a major economic driver in America. There are more than 2,800 breweries in the U.S. responsible for $246.5 billion in economic output in 2012 alone. Directly and indirectly, breweries create more than 2 million American jobs. For every 1 job in a brewery, 45 indirect jobs are created in agriculture, transportation, distributing, business, packaging, machinery, and retail. But the effects of climate change are beginning to threaten the industry, putting both jobs and the future of great beer at risk.<br></br><span>www.ceres.org/declaration/about/climate-declaration-campaigns/brewery</span>
+        <p>The beer brewing industry is a major economic driver in America. There are more than 2,800 breweries in the U.S. responsible for $246.5 billion in economic output in 2012 alone. Directly and indirectly, breweries create more than 2 million American jobs.<br></br><span>www.ceres.org/declaration/about/climate-declaration-campaigns/brewery</span>
         </p>
         </div>
       </div>
