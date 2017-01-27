@@ -1129,10 +1129,10 @@ if (window.SWRouter === undefined) {
         React.createElement(Route, { path: "/", component: SWRouter.AppComponent }),
         React.createElement(Route, { path: "/planets", component: SWRouter.PlanetListComponent }),
         React.createElement(Route, { path: "/starships", component: SWRouter.StarshipListComponent }),
-        React.createElement(Route, { path: "/species", component: SWRouter.StarshipListComponent }),
-        React.createElement(Route, { path: "/people", component: SWRouter.StarshipListComponent }),
-        React.createElement(Route, { path: "/vehicles", component: SWRouter.StarshipListComponent }),
-        React.createElement(Route, { path: "/films", component: SWRouter.StarshipListComponent })
+        React.createElement(Route, { path: "/species", component: SWRouter.SpeciesComponent }),
+        React.createElement(Route, { path: "/people", component: SWRouter.PeopleComponent }),
+        React.createElement(Route, { path: "/vehicles", component: SWRouter.VehiclesComponent }),
+        React.createElement(Route, { path: "/films", component: SWRouter.FilmComponent })
     );
 
     ReactDOM.render(router, mountNode);
