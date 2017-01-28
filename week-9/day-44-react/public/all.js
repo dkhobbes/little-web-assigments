@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -23,85 +23,81 @@ if (window.SWRouter === undefined) {
     }
 
     _createClass(AppComponent, [{
-      key: 'render',
+      key: "render",
       value: function render() {
         console.log('rendering AppComponent');
 
         return React.createElement(
-          'div',
-          null,
+          "div",
+          { className: "bkgd" },
           React.createElement(
-            'header',
+            "header",
             null,
             React.createElement(
-              'div',
-              { className: 'tabs' },
+              "div",
+              { className: "tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/' },
-                'home'
+                "home"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'tabs' },
+              "div",
+              { className: "tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/planets' },
-                'planets'
+                "planets"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'tabs' },
+              "div",
+              { className: "tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/starships' },
-                'starships'
+                "starships"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'tabs' },
+              "div",
+              { className: "tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/films' },
-                'films'
+                "films"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'tabs' },
+              "div",
+              { className: "tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/people' },
-                'people'
+                "people"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'tabs' },
+              "div",
+              { className: "tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/vehicles' },
-                'vehicles'
+                "vehicles"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'tabs' },
+              "div",
+              { className: "tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/species' },
-                'species'
+                "species"
               )
             )
           ),
-          React.createElement(
-            'p',
-            null,
-            'The app component'
-          ),
+          React.createElement("img", { className: "intro-img", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2000px-Star_Wars_Logo.svg.png" }),
           this.props.children
         );
       }

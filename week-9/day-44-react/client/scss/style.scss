@@ -94,3 +94,17 @@ header {
   background-image: url("http://nerdreactor.com/wp-content/uploads/2015/10/star_wars_the_force_awakens_horizontal_poster_header.jpg");
   background-size: auto;
 }
+
+.intro-img {
+  width: 400px;
+  height: 500px;
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+.bkgd {
+  background-color: black;
+  height: 1000px;
+  width: 100%;
+}
