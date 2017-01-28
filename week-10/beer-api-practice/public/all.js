@@ -215,15 +215,16 @@ if (window.BeerRouter === undefined) {
                 success: function success(data) {
 
                   $.each(data.results, function (i, val) {
-                    marketId.push(val.id);
-                    marketName.push(val.marketname);
+                    // marketId.push(val.id);
+
+                    name.push(val.name);
                   });
 
                   //console.log(marketName);
 
                   var counter = 0;
                   //Now, use the id to get detailed info
-                  $.each(marketId, function (k, v) {
+                  $.each( /*marketId,*/function (k, v) {
                     $.ajax({
                       type: "GET",
                       contentType: "application/json; charset=utf-8",
@@ -254,8 +255,8 @@ if (window.BeerRouter === undefined) {
                           allMarkers = new google.maps.Marker({
                             position: myLatlng,
                             map: map,
-                            title: marketName[counter],
-                            html: '<div class="markerPop">' + '<h1>' + marketName[counter].substring(4) + '</h1>' + //substring removes distance from title
+                            title: name[counter],
+                            html: '<div class="markerPop">' + '<h1>' + name[counter].substring(4) + '</h1>' + //substring removes distance from title
                             '<h3>' + results['Address'] + '</h3>' + '<p>' + results['Products'].split(';') + '</p>' + '<p>' + results['Schedule'] + '</p>' + '</div>'
                           });
 
