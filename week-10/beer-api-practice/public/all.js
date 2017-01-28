@@ -689,7 +689,8 @@ if (window.BeerRouter === undefined) {
                 'history'
               )
             )
-          )
+          ),
+          React.createElement('div', { className: 'hops-img' })
         );
       }
     }]);

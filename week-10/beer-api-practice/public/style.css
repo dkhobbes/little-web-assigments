@@ -151,4 +151,13 @@ a:visited {
   height: 750px;
   background-color: #bda17c; }
 
+.hops-img {
+  width: 350px;
+  height: 200px;
+  background-image: url("logo.png");
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  border-top: 2px solid gray; }
+
 /*# sourceMappingURL=style.css.map */
