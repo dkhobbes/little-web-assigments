@@ -9,21 +9,21 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 	var userCords;
 	var tempMarkerHolder = [];
 
-class Map extends React.Component {
-  componentDidMount() {
-    console.log("sanity check");
-    new google.maps.Map(this.map, {
-      center: {lat: 38.032936, lng: -97.9130348},
-      scrollwheel: false,
-      zoom: 5
-    });
+  class Map extends React.Component {
+    componentDidMount() {
+      console.log("sanity check");
+      new google.maps.Map(this.map, {
+        center: {lat: 38.032936, lng: -97.9130348},
+        scrollwheel: false,
+        zoom: 5
+      });
+    }
+    render() {
+      return (
+        <div id="map" ref={(map) => { this.map = map; }}></div>
+      )
+    }
   }
-  render() {
-    return (
-      <div id="map" ref={(map) => { this.map = map; }}></div>
-    )
-  }
-}
 
 
   class BeerSampleComponent extends React.Component{
@@ -95,14 +95,14 @@ class Map extends React.Component {
               //console.log(results);
 
               // //The API returns a link to Google maps containing lat and long. This pulls it apart.
-              // var googleLink = results['GoogleLink'];
-              // var latLong = decodeURIComponent(googleLink.substring(googleLink.indexOf("=")+1, googleLink.lastIndexOf("(")));
-              //
-              // var split = latLong.split(',');
-              //
-              // //covert values to floats, to play nice with .LatLng() below.
-              // var latitude = parseFloat(split[0]);
-              // var longitude = parseFloat(split[1]);
+              var googleLink = results['GoogleLink'];
+              var latLong = decodeURIComponent(googleLink.substring(googleLink.indexOf("=")+1, googleLink.lastIndexOf("(")));
+
+              var split = latLong.split(',');
+
+              //covert values to floats, to play nice with .LatLng() below.
+              var latitude = parseFloat(split[0]);
+              var longitude = parseFloat(split[1]);
 
               //set the markers.
               myLatlng = new google.maps.LatLng(latitude,longitude);

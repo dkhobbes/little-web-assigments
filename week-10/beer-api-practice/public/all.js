@@ -239,14 +239,14 @@ if (window.BeerRouter === undefined) {
                           //console.log(results);
 
                           // //The API returns a link to Google maps containing lat and long. This pulls it apart.
-                          // var googleLink = results['GoogleLink'];
-                          // var latLong = decodeURIComponent(googleLink.substring(googleLink.indexOf("=")+1, googleLink.lastIndexOf("(")));
-                          //
-                          // var split = latLong.split(',');
-                          //
-                          // //covert values to floats, to play nice with .LatLng() below.
-                          // var latitude = parseFloat(split[0]);
-                          // var longitude = parseFloat(split[1]);
+                          var googleLink = results['GoogleLink'];
+                          var latLong = decodeURIComponent(googleLink.substring(googleLink.indexOf("=") + 1, googleLink.lastIndexOf("(")));
+
+                          var split = latLong.split(',');
+
+                          //covert values to floats, to play nice with .LatLng() below.
+                          var latitude = parseFloat(split[0]);
+                          var longitude = parseFloat(split[1]);
 
                           //set the markers.
                           myLatlng = new google.maps.LatLng(latitude, longitude);
@@ -634,6 +634,22 @@ if (window.BeerRouter === undefined) {
       key: 'componentDidMount',
       value: function componentDidMount() {
         console.log('AppComponent.ComponentDidMount');
+        // this.getTheData();
+        // getTheData() {
+        //   $.ajax({
+        //     url: "/api/ibu"
+        //   })
+        //   .done((data) => {
+        //     console.log('got data', data);
+        //
+        //     var dataAsObjects = JSON.parse(data);
+        //   });
+        //
+        //     this.setState({
+        //       apiResult: dataAsObjects
+        //     });
+        // }
+
       }
     }, {
       key: 'render',

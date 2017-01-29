@@ -1,11 +1,31 @@
 if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 (function() {
+
   class IbuComponent extends React.Component {
     constructor() {
       super();
     }
+
     componentDidMount() {
       console.log('AppComponent.ComponentDidMount');
+      // this.getTheData();
+      // getTheData() {
+      //   $.ajax({
+      //     url: "/api/ibu"
+      //   })
+      //   .done((data) => {
+      //     console.log('got data', data);
+      //
+      //     var dataAsObjects = JSON.parse(data);
+      //   });
+      //
+      //     this.setState({
+      //       apiResult: dataAsObjects
+      //     });
+      // }
+
+
+
     }
     render(){
       return <div>
@@ -21,5 +41,4 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
     }
   }
   BeerRouter.IbuComponent = IbuComponent;
-
 })();
