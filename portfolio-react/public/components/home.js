@@ -16,7 +16,7 @@ window.Portfolio = window.Portfolio || {};
     function HomeComponent() {
       _classCallCheck(this, HomeComponent);
 
-      return _possibleConstructorReturn(this, (HomeComponent.__proto__ || Object.getPrototypeOf(HomeComponent)).apply(this, arguments));
+      return _possibleConstructorReturn(this, (HomeComponent.__proto__ || Object.getPrototypeOf(HomeComponent)).call(this));
     }
 
     _createClass(HomeComponent, [{

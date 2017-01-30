@@ -1,6 +1,11 @@
 window.Portfolio = window.Portfolio || {};
 (function(){
 class HomeComponent extends React.Component {
+
+    constructor(){
+     super();
+   }
+
   render(){
     return <div>
     <header>
