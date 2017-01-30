@@ -54,6 +54,76 @@ window.Portfolio = window.Portfolio || {};
               "Front End Developer"
             ),
             React.createElement("div", { className: "ending-bar" })
+          ),
+          React.createElement(
+            "section",
+            { className: "info-me" },
+            React.createElement(
+              "div",
+              { className: "container" },
+              React.createElement(
+                "div",
+                { className: "client-height" },
+                React.createElement(
+                  "div",
+                  { className: "shown" },
+                  React.createElement(
+                    "h1",
+                    null,
+                    "Summary"
+                  ),
+                  React.createElement(
+                    "p",
+                    null,
+                    "This is my path. Originally an IT Recruiter for over 5 years I have always had an interest in creating and making things. I started out as a Graphic Design student in college for 3 years before I missed the cut. I then went on to get an Advertising degree. I like to brew my own beer."
+                  ),
+                  React.createElement(
+                    "h1",
+                    null,
+                    "Skills"
+                  ),
+                  React.createElement(
+                    "p",
+                    null,
+                    "My skills involve working with HTML5, CSS3, JS, Node.JS, React, and Express. I am a quick learner, and love to learn. I am currently reading up on Express, and mongoDB."
+                  ),
+                  React.createElement(
+                    "p",
+                    null,
+                    "To read more about me click below."
+                  )
+                ),
+                React.createElement(
+                  "div",
+                  { className: "hidden" },
+                  React.createElement(
+                    "p",
+                    null,
+                    "My other skills include an interest in ....."
+                  )
+                )
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "read-more-trigger" },
+              React.createElement(
+                "span",
+                { className: "arrow" },
+                "\u25BE"
+              ),
+              React.createElement(
+                "span",
+                { className: "read-more" },
+                "Read more"
+              ),
+              React.createElement(
+                "span",
+                { className: "read-less" },
+                "Read less"
+              )
+            ),
+            React.createElement("div", { className: "ending-bar" })
           )
         );
       }

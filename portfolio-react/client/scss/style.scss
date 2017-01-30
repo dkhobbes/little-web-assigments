@@ -47,3 +47,63 @@ header div:hover {
   padding-bottom: 20px;
   margin: 0 auto;
 }
+
+/*adding in show more and show less */
+
+.container{
+  transition-property: overflow, max-height;
+  transition-delay: 0s;
+  transition-duration: 2s;
+  overflow: hidden;
+  font-family: sans-serif;
+  width: 100%;
+  margin-top: 25px;
+  /*margin-left: 20px;
+  margin-right: 20px;*/
+}
+
+span{
+  display: none;
+}
+
+.container p{
+  font-size: 13px;
+  padding-top: 5px;
+  line-height: 1.5em;
+}
+
+.read-more-trigger{
+  font-family: sans-serif;
+  margin-bottom: 25px;
+  /*margin-left: 20px;
+  margin-right: 20px;*/
+}
+
+.arrow{
+  font-size: 13px;
+  display: inline-block;
+  transition-property: transform;
+  transition-duration: .2s;
+}
+
+.arrow-rotate{
+  transition-property: transform;
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+.read-more{
+  color: rgb(0,150,200);
+  font-size: 13px;
+  padding-left: 5px;
+  display: inline;
+}
+
+.show-container{
+  transition-property: overflow, max-height;
+  margin-top: 25px;
+  width: 100%;
+  /*margin-left: 20px;
+  margin-right: 20px;*/
+}
