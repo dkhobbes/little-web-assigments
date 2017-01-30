@@ -131,7 +131,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         <form method="get" id="chooseZip">
           <button type="submit" className="learnButton">Use current location</button>
           <div className="zipSearch">
-    				<input id="textZip" type="text" placeholder="enter your zip code" autofocus />
+    				<input id="textZip" type="text" placeholder="enter your zip code" />
     				<button type="submit" className="learnButton">Search By Zip code</button>
   			  </div>
         </form>

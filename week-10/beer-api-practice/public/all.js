@@ -347,7 +347,7 @@ if (window.BeerRouter === undefined) {
               React.createElement(
                 'div',
                 { className: 'zipSearch' },
-                React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter your zip code', autofocus: true }),
+                React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter your zip code' }),
                 React.createElement(
                   'button',
                   { type: 'submit', className: 'learnButton' },
@@ -419,11 +419,11 @@ if (window.BeerRouter === undefined) {
       key: 'componentDidMount',
       value: function componentDidMount() {
         console.log("sanity check");
-        var myLatLng = { lat: 31.032936, lng: -97.9130348 };
+        var myLatLng = { lat: 31.032936, lng: -99.9130348 };
         this.googleMap = new google.maps.Map(this.map, {
           center: myLatLng,
           scrollwheel: false,
-          zoom: 6
+          zoom: 7
         });
         var marker = new google.maps.Marker({
           position: myLatLng,
@@ -561,7 +561,20 @@ if (window.BeerRouter === undefined) {
               )
             )
           ),
-          React.createElement('div', { className: 'history-bar' }),
+          React.createElement(
+            'div',
+            { className: 'history-bar' },
+            React.createElement(
+              'h1',
+              { id: 'Title-beer' },
+              'Texas Brewery History'
+            ),
+            React.createElement(
+              'p',
+              null,
+              'Watch the history of Texas Breweries in front of you.'
+            )
+          ),
           React.createElement(MapHistory, { info: this.state.apiResult }),
           React.createElement(
             'div',
