@@ -24,9 +24,9 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
       });
 
       var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading">Uluru</h1>'+
+            '<h1 id="firstHeading">brewery.streetAdress</h1>'+
+            '<h3>' + ['Address'] + '</h3>' +
+            '<p>' + ['Schedule'] + '</p>' +
             '</div>';
 
       var infowindow = new google.maps.InfoWindow({
@@ -52,6 +52,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         var myLatLng = {lat: brewery.latitude, lng: brewery.longitude};
         console.log(myLatLng);
         console.log(this.googleMap);
+
         var marker = new google.maps.Marker({
         position: myLatLng,
         map: this.googleMap,
@@ -84,7 +85,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
     getTheData(evt) {
       // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/locations"
+          url: "/api/zipCodeLocations"
         })
         .done((data) => {
 
@@ -129,7 +130,12 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         <p>We will help you locate your closest brewery. Simply type in your zip code below to begin, and map my beer.</p>
         <form method="get" id="chooseZip">
           <button type="submit" className="learnButton">Use current location</button>
+          <div className="zipSearch">
+    				<input id="textZip" type="text" placeholder="enter your zip code" autofocus />
+    				<button type="submit" className="learnButton">Search By Zip code</button>
+  			  </div>
         </form>
+
       </div>
       <Map info = {this.state.apiResult} />
       <div className="example"></div>

@@ -154,7 +154,7 @@ if (window.BeerRouter === undefined) {
           zoom: 5
         });
 
-        var contentString = '<div id="content">' + '<div id="siteNotice">' + '</div>' + '<h1 id="firstHeading">Uluru</h1>' + '</div>';
+        var contentString = '<div id="content">' + '<h1 id="firstHeading">brewery.streetAdress</h1>' + '<h3>' + ['Address'] + '</h3>' + '<p>' + ['Schedule'] + '</p>' + '</div>';
 
         var infowindow = new google.maps.InfoWindow({
           content: contentString
@@ -182,6 +182,7 @@ if (window.BeerRouter === undefined) {
           var myLatLng = { lat: brewery.latitude, lng: brewery.longitude };
           console.log(myLatLng);
           console.log(_this2.googleMap);
+
           var marker = new google.maps.Marker({
             position: myLatLng,
             map: _this2.googleMap,
@@ -229,7 +230,7 @@ if (window.BeerRouter === undefined) {
 
         // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/locations"
+          url: "/api/zipCodeLocations"
         }).done(function (data) {
 
           var dataAsObjects = JSON.parse(data);
@@ -342,6 +343,16 @@ if (window.BeerRouter === undefined) {
                 'button',
                 { type: 'submit', className: 'learnButton' },
                 'Use current location'
+              ),
+              React.createElement(
+                'div',
+                { className: 'zipSearch' },
+                React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter your zip code', autofocus: true }),
+                React.createElement(
+                  'button',
+                  { type: 'submit', className: 'learnButton' },
+                  'Search By Zip code'
+                )
               )
             )
           ),
@@ -381,7 +392,7 @@ if (window.BeerRouter === undefined) {
 
   BeerRouter.BeerSampleComponent = BeerSampleComponent;
 })();
-"use strict";
+'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -405,22 +416,48 @@ if (window.BeerRouter === undefined) {
     }
 
     _createClass(MapHistory, [{
-      key: "componentDidMount",
+      key: 'componentDidMount',
       value: function componentDidMount() {
         console.log("sanity check");
-        new google.maps.Map(this.map, {
-          center: { lat: 38.032936, lng: -97.9130348 },
+        var myLatLng = { lat: 31.032936, lng: -97.9130348 };
+        this.googleMap = new google.maps.Map(this.map, {
+          center: myLatLng,
           scrollwheel: false,
-          zoom: 5
+          zoom: 6
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: this.googleMap,
+          title: 'Hello World!'
         });
       }
     }, {
-      key: "render",
-      value: function render() {
+      key: 'componentDidUpdate',
+      value: function componentDidUpdate() {
         var _this2 = this;
 
-        return React.createElement("div", { id: "map", ref: function ref(map) {
-            _this2.map = map;
+        console.log('willReceiveProps test', this.props);
+
+        this.props.info.data.forEach(function (brewery) {
+          console.log(brewery);
+          var myLatLng = { lat: brewery.latitude, lng: brewery.longitude };
+          console.log(myLatLng);
+          console.log(_this2.googleMap);
+
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: _this2.googleMap,
+            title: 'Hello World!'
+          });
+        });
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _this3 = this;
+
+        return React.createElement('div', { id: 'map', ref: function ref(map) {
+            _this3.map = map;
           } });
       }
     }]);
@@ -434,102 +471,110 @@ if (window.BeerRouter === undefined) {
     function HistoryComponent() {
       _classCallCheck(this, HistoryComponent);
 
-      return _possibleConstructorReturn(this, (HistoryComponent.__proto__ || Object.getPrototypeOf(HistoryComponent)).call(this));
+      var _this4 = _possibleConstructorReturn(this, (HistoryComponent.__proto__ || Object.getPrototypeOf(HistoryComponent)).call(this));
+
+      _this4.state = { apiResult: {
+          data: []
+        }
+      };
+
+      return _this4;
     }
 
     _createClass(HistoryComponent, [{
-      key: "componentDidMount",
+      key: 'componentDidMount',
       value: function componentDidMount() {
         console.log('AppComponent.ComponentDidMount');
+        this.getTheData();
       }
     }, {
-      key: "getTheData",
+      key: 'getTheData',
       value: function getTheData(evt) {
-        var _this4 = this;
+        var _this5 = this;
 
         // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/abv"
+          url: "/api/texas"
         }).done(function (data) {
           console.log('got data');
 
           var dataAsObjects = JSON.parse(data);
 
-          _this4.setState({
+          _this5.setState({
             apiResult: dataAsObjects
           });
         });
         // }
       }
     }, {
-      key: "render",
+      key: 'render',
       value: function render() {
         return React.createElement(
-          "div",
+          'div',
           null,
           React.createElement(
-            "header",
+            'header',
             null,
             React.createElement(
-              "div",
-              { className: "nav-tabs" },
+              'div',
+              { className: 'nav-tabs' },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/' },
-                "home"
+                'home'
               )
             ),
             React.createElement(
-              "div",
-              { className: "nav-tabs" },
+              'div',
+              { className: 'nav-tabs' },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/locator' },
-                "locator"
+                'locator'
               )
             ),
             React.createElement(
-              "div",
-              { className: "nav-tabs" },
+              'div',
+              { className: 'nav-tabs' },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/abv' },
-                "abv"
+                'abv'
               )
             ),
             React.createElement(
-              "div",
-              { className: "nav-tabs" },
+              'div',
+              { className: 'nav-tabs' },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/ibu' },
-                "ibu"
+                'ibu'
               )
             ),
             React.createElement(
-              "div",
-              { className: "nav-tabs" },
+              'div',
+              { className: 'nav-tabs' },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/history' },
-                "history"
+                'history'
               )
             )
           ),
-          React.createElement("div", { className: "history-bar" }),
-          React.createElement(MapHistory, null),
+          React.createElement('div', { className: 'history-bar' }),
+          React.createElement(MapHistory, { info: this.state.apiResult }),
           React.createElement(
-            "div",
-            { className: "example-2" },
+            'div',
+            { className: 'example-2' },
             React.createElement(
-              "p",
+              'p',
               null,
-              "The beer brewing industry is a major economic driver in America. There are more than 2,800 breweries in the U.S. responsible for $246.5 billion in economic output in 2012 alone. Directly and indirectly, breweries create more than 2 million American jobs.",
-              React.createElement("br", null),
+              'The beer brewing industry is a major economic driver in America. There are more than 2,800 breweries in the U.S. responsible for $246.5 billion in economic output in 2012 alone. Directly and indirectly, breweries create more than 2 million American jobs.',
+              React.createElement('br', null),
               React.createElement(
-                "span",
+                'span',
                 null,
-                "www.ceres.org/declaration/about/climate-declaration-campaigns/brewery"
+                'www.ceres.org/declaration/about/climate-declaration-campaigns/brewery'
               )
             )
           )
