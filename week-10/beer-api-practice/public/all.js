@@ -24,7 +24,8 @@ if (window.BeerRouter === undefined) {
     _createClass(AbvComponent, [{
       key: 'componentDidMount',
       value: function componentDidMount() {
-        console.log('AppComponent.ComponentDidMount');
+        console.log('AbvComponent.ComponentDidMount');
+        this.getTheData();
       }
     }, {
       key: 'getTheData',
@@ -33,11 +34,11 @@ if (window.BeerRouter === undefined) {
 
         // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/abv"
+          url: "/api/theabv"
         }).done(function (data) {
-          console.log('got data');
 
           var dataAsObjects = JSON.parse(data);
+          console.log('got data', dataAsObjects);
 
           _this2.setState({
             apiResult: dataAsObjects
@@ -625,23 +626,25 @@ if (window.BeerRouter === undefined) {
     _createClass(IbuComponent, [{
       key: 'componentDidMount',
       value: function componentDidMount() {
-        console.log('AppComponent.ComponentDidMount');
-        // this.getTheData();
-        // getTheData() {
-        //   $.ajax({
-        //     url: "/api/ibu"
-        //   })
-        //   .done((data) => {
-        //     console.log('got data', data);
-        //
-        //     var dataAsObjects = JSON.parse(data);
-        //   });
-        //
-        //     this.setState({
-        //       apiResult: dataAsObjects
-        //     });
-        // }
+        console.log('IbuComponent.ComponentDidMount');
+        this.getTheData();
+      }
+    }, {
+      key: 'getTheData',
+      value: function getTheData() {
+        var _this2 = this;
 
+        $.ajax({
+          url: "/api/theibu"
+        }).done(function (data) {
+
+          var dataAsObjects = JSON.parse(data);
+          console.log('got data', dataAsObjects);
+
+          _this2.setState({
+            apiResult: dataAsObjects
+          });
+        });
       }
     }, {
       key: 'render',

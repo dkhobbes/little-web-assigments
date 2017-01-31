@@ -1,22 +1,24 @@
 if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 (function() {
+
   class AbvComponent extends React.Component {
     constructor() {
       super();
     }
     componentDidMount() {
-      console.log('AppComponent.ComponentDidMount');
+      console.log('AbvComponent.ComponentDidMount');
+      this.getTheData();
     }
 
     getTheData(evt) {
       // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/abv"
+          url: "/api/theabv"
         })
         .done((data) => {
-          console.log('got data');
 
           var dataAsObjects = JSON.parse(data);
+          console.log('got data', dataAsObjects);
 
           this.setState({
             apiResult: dataAsObjects

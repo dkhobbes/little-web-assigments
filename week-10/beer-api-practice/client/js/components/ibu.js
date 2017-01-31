@@ -7,26 +7,28 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
     }
 
     componentDidMount() {
-      console.log('AppComponent.ComponentDidMount');
-      // this.getTheData();
-      // getTheData() {
-      //   $.ajax({
-      //     url: "/api/ibu"
-      //   })
-      //   .done((data) => {
-      //     console.log('got data', data);
-      //
-      //     var dataAsObjects = JSON.parse(data);
-      //   });
-      //
-      //     this.setState({
-      //       apiResult: dataAsObjects
-      //     });
-      // }
-
-
-
+      console.log('IbuComponent.ComponentDidMount');
+      this.getTheData();
     }
+
+      getTheData() {
+        $.ajax({
+          url: "/api/theibu"
+        })
+        .done((data) => {
+
+          var dataAsObjects = JSON.parse(data);
+          console.log('got data', dataAsObjects);
+
+          this.setState({
+            apiResult: dataAsObjects
+          })
+        });
+
+      }
+
+
+
     render(){
       return <div>
         <header>
