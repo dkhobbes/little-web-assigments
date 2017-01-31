@@ -801,12 +801,20 @@ if (window.BeerRouter === undefined) {
               React.createElement(
                 'div',
                 { className: 'home-section', id: 'home-center' },
-                'Welcome to Beer Me Finder'
+                React.createElement(
+                  'h1',
+                  null,
+                  'Welcome to Beer Me Finder'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'home-section', id: 'home-2' },
-                'Please enjoy this application devouted to the beer and Breweries near you. You can look at the breweries in your area, or see what beer has the highest abv to kick your butt.'
+                React.createElement(
+                  'p',
+                  null,
+                  'Please enjoy this application devouted to the beer and Breweries near you. You can look at the breweries in your area, or see what beer has the highest abv to kick your butt.'
+                )
               )
             )
           )
