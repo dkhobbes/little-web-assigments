@@ -1,6 +1,18 @@
 if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 (function() {
 
+  class Ibu2and4Component extends React.Component {
+    constructor() {
+      super();
+    }
+    componentDidMount() {
+      console.log('IbuComponent.ComponentDidMount');
+      // this.getTheData();
+    }
+
+  }
+
+
   class IbuComponent extends React.Component {
     constructor() {
       super();
@@ -39,6 +51,16 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           <div className="nav-tabs"><ReactRouter.Link to={'/history'}>history</ReactRouter.Link></div>
         </header>
         <div className="hops-img"></div>
+
+        <div className="ibu-content">
+          <section>
+            <div className="nav-tabs">10-19</div>
+            <div className="nav-tabs">20-39</div>
+            <div className="nav-tabs">40-70</div>
+            <div className="nav-tabs">71-100</div>
+            <div className="nav-tabs">101+</div>
+          </section>
+        </div>
       </div>
     }
   }

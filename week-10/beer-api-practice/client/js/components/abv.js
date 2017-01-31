@@ -36,6 +36,15 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           <div className="nav-tabs"><ReactRouter.Link to={'/ibu'}>ibu</ReactRouter.Link></div>
           <div className="nav-tabs"><ReactRouter.Link to={'/history'}>history</ReactRouter.Link></div>
         </header>
+        <div className="ibu-content">
+          <section>
+            <div className="nav-tabs">2-4</div>
+            <div className="nav-tabs">5-7</div>
+            <div className="nav-tabs">8-10</div>
+            <div className="nav-tabs">8-10</div>
+            <div className="nav-tabs">11+</div>
+          </section>
+        </div>
       </div>
     }
   }

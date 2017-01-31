@@ -100,6 +100,39 @@ if (window.BeerRouter === undefined) {
                 'history'
               )
             )
+          ),
+          React.createElement(
+            'div',
+            { className: 'ibu-content' },
+            React.createElement(
+              'section',
+              null,
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '2-4'
+              ),
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '5-7'
+              ),
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '8-10'
+              ),
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '8-10'
+              ),
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '11+'
+              )
+            )
           )
         );
       }
@@ -614,8 +647,28 @@ if (window.BeerRouter === undefined) {
   window.BeerRouter = {};
 }
 (function () {
-  var IbuComponent = function (_React$Component) {
-    _inherits(IbuComponent, _React$Component);
+  var Ibu2and4Component = function (_React$Component) {
+    _inherits(Ibu2and4Component, _React$Component);
+
+    function Ibu2and4Component() {
+      _classCallCheck(this, Ibu2and4Component);
+
+      return _possibleConstructorReturn(this, (Ibu2and4Component.__proto__ || Object.getPrototypeOf(Ibu2and4Component)).call(this));
+    }
+
+    _createClass(Ibu2and4Component, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        console.log('IbuComponent.ComponentDidMount');
+        // this.getTheData();
+      }
+    }]);
+
+    return Ibu2and4Component;
+  }(React.Component);
+
+  var IbuComponent = function (_React$Component2) {
+    _inherits(IbuComponent, _React$Component2);
 
     function IbuComponent() {
       _classCallCheck(this, IbuComponent);
@@ -632,7 +685,7 @@ if (window.BeerRouter === undefined) {
     }, {
       key: 'getTheData',
       value: function getTheData() {
-        var _this2 = this;
+        var _this3 = this;
 
         $.ajax({
           url: "/api/theibu"
@@ -641,7 +694,7 @@ if (window.BeerRouter === undefined) {
           var dataAsObjects = JSON.parse(data);
           console.log('got data', dataAsObjects);
 
-          _this2.setState({
+          _this3.setState({
             apiResult: dataAsObjects
           });
         });
@@ -701,7 +754,40 @@ if (window.BeerRouter === undefined) {
               )
             )
           ),
-          React.createElement('div', { className: 'hops-img' })
+          React.createElement('div', { className: 'hops-img' }),
+          React.createElement(
+            'div',
+            { className: 'ibu-content' },
+            React.createElement(
+              'section',
+              null,
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '10-19'
+              ),
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '20-39'
+              ),
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '40-70'
+              ),
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '71-100'
+              ),
+              React.createElement(
+                'div',
+                { className: 'nav-tabs' },
+                '101+'
+              )
+            )
+          )
         );
       }
     }]);

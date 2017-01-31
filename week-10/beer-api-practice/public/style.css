@@ -196,4 +196,12 @@ a:visited {
   margin-top: 120px;
   font-size: 24px; }
 
+.ibu-content {
+  height: 400px;
+  width: 80%;
+  border-radius: 25px;
+  margin: 0 auto;
+  background-color: #303e4d;
+  margin-top: 25px; }
+
 /*# sourceMappingURL=style.css.map */
