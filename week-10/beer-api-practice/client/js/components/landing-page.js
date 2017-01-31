@@ -16,6 +16,12 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           <div className="nav-tabs"><ReactRouter.Link to={'/ibu'}>ibu</ReactRouter.Link></div>
           <div className="nav-tabs"><ReactRouter.Link to={'/history'}>history</ReactRouter.Link></div>
         </header>
+        <div id="home-picture">
+        <div id="divs2center">
+          <div className="home-section" id="home-center" >Welcome to Beer Me Finder</div>
+          <div className="home-section" id="home-2" >Please enjoy this application devouted to the beer and Breweries near you. You can look at the breweries in your area, or see what beer has the highest abv to kick your butt.</div>
+        </div>
+        </div>
       </div>
     }
   }

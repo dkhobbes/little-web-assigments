@@ -791,6 +791,24 @@ if (window.BeerRouter === undefined) {
                 'history'
               )
             )
+          ),
+          React.createElement(
+            'div',
+            { id: 'home-picture' },
+            React.createElement(
+              'div',
+              { id: 'divs2center' },
+              React.createElement(
+                'div',
+                { className: 'home-section', id: 'home-center' },
+                'Welcome to Beer Me Finder'
+              ),
+              React.createElement(
+                'div',
+                { className: 'home-section', id: 'home-2' },
+                'Please enjoy this application devouted to the beer and Breweries near you. You can look at the breweries in your area, or see what beer has the highest abv to kick your butt.'
+              )
+            )
           )
         );
       }

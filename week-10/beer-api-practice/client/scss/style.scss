@@ -150,3 +150,37 @@ a:visited {
   margin-top: 30px;
   border-top: 2px solid gray;
 }
+
+#home-picture {
+  background-image: url('images/beerToasting.jpg');
+  background-size: cover;
+  height: 730px;
+  width: 100%;
+
+}
+
+.home-section {
+  float: left;
+  width: 25%;
+  height: 300px;
+  text-align: center;
+  padding: 5%;
+  color: white;
+  background-color: rgba(0,0,0,0.3);
+}
+
+#divs2center {
+  padding-left: 150px;
+  padding-top: 100px;
+}
+
+#home-center {
+  border-right: 2px solid white;
+  border-radius: 25px 0 0 25px;
+}
+
+#home-2 {
+  border-radius: 0 25px 25px 0;
+  width: 35%;
+
+}
