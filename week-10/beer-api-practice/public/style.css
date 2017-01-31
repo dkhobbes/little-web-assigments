@@ -59,17 +59,20 @@ html, body {
 
 #Title-beer {
   font-size: 24px;
-  font-weight: bold; }
+  font-weight: bold;
+  color: white;
+  padding: 20px 30px 10px 30px; }
 
 #control {
   float: left;
   color: black;
   width: 15%;
   height: 750px;
-  background-color: #c8e6fa; }
+  background-color: #303e4d; }
 
 #control h2, p {
-  padding: 20px 30px 10px 30px; }
+  padding: 20px 30px 10px 30px;
+  color: white; }
 
 #control input[type=text] {
   width: 60%;
@@ -93,7 +96,7 @@ html, body {
 .example-2 p {
   width: 96%;
   height: 400px;
-  background-color: #c8e6fa;
+  background-color: #303e4d;
   font-weight: bold;
   font-size: 48px;
   text-align: center;
@@ -149,7 +152,7 @@ a:visited {
   color: black;
   width: 15%;
   height: 750px;
-  background-color: #c8e6fa; }
+  background-color: #303e4d; }
 
 .hops-img {
   width: 350px;

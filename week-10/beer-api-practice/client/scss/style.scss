@@ -30,6 +30,9 @@ html, body {
 #Title-beer {
   font-size: 24px;
   font-weight: bold;
+  color: white;
+  padding: 20px 30px 10px 30px;
+
 }
 
 #control{
@@ -37,12 +40,12 @@ html, body {
 		color: black;
 		width: 15%;
     height: 750px;
-    background-color: rgb(200,230,250);
+    background-color: rgba(48, 62, 77, 1.0);
 	}
 
   #control h2, p {
     padding: 20px 30px 10px 30px;
-
+    color: white;
   }
 
 	#control input[type=text]{
@@ -71,7 +74,7 @@ html, body {
   .example-2 p {
     width: 96%;
     height: 400px;
-    background-color:  rgb(200,230,250);
+    background-color:  rgba(48, 62, 77, 1.0);
     font-weight: bold;
     font-size: 48px;
     text-align: center;
@@ -138,7 +141,7 @@ a:visited {
   color: black;
   width: 15%;
   height: 750px;
-  background-color:  rgb(200,230,250);
+  background-color:  rgba(48, 62, 77, 1.0);
 }
 
 .hops-img {

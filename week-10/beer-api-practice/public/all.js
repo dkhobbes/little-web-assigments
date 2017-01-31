@@ -239,7 +239,6 @@ if (window.BeerRouter === undefined) {
           _this5.setState({
             apiResult: dataAsObjects
           });
-
           // loop through data, and find lat and long
           // put markers on all of them
         });

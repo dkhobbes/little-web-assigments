@@ -84,21 +84,20 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 
     getTheData(evt) {
       // if (evt.keyCode === 13) {
-        $.ajax({
-          url: "/api/zipCodeLocations"
+      $.ajax({
+        url: "/api/zipCodeLocations"
+      })
+      .done((data) => {
+
+        var dataAsObjects = JSON.parse(data);
+        console.log('got data', dataAsObjects);
+
+        this.setState ({
+          apiResult: dataAsObjects
         })
-        .done((data) => {
-
-          var dataAsObjects = JSON.parse(data);
-          console.log('got data', dataAsObjects);
-
-          this.setState ({
-            apiResult: dataAsObjects
-          })
-
-          // loop through data, and find lat and long
-          // put markers on all of them
-        });
+        // loop through data, and find lat and long
+        // put markers on all of them
+      });
       // }
     }
 
