@@ -37,7 +37,7 @@ html, body {
 		color: black;
 		width: 15%;
     height: 750px;
-    background-color: rgba(189, 161, 124, 1.0);
+    background-color: rgb(200,230,250);
 	}
 
   #control h2, p {
@@ -71,7 +71,7 @@ html, body {
   .example-2 p {
     width: 96%;
     height: 400px;
-    background-color: rgba(189, 161, 124, 1.0);
+    background-color:  rgb(200,230,250);
     font-weight: bold;
     font-size: 48px;
     text-align: center;
@@ -105,7 +105,7 @@ html, body {
 header {
   height: 80px;
   width: 100%;
-  background-color: rgb(100,50,0);
+  background-color: rgb(0,20,50);
   z-index: 1;
 }
 
@@ -138,7 +138,7 @@ a:visited {
   color: black;
   width: 15%;
   height: 750px;
-  background-color: rgba(189, 161, 124, 1.0);
+  background-color:  rgb(200,230,250);
 }
 
 .hops-img {
@@ -161,12 +161,12 @@ a:visited {
 
 .home-section {
   float: left;
-  width: 27%;
+  width: 25%;
   height: 400px;
   text-align: center;
   padding: 5%;
   color: white;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(25,20,71,0.4);
 }
 
 #divs2center {
@@ -174,17 +174,17 @@ a:visited {
 }
 
 #home-center {
-  border-right: 2px solid gray;
+  border-right: 2px solid lightgray;
 }
 
 #home-center h1 {
   margin-top: 150px;
-  font-size: 36px;
+  font-size: 40px;
 }
 
 #home-2 {
   border-radius: 0 25px 25px 0;
-  width: 35%;
+  width: 37%;
 }
 
 #home-2 p {
