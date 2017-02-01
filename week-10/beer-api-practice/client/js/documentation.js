@@ -1,5 +1,5 @@
 // render(){
-//   // console.log('render', this.state);
+//   console.log('render', this.state);
 //   var theList;
 //
 //   if (this.state != null) {

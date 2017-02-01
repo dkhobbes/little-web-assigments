@@ -117,12 +117,13 @@ html, body {
   padding: 10px; }
 
 .theList {
-  padding: 10px; }
+  padding: 60px; }
 
 .theList li {
-  color: black;
-  background-color: white;
-  padding: 5px; }
+  color: white;
+  background-color: #303e4d;
+  padding: 5px;
+  float: left; }
 
 header {
   height: 60px;
@@ -206,5 +207,13 @@ a:visited {
   margin: 0 auto;
   background-color: #303e4d;
   margin-top: 25px; }
+
+.abvIbuImg {
+  width: 150px;
+  height: 150px;
+  background-size: cover; }
+
+.beerImgText {
+  width: 150px; }
 
 /*# sourceMappingURL=style.css.map */

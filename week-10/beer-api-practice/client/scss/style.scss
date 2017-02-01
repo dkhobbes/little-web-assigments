@@ -100,16 +100,18 @@ html, body {
   }
 
 .theList {
-  padding: 10px;
+  padding: 60px;
   // z-index: 1;
   // width: 300px;
 }
 
 .theList li {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: $background-color;
   padding: 5px;
+  float: left;
   // width: 300px;
+
 }
 
 header {
@@ -204,9 +206,21 @@ a:visited {
 
 .ibu-content {
   height: 400px;
+  // set to container height
   width: 80%;
   border-radius: 25px;
   margin: 0 auto;
   background-color: $background-color;
   margin-top: 25px;
+}
+
+.abvIbuImg {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+}
+
+.beerImgText {
+  width: 150px;
+
 }

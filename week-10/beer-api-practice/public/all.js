@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -22,13 +22,13 @@ if (window.BeerRouter === undefined) {
     }
 
     _createClass(AbvComponent, [{
-      key: 'componentDidMount',
+      key: "componentDidMount",
       value: function componentDidMount() {
         console.log('AbvComponent.ComponentDidMount');
         this.getTheData();
       }
     }, {
-      key: 'getTheData',
+      key: "getTheData",
       value: function getTheData(evt, query) {
         var _this2 = this;
 
@@ -39,7 +39,7 @@ if (window.BeerRouter === undefined) {
         }).done(function (data) {
 
           var dataAsObjects = JSON.parse(data);
-          console.log('got data', dataAsObjects);
+          // console.log('got data', dataAsObjects);
 
           _this2.setState({
             apiResult: dataAsObjects
@@ -48,105 +48,136 @@ if (window.BeerRouter === undefined) {
         // }
       }
     }, {
-      key: 'render',
+      key: "render",
       value: function render() {
         var _this3 = this;
 
+        var theList;
+
+        if (this.state != null) {
+          console.log(this.state);
+          theList = React.createElement(
+            "ul",
+            { className: "theList" },
+            this.state.apiResult.data.map(function (abv, index) {
+              return React.createElement(
+                "li",
+                { key: index },
+                " ",
+                React.createElement("img", { src: abv.labels.large, className: "abvIbuImg" }),
+                React.createElement(
+                  "h1",
+                  { className: "beerImgText" },
+                  abv.name
+                ),
+                React.createElement(
+                  "h2",
+                  { className: "beerImgText" },
+                  "Abv:",
+                  abv.abv
+                ),
+                " "
+              );
+            })
+          );
+        }
+
         return React.createElement(
-          'div',
+          "div",
           null,
           React.createElement(
-            'header',
+            "header",
             null,
             React.createElement(
-              'div',
-              { className: 'nav-tabs' },
+              "div",
+              { className: "nav-tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/' },
-                'home'
+                "home"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'nav-tabs' },
+              "div",
+              { className: "nav-tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/locator' },
-                'locator'
+                "locator"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'nav-tabs' },
+              "div",
+              { className: "nav-tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/abv' },
-                'abv'
+                "abv"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'nav-tabs' },
+              "div",
+              { className: "nav-tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/ibu' },
-                'ibu'
+                "ibu"
               )
             ),
             React.createElement(
-              'div',
-              { className: 'nav-tabs' },
+              "div",
+              { className: "nav-tabs" },
               React.createElement(
                 ReactRouter.Link,
                 { to: '/history' },
-                'history'
+                "history"
               )
             )
           ),
-          React.createElement('div', { className: 'hops-img' }),
+          React.createElement("div", { className: "hops-img" }),
           React.createElement(
-            'div',
-            { className: 'ibu-content' },
+            "div",
+            { className: "ibu-content" },
             React.createElement(
-              'section',
+              "section",
               null,
               React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
+                "div",
+                { className: "nav-tabs", onClick: function onClick(evt) {
                     _this3.getTheData(evt, "2,4");
                   } },
-                ' 2-4'
+                " 2-4"
               ),
               React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
+                "div",
+                { className: "nav-tabs", onClick: function onClick(evt) {
                     _this3.getTheData(evt, "5,7");
                   } },
-                '5-7'
+                "5-7"
               ),
               React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
+                "div",
+                { className: "nav-tabs", onClick: function onClick(evt) {
                     _this3.getTheData(evt, "8,10");
                   } },
-                '8-10'
+                "8-10"
               ),
               React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
+                "div",
+                { className: "nav-tabs", onClick: function onClick(evt) {
                     _this3.getTheData(evt, "11,13");
                   } },
-                '11-13'
+                "11-13"
               ),
               React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
+                "div",
+                { className: "nav-tabs", onClick: function onClick(evt) {
                     _this3.getTheData(evt, "14,80");
                   } },
-                '14+'
+                "14+"
               )
-            )
+            ),
+            theList
           )
         );
       }

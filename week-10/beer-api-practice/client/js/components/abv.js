@@ -20,7 +20,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         .done((data) => {
 
           var dataAsObjects = JSON.parse(data);
-          console.log('got data', dataAsObjects);
+          // console.log('got data', dataAsObjects);
 
           this.setState({
             apiResult: dataAsObjects
@@ -31,6 +31,17 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 
     render(){
 
+      var theList;
+
+      if (this.state != null) {
+        console.log(this.state);
+        theList = <ul className="theList">
+          {this.state.apiResult.data.map((abv, index) => {
+            return <li key={index}> <img src={abv.labels.large} className="abvIbuImg" /><h1 className="beerImgText" >{abv.name}</h1><h2 className="beerImgText">Abv:{abv.abv}</h2> </li>
+          })}
+        </ul>;
+      }
+
       return <div>
         <header>
           <div className="nav-tabs"><ReactRouter.Link to={'/'}>home</ReactRouter.Link></div>
@@ -39,9 +50,8 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           <div className="nav-tabs"><ReactRouter.Link to={'/ibu'}>ibu</ReactRouter.Link></div>
           <div className="nav-tabs"><ReactRouter.Link to={'/history'}>history</ReactRouter.Link></div>
         </header>
+
         <div className="hops-img"></div>
-
-
 
         <div className="ibu-content">
           <section>
@@ -51,10 +61,12 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
             <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"11,13")}}>11-13</div>
             <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"14,80")}}>14+</div>
           </section>
+          {theList}
         </div>
       </div>
     }
   }
+
   BeerRouter.AbvComponent = AbvComponent;
 
 })();
