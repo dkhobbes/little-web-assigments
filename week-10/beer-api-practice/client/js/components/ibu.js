@@ -23,9 +23,11 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
       this.getTheData();
     }
 
-      getTheData() {
+      getTheData(evt, query) {
+        var param = query;
+
         $.ajax({
-          url: "/api/theibu"
+          url: "/api/theibu/" + param
         })
         .done((data) => {
 
@@ -54,11 +56,11 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 
         <div className="ibu-content">
           <section>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theibu10to19'}>10-19</ReactRouter.Link></div>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theibu20to39'}>20-39</ReactRouter.Link></div>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theibu40to70'}>40-70</ReactRouter.Link></div>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theibu71to100'}>71-100</ReactRouter.Link></div>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theibu101plus'}>101+</ReactRouter.Link></div>
+            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"10,19")}}>10-19</div>
+            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"20,39")}}>20-39</div>
+            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"40,70")}}>40-70</div>
+            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"71,100")}}>71-100</div>
+            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"101,250")}}>101+</div>
           </section>
         </div>
       </div>

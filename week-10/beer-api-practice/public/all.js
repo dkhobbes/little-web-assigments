@@ -50,8 +50,8 @@ if (window.BeerRouter === undefined) {
     }, {
       key: 'render',
       value: function render() {
+        var _this3 = this;
 
-        beerInfo;
         return React.createElement(
           'div',
           null,
@@ -113,27 +113,37 @@ if (window.BeerRouter === undefined) {
               null,
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
-                '2-4'
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this3.getTheData(evt, "2,4");
+                  } },
+                ' 2-4'
               ),
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this3.getTheData(evt, "5,7");
+                  } },
                 '5-7'
               ),
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this3.getTheData(evt, "8,10");
+                  } },
                 '8-10'
               ),
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this3.getTheData(evt, "11,13");
+                  } },
                 '11-13'
               ),
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this3.getTheData(evt, "14,80");
+                  } },
                 '14+'
               )
             )
@@ -698,11 +708,13 @@ if (window.BeerRouter === undefined) {
       }
     }, {
       key: 'getTheData',
-      value: function getTheData() {
+      value: function getTheData(evt, query) {
         var _this3 = this;
 
+        var param = query;
+
         $.ajax({
-          url: "/api/theibu"
+          url: "/api/theibu/" + param
         }).done(function (data) {
 
           var dataAsObjects = JSON.parse(data);
@@ -716,6 +728,8 @@ if (window.BeerRouter === undefined) {
     }, {
       key: 'render',
       value: function render() {
+        var _this4 = this;
+
         return React.createElement(
           'div',
           null,
@@ -777,48 +791,38 @@ if (window.BeerRouter === undefined) {
               null,
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theibu10to19' },
-                  '10-19'
-                )
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this4.getTheData(evt, "10,19");
+                  } },
+                '10-19'
               ),
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theibu20to39' },
-                  '20-39'
-                )
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this4.getTheData(evt, "20,39");
+                  } },
+                '20-39'
               ),
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theibu40to70' },
-                  '40-70'
-                )
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this4.getTheData(evt, "40,70");
+                  } },
+                '40-70'
               ),
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theibu71to100' },
-                  '71-100'
-                )
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this4.getTheData(evt, "71,100");
+                  } },
+                '71-100'
               ),
               React.createElement(
                 'div',
-                { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theibu101plus' },
-                  '101+'
-                )
+                { className: 'nav-tabs', onClick: function onClick(evt) {
+                    _this4.getTheData(evt, "101,250");
+                  } },
+                '101+'
               )
             )
           )
@@ -949,6 +953,7 @@ if (window.BeerRouter === undefined) {
 
   BeerRouter.LandingPageComponent = LandingPageComponent;
 })();
+"use strict";
 "use strict";
 
 if (window.BeerRouter === undefined) {
