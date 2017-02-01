@@ -129,50 +129,54 @@ if (window.BeerRouter === undefined) {
               )
             )
           ),
-          React.createElement("div", { className: "hops-img" }),
           React.createElement(
             "div",
-            { className: "ibu-content" },
+            { className: "abvIbu-bkgd" },
+            React.createElement("div", { className: "hops-img" }),
             React.createElement(
-              "section",
-              null,
+              "div",
+              { className: "ibu-content" },
               React.createElement(
-                "div",
-                { className: "nav-tabs", onClick: function onClick(evt) {
-                    _this3.getTheData(evt, "2,4");
-                  } },
-                " 2-4"
+                "section",
+                null,
+                React.createElement(
+                  "div",
+                  { className: "nav-2", onClick: function onClick(evt) {
+                      _this3.getTheData(evt, "2,4");
+                    } },
+                  " 2-4"
+                ),
+                React.createElement(
+                  "div",
+                  { className: "nav-2", onClick: function onClick(evt) {
+                      _this3.getTheData(evt, "5,7");
+                    } },
+                  "5-7"
+                ),
+                React.createElement(
+                  "div",
+                  { className: "nav-2", onClick: function onClick(evt) {
+                      _this3.getTheData(evt, "8,10");
+                    } },
+                  "8-10"
+                ),
+                React.createElement(
+                  "div",
+                  { className: "nav-2", onClick: function onClick(evt) {
+                      _this3.getTheData(evt, "11,13");
+                    } },
+                  "11-13"
+                ),
+                React.createElement(
+                  "div",
+                  { className: "nav-2", onClick: function onClick(evt) {
+                      _this3.getTheData(evt, "14,80");
+                    } },
+                  "14+"
+                )
               ),
-              React.createElement(
-                "div",
-                { className: "nav-tabs", onClick: function onClick(evt) {
-                    _this3.getTheData(evt, "5,7");
-                  } },
-                "5-7"
-              ),
-              React.createElement(
-                "div",
-                { className: "nav-tabs", onClick: function onClick(evt) {
-                    _this3.getTheData(evt, "8,10");
-                  } },
-                "8-10"
-              ),
-              React.createElement(
-                "div",
-                { className: "nav-tabs", onClick: function onClick(evt) {
-                    _this3.getTheData(evt, "11,13");
-                  } },
-                "11-13"
-              ),
-              React.createElement(
-                "div",
-                { className: "nav-tabs", onClick: function onClick(evt) {
-                    _this3.getTheData(evt, "14,80");
-                  } },
-                "14+"
-              )
-            ),
-            theList
+              theList
+            )
           )
         );
       }
@@ -833,50 +837,54 @@ if (window.BeerRouter === undefined) {
               )
             )
           ),
-          React.createElement('div', { className: 'hops-img' }),
           React.createElement(
             'div',
-            { className: 'ibu-content' },
+            { className: 'abvIbu-bkgd' },
+            React.createElement('div', { className: 'hops-img' }),
             React.createElement(
-              'section',
-              null,
+              'div',
+              { className: 'ibu-content' },
               React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
-                    _this4.getTheData(evt, "10,19");
-                  } },
-                '10-19'
+                'section',
+                null,
+                React.createElement(
+                  'div',
+                  { className: 'nav-2', onClick: function onClick(evt) {
+                      _this4.getTheData(evt, "10,19");
+                    } },
+                  '10-19'
+                ),
+                React.createElement(
+                  'div',
+                  { className: 'nav-2', onClick: function onClick(evt) {
+                      _this4.getTheData(evt, "20,39");
+                    } },
+                  '20-39'
+                ),
+                React.createElement(
+                  'div',
+                  { className: 'nav-2', onClick: function onClick(evt) {
+                      _this4.getTheData(evt, "40,70");
+                    } },
+                  '40-70'
+                ),
+                React.createElement(
+                  'div',
+                  { className: 'nav-2', onClick: function onClick(evt) {
+                      _this4.getTheData(evt, "71,100");
+                    } },
+                  '71-100'
+                ),
+                React.createElement(
+                  'div',
+                  { className: 'nav-2', onClick: function onClick(evt) {
+                      _this4.getTheData(evt, "101,250");
+                    } },
+                  '101+'
+                )
               ),
-              React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
-                    _this4.getTheData(evt, "20,39");
-                  } },
-                '20-39'
-              ),
-              React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
-                    _this4.getTheData(evt, "40,70");
-                  } },
-                '40-70'
-              ),
-              React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
-                    _this4.getTheData(evt, "71,100");
-                  } },
-                '71-100'
-              ),
-              React.createElement(
-                'div',
-                { className: 'nav-tabs', onClick: function onClick(evt) {
-                    _this4.getTheData(evt, "101,250");
-                  } },
-                '101+'
-              )
-            ),
-            theList
+              theList
+            )
           )
         );
       }

@@ -65,18 +65,18 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           <div className="nav-tabs"><ReactRouter.Link to={'/ibu'}>ibu</ReactRouter.Link></div>
           <div className="nav-tabs"><ReactRouter.Link to={'/history'}>history</ReactRouter.Link></div>
         </header>
+        <div className="abvIbu-bkgd">
         <div className="hops-img"></div>
-
         <div className="ibu-content">
           <section>
-            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"10,19")}}>10-19</div>
-            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"20,39")}}>20-39</div>
-            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"40,70")}}>40-70</div>
-            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"71,100")}}>71-100</div>
-            <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"101,250")}}>101+</div>
+            <div className="nav-2" onClick={(evt)=>{this.getTheData(evt,"10,19")}}>10-19</div>
+            <div className="nav-2" onClick={(evt)=>{this.getTheData(evt,"20,39")}}>20-39</div>
+            <div className="nav-2" onClick={(evt)=>{this.getTheData(evt,"40,70")}}>40-70</div>
+            <div className="nav-2" onClick={(evt)=>{this.getTheData(evt,"71,100")}}>71-100</div>
+            <div className="nav-2" onClick={(evt)=>{this.getTheData(evt,"101,250")}}>101+</div>
           </section>
           {theList}
-
+          </div>
         </div>
       </div>
     }
