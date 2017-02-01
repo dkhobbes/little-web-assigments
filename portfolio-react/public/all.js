@@ -195,6 +195,61 @@ if (window.Portfolio === undefined) {
                 "resume"
               )
             )
+          ),
+          React.createElement(
+            "section",
+            { className: "section-margin" },
+            React.createElement(
+              "h1",
+              null,
+              "David Kurth"
+            ),
+            React.createElement(
+              "h2",
+              null,
+              "github:"
+            ),
+            React.createElement(
+              "h2",
+              null,
+              "portfolio:"
+            ),
+            React.createElement(
+              "h2",
+              null,
+              "linkedIn:"
+            ),
+            React.createElement("div", { className: "ending-bar" })
+          ),
+          React.createElement(
+            "section",
+            { className: "section-margin" },
+            React.createElement(
+              "h1",
+              null,
+              "Summary of Qualifications"
+            ),
+            React.createElement("div", { className: "ending-bar" })
+          ),
+          React.createElement(
+            "section",
+            { className: "section-margin" },
+            React.createElement(
+              "h1",
+              null,
+              "Work Experience"
+            ),
+            React.createElement("div", { className: "ending-bar" })
+          ),
+          React.createElement(
+            "section",
+            { className: "section-margin" },
+            React.createElement(
+              "h1",
+              null,
+              "Education"
+            ),
+            React.createElement("div", { className: "ending-bar" })
           )
         );
       }
