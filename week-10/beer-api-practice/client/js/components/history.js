@@ -84,6 +84,10 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         <div className="history-bar">
           <h1 id="Title-beer">Texas Brewery History</h1>
           <p>Watch the history of Texas Breweries in front of you.</p>
+          <button type="submit" className="runButton">Run History</button>
+          <button type="submit" className="resetButton">Reset</button>
+
+
         </div>
         <MapHistory info = {this.state.apiResult} />
         <div className="example-2">

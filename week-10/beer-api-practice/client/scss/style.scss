@@ -1,4 +1,6 @@
 @import 'reset';
+$background-color: rgba(48, 62, 77, 1.0);
+
 
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
@@ -40,7 +42,7 @@ html, body {
 		color: black;
 		width: 15%;
     height: 750px;
-    background-color: rgba(48, 62, 77, 1.0);
+    background-color: $background-color;
 	}
 
   #control h2, p {
@@ -64,6 +66,11 @@ html, body {
       margin-top: 10px;
   }
 
+.runButton  {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
   .example {
     width: 100%;
     height: 800px;
@@ -74,7 +81,7 @@ html, body {
   .example-2 p {
     width: 96%;
     height: 400px;
-    background-color:  rgba(48, 62, 77, 1.0);
+    background-color:  $background-color;
     font-weight: bold;
     font-size: 48px;
     text-align: center;
@@ -106,16 +113,16 @@ html, body {
 }
 
 header {
-  height: 80px;
+  height: 60px;
   width: 100%;
   background-color: rgb(0,20,50);
-  z-index: 1;
+  // z-index: 1;
 }
 
 .nav-tabs {
   padding: 5px;
   font-size: 16px;
-  padding-top: 10px;
+  padding-top: 5px;
   border-bottom: 1px solid white;
   display: inline-block;
   float: left;
@@ -137,11 +144,11 @@ a:visited {
 }
 
 .history-bar {
-  float: right;
+  float: left;
   color: black;
   width: 15%;
   height: 750px;
-  background-color:  rgba(48, 62, 77, 1.0);
+  background-color:  $background-color;
 }
 
 .hops-img {
@@ -150,7 +157,7 @@ a:visited {
   background-image: url("logo.png");
   margin: 0 auto;
   display: block;
-  margin-top: 30px;
+  margin-top: 25px;
   border-top: 2px solid gray;
 }
 
@@ -200,6 +207,6 @@ a:visited {
   width: 80%;
   border-radius: 25px;
   margin: 0 auto;
-  background-color: rgba(48, 62, 77, 1.0);
+  background-color: $background-color;
   margin-top: 25px;
 }

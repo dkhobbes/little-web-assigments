@@ -101,6 +101,7 @@ if (window.BeerRouter === undefined) {
               )
             )
           ),
+          React.createElement('div', { className: 'hops-img' }),
           React.createElement(
             'div',
             { className: 'ibu-content' },
@@ -110,27 +111,47 @@ if (window.BeerRouter === undefined) {
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '2-4'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theabv' },
+                  '2-4'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '5-7'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theabv' },
+                  '5-7'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '8-10'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theabv' },
+                  '8-10'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '8-10'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theabv' },
+                  '11-13'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '11+'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theabv' },
+                  '14+'
+                )
               )
             )
           )
@@ -606,6 +627,16 @@ if (window.BeerRouter === undefined) {
               'p',
               null,
               'Watch the history of Texas Breweries in front of you.'
+            ),
+            React.createElement(
+              'button',
+              { type: 'submit', className: 'runButton' },
+              'Run History'
+            ),
+            React.createElement(
+              'button',
+              { type: 'submit', className: 'resetButton' },
+              'Reset'
             )
           ),
           React.createElement(MapHistory, { info: this.state.apiResult }),
@@ -764,27 +795,47 @@ if (window.BeerRouter === undefined) {
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '10-19'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theibu' },
+                  '10-19'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '20-39'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theibu' },
+                  '20-39'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '40-70'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theibu' },
+                  '40-70'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '71-100'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theibu' },
+                  '71-100'
+                )
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                '101+'
+                React.createElement(
+                  ReactRouter.Link,
+                  { to: '/theibu' },
+                  '101+'
+                )
               )
             )
           )

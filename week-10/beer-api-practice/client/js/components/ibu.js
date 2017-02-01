@@ -54,11 +54,11 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 
         <div className="ibu-content">
           <section>
-            <div className="nav-tabs">10-19</div>
-            <div className="nav-tabs">20-39</div>
-            <div className="nav-tabs">40-70</div>
-            <div className="nav-tabs">71-100</div>
-            <div className="nav-tabs">101+</div>
+            <div className="nav-tabs"><ReactRouter.Link to={'/theibu'}>10-19</ReactRouter.Link></div>
+            <div className="nav-tabs"><ReactRouter.Link to={'/theibu'}>20-39</ReactRouter.Link></div>
+            <div className="nav-tabs"><ReactRouter.Link to={'/theibu'}>40-70</ReactRouter.Link></div>
+            <div className="nav-tabs"><ReactRouter.Link to={'/theibu'}>71-100</ReactRouter.Link></div>
+            <div className="nav-tabs"><ReactRouter.Link to={'/theibu'}>101+</ReactRouter.Link></div>
           </section>
         </div>
       </div>
