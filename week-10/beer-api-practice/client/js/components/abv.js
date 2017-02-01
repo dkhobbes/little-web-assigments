@@ -7,15 +7,15 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
     }
     componentDidMount() {
       console.log('AbvComponent.ComponentDidMount');
-      this.getTheData();
+      // this.getTheData();
     }
 
     getTheData(evt, query) {
 
-      var param = query
+      // var param = query
       // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/theabv/" + param
+          url: "/api/theabv/" + query
         })
         .done((data) => {
 
@@ -37,7 +37,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         console.log(this.state);
         theList = <ul className="theList">
           {this.state.apiResult.data.map((abv, index) => {
-            return <li key={index}> <img src={abv.labels.large} className="abvIbuImg" /><h1 className="beerImgText" >{abv.name}</h1><h2 className="beerImgText">Abv:{abv.abv}</h2> </li>
+            return <li key={index}> <img src={abv.labels.medium} className="abvIbuImg" /><h2 className="beerImgText">Abv:{abv.abv}</h2> </li>
           })}
         </ul>;
       }

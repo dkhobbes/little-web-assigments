@@ -209,11 +209,9 @@ a:visited {
   margin-top: 25px; }
 
 .abvIbuImg {
-  width: 150px;
-  height: 150px;
-  background-size: cover; }
-
-.beerImgText {
-  width: 150px; }
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

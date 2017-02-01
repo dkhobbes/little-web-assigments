@@ -25,17 +25,17 @@ if (window.BeerRouter === undefined) {
       key: "componentDidMount",
       value: function componentDidMount() {
         console.log('AbvComponent.ComponentDidMount');
-        this.getTheData();
+        // this.getTheData();
       }
     }, {
       key: "getTheData",
       value: function getTheData(evt, query) {
         var _this2 = this;
 
-        var param = query;
+        // var param = query
         // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/theabv/" + param
+          url: "/api/theabv/" + query
         }).done(function (data) {
 
           var dataAsObjects = JSON.parse(data);
@@ -64,12 +64,7 @@ if (window.BeerRouter === undefined) {
                 "li",
                 { key: index },
                 " ",
-                React.createElement("img", { src: abv.labels.large, className: "abvIbuImg" }),
-                React.createElement(
-                  "h1",
-                  { className: "beerImgText" },
-                  abv.name
-                ),
+                React.createElement("img", { src: abv.labels.medium, className: "abvIbuImg" }),
                 React.createElement(
                   "h2",
                   { className: "beerImgText" },
@@ -735,17 +730,17 @@ if (window.BeerRouter === undefined) {
       key: 'componentDidMount',
       value: function componentDidMount() {
         console.log('IbuComponent.ComponentDidMount');
-        this.getTheData();
+        // this.getTheData();
       }
     }, {
       key: 'getTheData',
       value: function getTheData(evt, query) {
         var _this3 = this;
 
-        var param = query;
+        // var param = query;
 
         $.ajax({
-          url: "/api/theibu/" + param
+          url: "/api/theibu/" + query
         }).done(function (data) {
 
           var dataAsObjects = JSON.parse(data);
@@ -760,6 +755,31 @@ if (window.BeerRouter === undefined) {
       key: 'render',
       value: function render() {
         var _this4 = this;
+
+        var theList;
+
+        if (this.state != null) {
+          console.log(this.state);
+          theList = React.createElement(
+            'ul',
+            { className: 'theList' },
+            this.state.apiResult.data.map(function (ibu, index) {
+              return React.createElement(
+                'li',
+                { key: index },
+                ' ',
+                React.createElement('img', { src: ibu.labels.medium, className: 'abvIbuImg' }),
+                React.createElement(
+                  'h2',
+                  { className: 'beerImgText' },
+                  'Abv:',
+                  ibu.ibu
+                ),
+                ' '
+              );
+            })
+          );
+        }
 
         return React.createElement(
           'div',
@@ -855,7 +875,8 @@ if (window.BeerRouter === undefined) {
                   } },
                 '101+'
               )
-            )
+            ),
+            theList
           )
         );
       }

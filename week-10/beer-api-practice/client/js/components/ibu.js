@@ -20,14 +20,14 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 
     componentDidMount() {
       console.log('IbuComponent.ComponentDidMount');
-      this.getTheData();
+      // this.getTheData();
     }
 
       getTheData(evt, query) {
-        var param = query;
+        // var param = query;
 
         $.ajax({
-          url: "/api/theibu/" + param
+          url: "/api/theibu/" + query
         })
         .done((data) => {
 
@@ -44,6 +44,19 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 
 
     render(){
+
+      var theList;
+
+      if (this.state != null) {
+        console.log(this.state);
+        theList = <ul className="theList">
+          {this.state.apiResult.data.map((ibu, index) => {
+            return <li key={index}> <img src={ibu.labels.medium} className="abvIbuImg" /><h2 className="beerImgText">Abv:{ibu.ibu}</h2> </li>
+          })}
+        </ul>;
+      }
+
+
       return <div>
         <header>
           <div className="nav-tabs"><ReactRouter.Link to={'/'}>home</ReactRouter.Link></div>
@@ -62,6 +75,8 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
             <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"71,100")}}>71-100</div>
             <div className="nav-tabs" onClick={(evt)=>{this.getTheData(evt,"101,250")}}>101+</div>
           </section>
+          {theList}
+
         </div>
       </div>
     }
