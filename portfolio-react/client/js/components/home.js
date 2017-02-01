@@ -1,4 +1,4 @@
-window.Portfolio = window.Portfolio || {};
+if (window.Portfolio === undefined) {window.Portfolio = {}; }
 (function(){
 class HomeComponent extends React.Component {
 
@@ -10,8 +10,8 @@ class HomeComponent extends React.Component {
     return <div>
     <header>
       <section id="banner"></section>
-      <div className="nav-tab nav-1">home</div>
-      <div className="nav-tab">resume</div>
+      <div className="nav-tab nav-1"><ReactRouter.Link to={'/'}>home</ReactRouter.Link></div>
+      <div className="nav-tab"><ReactRouter.Link to={'/resume'}>resume</ReactRouter.Link></div>
     </header>
     <section>
       <h1 id="name-holder">DAVID KURTH</h1>
