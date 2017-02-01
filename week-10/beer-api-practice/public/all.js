@@ -29,12 +29,13 @@ if (window.BeerRouter === undefined) {
       }
     }, {
       key: 'getTheData',
-      value: function getTheData(evt) {
+      value: function getTheData(evt, query) {
         var _this2 = this;
 
+        var param = query;
         // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/theabv"
+          url: "/api/theabv/" + param
         }).done(function (data) {
 
           var dataAsObjects = JSON.parse(data);
@@ -49,6 +50,8 @@ if (window.BeerRouter === undefined) {
     }, {
       key: 'render',
       value: function render() {
+
+        beerInfo;
         return React.createElement(
           'div',
           null,
@@ -111,47 +114,27 @@ if (window.BeerRouter === undefined) {
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theabv' },
-                  '2-4'
-                )
+                '2-4'
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theabv' },
-                  '5-7'
-                )
+                '5-7'
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theabv' },
-                  '8-10'
-                )
+                '8-10'
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theabv' },
-                  '11-13'
-                )
+                '11-13'
               ),
               React.createElement(
                 'div',
                 { className: 'nav-tabs' },
-                React.createElement(
-                  ReactRouter.Link,
-                  { to: '/theabv' },
-                  '14+'
-                )
+                '14+'
               )
             )
           )
@@ -797,7 +780,7 @@ if (window.BeerRouter === undefined) {
                 { className: 'nav-tabs' },
                 React.createElement(
                   ReactRouter.Link,
-                  { to: '/theibu' },
+                  { to: '/theibu10to19' },
                   '10-19'
                 )
               ),
@@ -806,7 +789,7 @@ if (window.BeerRouter === undefined) {
                 { className: 'nav-tabs' },
                 React.createElement(
                   ReactRouter.Link,
-                  { to: '/theibu' },
+                  { to: '/theibu20to39' },
                   '20-39'
                 )
               ),
@@ -815,7 +798,7 @@ if (window.BeerRouter === undefined) {
                 { className: 'nav-tabs' },
                 React.createElement(
                   ReactRouter.Link,
-                  { to: '/theibu' },
+                  { to: '/theibu40to70' },
                   '40-70'
                 )
               ),
@@ -824,7 +807,7 @@ if (window.BeerRouter === undefined) {
                 { className: 'nav-tabs' },
                 React.createElement(
                   ReactRouter.Link,
-                  { to: '/theibu' },
+                  { to: '/theibu71to100' },
                   '71-100'
                 )
               ),
@@ -833,7 +816,7 @@ if (window.BeerRouter === undefined) {
                 { className: 'nav-tabs' },
                 React.createElement(
                   ReactRouter.Link,
-                  { to: '/theibu' },
+                  { to: '/theibu101plus' },
                   '101+'
                 )
               )

@@ -10,10 +10,12 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
       this.getTheData();
     }
 
-    getTheData(evt) {
+    getTheData(evt, query) {
+
+      var param = query
       // if (evt.keyCode === 13) {
         $.ajax({
-          url: "/api/theabv"
+          url: "/api/theabv/" + param
         })
         .done((data) => {
 
@@ -28,6 +30,8 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
     }
 
     render(){
+
+      beerInfo;
       return <div>
         <header>
           <div className="nav-tabs"><ReactRouter.Link to={'/'}>home</ReactRouter.Link></div>
@@ -38,13 +42,15 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         </header>
         <div className="hops-img"></div>
 
+
+
         <div className="ibu-content">
           <section>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theabv'}>2-4</ReactRouter.Link></div>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theabv'}>5-7</ReactRouter.Link></div>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theabv'}>8-10</ReactRouter.Link></div>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theabv'}>11-13</ReactRouter.Link></div>
-            <div className="nav-tabs"><ReactRouter.Link to={'/theabv'}>14+</ReactRouter.Link></div>
+            <div className="nav-tabs" onclick=> 2-4</div>
+            <div className="nav-tabs">5-7</div>
+            <div className="nav-tabs">8-10</div>
+            <div className="nav-tabs">11-13</div>
+            <div className="nav-tabs">14+</div>
           </section>
         </div>
       </div>
