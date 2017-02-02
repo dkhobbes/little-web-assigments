@@ -299,28 +299,29 @@ if (window.BeerRouter === undefined) {
       key: 'componentDidMount',
       value: function componentDidMount() {
         console.log('AppComponent.ComponentDidMount');
-        this.getTheData();
+        // this.getTheData();
+        // this.myInput;
       }
     }, {
       key: 'getTheData',
       value: function getTheData(evt) {
         var _this5 = this;
 
-        // if (evt.keyCode === 13) {
-        $.ajax({
-          url: "/api/zipCodeLocations"
-        }).done(function (data) {
+        console.log(evt);
+        if (evt.keyCode === 13) {
+          // var zip =input.value
+          $.ajax({
+            url: "/api/zipCodeLocations/" + this.myInput.value
+          }).done(function (data) {
 
-          var dataAsObjects = JSON.parse(data);
-          console.log('got data', dataAsObjects);
+            var dataAsObjects = JSON.parse(data);
+            console.log('got data', dataAsObjects);
 
-          _this5.setState({
-            apiResult: dataAsObjects
+            _this5.setState({
+              apiResult: dataAsObjects
+            });
           });
-          // loop through data, and find lat and long
-          // put markers on all of them
-        });
-        // }
+        }
       }
     }, {
       key: 'render',
@@ -426,11 +427,15 @@ if (window.BeerRouter === undefined) {
               React.createElement(
                 'div',
                 { className: 'zipSearch' },
-                React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter your zip code' }),
+                React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter your zip code', onKeyUp: function onKeyUp(evt) {
+                    _this6.getTheData(evt);
+                  }, ref: function ref(input) {
+                    _this6.myInput = input;
+                  } }),
                 React.createElement(
                   'button',
                   { type: 'submit', className: 'learnButton', onClick: function onClick(evt) {
-                      _this6.getTheData(evt, query);
+                      _this6.getTheData(evt);
                     } },
                   'Search By Zip code'
                 )
@@ -780,7 +785,7 @@ if (window.BeerRouter === undefined) {
                 React.createElement(
                   'h2',
                   { className: 'beerImgText' },
-                  'Abv:',
+                  'Ibu:',
                   ibu.ibu
                 ),
                 ' '

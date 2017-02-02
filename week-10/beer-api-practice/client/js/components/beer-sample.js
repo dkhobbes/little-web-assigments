@@ -79,13 +79,16 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
 
     componentDidMount() {
       console.log('AppComponent.ComponentDidMount');
-      this.getTheData();
+      // this.getTheData();
+      // this.myInput;
     }
 
     getTheData(evt) {
-      // if (evt.keyCode === 13) {
+      console.log(evt);
+      if (evt.keyCode === 13) {
+      // var zip =input.value
       $.ajax({
-        url: "/api/zipCodeLocations"
+        url: "/api/zipCodeLocations/" + this.myInput.value
       })
       .done((data) => {
 
@@ -95,10 +98,8 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         this.setState ({
           apiResult: dataAsObjects
         })
-        // loop through data, and find lat and long
-        // put markers on all of them
       });
-      // }
+      }
     }
 
     render(){
@@ -130,8 +131,8 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         <form method="get" id="chooseZip">
           <button type="submit" className="learnButton">Use current location</button>
           <div className="zipSearch">
-    				<input id="textZip" type="text" placeholder="enter your zip code" />
-    				<button type="submit" className="learnButton" onClick={(evt)=>{this.getTheData(evt,query)}}>Search By Zip code</button>
+    				<input id="textZip" type="text" placeholder="enter your zip code" onKeyUp={(evt) => { this.getTheData(evt); }} ref={(input) => { this.myInput = input; }} />
+    				<button type="submit" className="learnButton" onClick={(evt)=>{this.getTheData(evt)}}>Search By Zip code</button>
   			  </div>
         </form>
 

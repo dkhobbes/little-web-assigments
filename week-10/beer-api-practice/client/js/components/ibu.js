@@ -51,7 +51,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         console.log(this.state);
         theList = <ul className="theList">
           {this.state.apiResult.data.map((ibu, index) => {
-            return <li key={index}> <img src={ibu.labels.medium} className="abvIbuImg" /><h2 className="beerImgText">Abv:{ibu.ibu}</h2> </li>
+            return <li key={index}> <img src={ibu.labels.medium} className="abvIbuImg" /><h2 className="beerImgText">Ibu:{ibu.ibu}</h2> </li>
           })}
         </ul>;
       }
