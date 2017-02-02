@@ -23,7 +23,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         zoom: 5
       });
 
-      var contentString = '<div id="content">'+
+    {/*  var contentString = '<div id="content">'+
             '<h1 id="firstHeading">brewery.streetAdress</h1>'+
             '<h3>' + ['Address'] + '</h3>' +
             '<p>' + ['Schedule'] + '</p>' +
@@ -41,7 +41,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           infowindow.open(map, marker);
         });
 
-      console.log("props", this.props);
+      console.log("props", this.props); */}
     }
 
     componentDidUpdate() {
@@ -84,8 +84,8 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
     }
 
     getTheData(evt) {
-      console.log(evt);
-      if (evt.keyCode === 13) {
+      // console.log(evt);
+      // if (evt.keyCode === 13) {
       // var zip =input.value
       $.ajax({
         url: "/api/zipCodeLocations/" + this.myInput.value
@@ -99,6 +99,12 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           apiResult: dataAsObjects
         })
       });
+      // }
+    }
+
+    keyUp(evt) {
+      if (evt.keyCode === 13) {
+        this.getTheData(evt.target.value)
       }
     }
 
@@ -123,16 +129,16 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         <div className="nav-tabs"><ReactRouter.Link to={'/locator'}>locator</ReactRouter.Link></div>
         <div className="nav-tabs"><ReactRouter.Link to={'/abv'}>abv</ReactRouter.Link></div>
         <div className="nav-tabs"><ReactRouter.Link to={'/ibu'}>ibu</ReactRouter.Link></div>
-        <div className="nav-tabs"><ReactRouter.Link to={'/history'}>history</ReactRouter.Link></div>
+        {/*  <div className="nav-tabs"><ReactRouter.Link to={'/history'}>history</ReactRouter.Link></div> */}
       </header>
       <div id="control">
         <h2 id="Title-beer">Find Local Breweries</h2>
         <p>We will help you locate your closest brewery. Simply type in your zip code below to begin, and map my beer.</p>
         <form method="get" id="chooseZip">
-          <button type="submit" className="learnButton">Use current location</button>
+          {/*<button type="submit" className="learnButton">Use current location</button>*/}
           <div className="zipSearch">
-    				<input id="textZip" type="text" placeholder="enter your zip code" onKeyUp={(evt) => { this.getTheData(evt); }} ref={(input) => { this.myInput = input; }} />
-    				<button type="submit" className="learnButton" onClick={(evt)=>{this.getTheData(evt)}}>Search By Zip code</button>
+    				<input id="textZip" type="text" placeholder="enter your zip code" onKeyUp={(evt) => { this.keyUp(evt); }} ref={(input) => { this.myInput = input; }} />
+    				<button type="submit" className="learnButton" onClick={(evt)=>{this.getTheData(evt); }} >Search By Zip code</button>
   			  </div>
         </form>
 

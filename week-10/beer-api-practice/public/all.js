@@ -118,15 +118,6 @@ if (window.BeerRouter === undefined) {
                 { to: '/ibu' },
                 "ibu"
               )
-            ),
-            React.createElement(
-              "div",
-              { className: "nav-tabs" },
-              React.createElement(
-                ReactRouter.Link,
-                { to: '/history' },
-                "history"
-              )
             )
           ),
           React.createElement(
@@ -232,21 +223,23 @@ if (window.BeerRouter === undefined) {
           zoom: 5
         });
 
-        var contentString = '<div id="content">' + '<h1 id="firstHeading">brewery.streetAdress</h1>' + '<h3>' + ['Address'] + '</h3>' + '<p>' + ['Schedule'] + '</p>' + '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: this.googleMap,
-          title: 'Hello World!'
-        });
-        marker.addListener('click', function () {
-          infowindow.open(map, marker);
-        });
-
-        console.log("props", this.props);
+        {/*  var contentString = '<div id="content">'+
+                 '<h1 id="firstHeading">brewery.streetAdress</h1>'+
+                 '<h3>' + ['Address'] + '</h3>' +
+                 '<p>' + ['Schedule'] + '</p>' +
+                 '</div>';
+            var infowindow = new google.maps.InfoWindow({
+               content: contentString
+             });
+           var marker = new google.maps.Marker({
+             position: myLatLng,
+             map: this.googleMap,
+             title: 'Hello World!'
+           });
+           marker.addListener('click', function() {
+               infowindow.open(map, marker);
+             });
+            console.log("props", this.props); */}
       }
     }, {
       key: 'componentDidUpdate',
@@ -307,20 +300,27 @@ if (window.BeerRouter === undefined) {
       value: function getTheData(evt) {
         var _this5 = this;
 
-        console.log(evt);
-        if (evt.keyCode === 13) {
-          // var zip =input.value
-          $.ajax({
-            url: "/api/zipCodeLocations/" + this.myInput.value
-          }).done(function (data) {
+        // console.log(evt);
+        // if (evt.keyCode === 13) {
+        // var zip =input.value
+        $.ajax({
+          url: "/api/zipCodeLocations/" + this.myInput.value
+        }).done(function (data) {
 
-            var dataAsObjects = JSON.parse(data);
-            console.log('got data', dataAsObjects);
+          var dataAsObjects = JSON.parse(data);
+          console.log('got data', dataAsObjects);
 
-            _this5.setState({
-              apiResult: dataAsObjects
-            });
+          _this5.setState({
+            apiResult: dataAsObjects
           });
+        });
+        // }
+      }
+    }, {
+      key: 'keyUp',
+      value: function keyUp(evt) {
+        if (evt.keyCode === 13) {
+          this.getTheData(evt.target.value);
         }
       }
     }, {
@@ -392,15 +392,6 @@ if (window.BeerRouter === undefined) {
                 { to: '/ibu' },
                 'ibu'
               )
-            ),
-            React.createElement(
-              'div',
-              { className: 'nav-tabs' },
-              React.createElement(
-                ReactRouter.Link,
-                { to: '/history' },
-                'history'
-              )
             )
           ),
           React.createElement(
@@ -420,15 +411,10 @@ if (window.BeerRouter === undefined) {
               'form',
               { method: 'get', id: 'chooseZip' },
               React.createElement(
-                'button',
-                { type: 'submit', className: 'learnButton' },
-                'Use current location'
-              ),
-              React.createElement(
                 'div',
                 { className: 'zipSearch' },
                 React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter your zip code', onKeyUp: function onKeyUp(evt) {
-                    _this6.getTheData(evt);
+                    _this6.keyUp(evt);
                   }, ref: function ref(input) {
                     _this6.myInput = input;
                   } }),
@@ -636,15 +622,6 @@ if (window.BeerRouter === undefined) {
                 { to: '/ibu' },
                 'ibu'
               )
-            ),
-            React.createElement(
-              'div',
-              { className: 'nav-tabs' },
-              React.createElement(
-                ReactRouter.Link,
-                { to: '/history' },
-                'history'
-              )
             )
           ),
           React.createElement(
@@ -835,15 +812,6 @@ if (window.BeerRouter === undefined) {
                 { to: '/ibu' },
                 'ibu'
               )
-            ),
-            React.createElement(
-              'div',
-              { className: 'nav-tabs' },
-              React.createElement(
-                ReactRouter.Link,
-                { to: '/history' },
-                'history'
-              )
             )
           ),
           React.createElement(
@@ -975,15 +943,6 @@ if (window.BeerRouter === undefined) {
                 ReactRouter.Link,
                 { to: '/ibu' },
                 'ibu'
-              )
-            ),
-            React.createElement(
-              'div',
-              { className: 'nav-tabs' },
-              React.createElement(
-                ReactRouter.Link,
-                { to: '/history' },
-                'history'
               )
             )
           ),
