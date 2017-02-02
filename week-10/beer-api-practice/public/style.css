@@ -218,7 +218,8 @@ a:visited {
   border-radius: 25px;
   margin: 0 auto;
   background-color: white;
-  margin-top: 25px; }
+  margin-top: 25px;
+  padding-bottom: 550px; }
 
 .abvIbuImg {
   width: 100px;

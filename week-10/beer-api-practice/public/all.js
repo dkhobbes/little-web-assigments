@@ -325,6 +325,8 @@ if (window.BeerRouter === undefined) {
     }, {
       key: 'render',
       value: function render() {
+        var _this6 = this;
+
         console.log('render', this.state);
         var theList;
 
@@ -427,7 +429,9 @@ if (window.BeerRouter === undefined) {
                 React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter your zip code' }),
                 React.createElement(
                   'button',
-                  { type: 'submit', className: 'learnButton' },
+                  { type: 'submit', className: 'learnButton', onClick: function onClick(evt) {
+                      _this6.getTheData(evt, query);
+                    } },
                   'Search By Zip code'
                 )
               )

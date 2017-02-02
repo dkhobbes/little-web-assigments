@@ -131,7 +131,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           <button type="submit" className="learnButton">Use current location</button>
           <div className="zipSearch">
     				<input id="textZip" type="text" placeholder="enter your zip code" />
-    				<button type="submit" className="learnButton">Search By Zip code</button>
+    				<button type="submit" className="learnButton" onClick={(evt)=>{this.getTheData(evt,query)}}>Search By Zip code</button>
   			  </div>
         </form>
 

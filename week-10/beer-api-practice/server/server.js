@@ -31,51 +31,6 @@ app.get('/api/texas', function(req,res) {
   })
 })
 
-// app.get('/api/theibu', function(req,res) {
-//   request('http://api.brewerydb.com/v2/beers?key=f4b03113073283a320e1c5d0630a4d0d&withBreweries=y&hasLabels=y&p=1&ibu=10,19', function (error,response, body) {
-//     console.log('status code', response.statusCode);
-//     if (!error && response.statusCode == 200) {
-//       res.send(body);
-//     }
-//   })
-// })
-//
-// app.get('/api/theibu10to19', function(req,res) {
-//   request('http://api.brewerydb.com/v2/beers?key=f4b03113073283a320e1c5d0630a4d0d&withBreweries=y&hasLabels=y&p=1&ibu=10,19', function (error,response, body) {
-//     console.log('status code', response.statusCode);
-//     if (!error && response.statusCode == 200) {
-//       res.send(body);
-//     }
-//   })
-// })
-//
-// app.get('/api/theibu20to39', function(req,res) {
-//   request('http://api.brewerydb.com/v2/beers?key=f4b03113073283a320e1c5d0630a4d0d&withBreweries=y&hasLabels=y&p=1&ibu=20,39', function (error,response, body) {
-//     console.log('status code', response.statusCode);
-//     if (!error && response.statusCode == 200) {
-//       res.send(body);
-//     }
-//   })
-// })
-//
-// app.get('/api/theibu40to70', function(req,res) {
-//   request('http://api.brewerydb.com/v2/beers?key=f4b03113073283a320e1c5d0630a4d0d&withBreweries=y&hasLabels=y&p=1&ibu=40,70', function (error,response, body) {
-//     console.log('status code', response.statusCode);
-//     if (!error && response.statusCode == 200) {
-//       res.send(body);
-//     }
-//   })
-// })
-//
-// app.get('/api/theibu71to100', function(req,res) {
-//   request('http://api.brewerydb.com/v2/beers?key=f4b03113073283a320e1c5d0630a4d0d&withBreweries=y&hasLabels=y&p=1&ibu=71,100', function (error,response, body) {
-//     console.log('status code', response.statusCode);
-//     if (!error && response.statusCode == 200) {
-//       res.send(body);
-//     }
-//   })
-// })
-
 app.get('/api/theibu/:ibu', function(req,res) {
   console.log(req.params.ibu);
   request('http://api.brewerydb.com/v2/beers?key=f4b03113073283a320e1c5d0630a4d0d&withBreweries=y&hasLabels=y&p=1&ibu=' + req.params.ibu, function (error,response, body) {
