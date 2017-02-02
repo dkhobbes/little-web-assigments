@@ -124,8 +124,8 @@ html, body {
   background-color: white;
   padding: 5px;
   float: left;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 2px solid #303e4d;
+  border-radius: 10px 10px 0 0;
   margin: 10px; }
 
 header {
@@ -201,7 +201,8 @@ a:visited {
   padding-top: 50px; }
 
 #home-center {
-  border-right: 2px solid lightgray; }
+  border-right: 2px solid lightgray;
+  border-radius: 25px 0 0 25px; }
 
 #home-center h1 {
   margin-top: 150px;
@@ -234,6 +235,8 @@ a:visited {
   background-color: #303e4d; }
 
 .beerImgText {
-  color: #303e4d; }
+  color: white;
+  background-color: #303e4d;
+  padding: 5px; }
 
 /*# sourceMappingURL=style.css.map */

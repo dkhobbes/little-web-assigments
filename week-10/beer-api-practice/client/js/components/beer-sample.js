@@ -23,6 +23,15 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         zoom: 5
       });
 
+      var bounds = new google.maps.LatLngBounds ();
+								//  Go through each...
+								for (var i = 0, LtLgLen = allLatlng.length; i < LtLgLen; i++) {
+								  //  And increase the bounds to take this point
+								  bounds.extend (allLatlng[i]);
+								}
+								//  Fit these bounds to the map
+								map.fitBounds (bounds);
+
     {/*  var contentString = '<div id="content">'+
             '<h1 id="firstHeading">brewery.streetAdress</h1>'+
             '<h3>' + ['Address'] + '</h3>' +
@@ -88,7 +97,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
       // if (evt.keyCode === 13) {
       // var zip =input.value
       $.ajax({
-        url: "/api/zipCodeLocations/" + this.myInput.value
+        url: "/api/state/" + this.myInput.value
       })
       .done((data) => {
 
@@ -138,7 +147,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
           {/*<button type="submit" className="learnButton">Use current location</button>*/}
           <div className="zipSearch">
     				<input id="textZip" type="text" placeholder="enter your zip code" onKeyUp={(evt) => { this.keyUp(evt); }} ref={(input) => { this.myInput = input; }} />
-    				<button type="submit" className="learnButton" onClick={(evt)=>{this.getTheData(evt); }} >Search By Zip code</button>
+    				<button type="submit" className="learnButton" onClick={(evt)=>{this.getTheData(evt); }} >Search for State</button>
   			  </div>
         </form>
 

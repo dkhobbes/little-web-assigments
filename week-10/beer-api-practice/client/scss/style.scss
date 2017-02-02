@@ -110,8 +110,8 @@ html, body {
   background-color: white;
   padding: 5px;
   float: left;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 2px solid $background-color;
+  border-radius: 10px 10px 0 0;
   margin: 10px;
 }
 
@@ -203,6 +203,7 @@ a:visited {
 
 #home-center {
   border-right: 2px solid lightgray;
+  border-radius:  25px 0 0 25px ;
 }
 
 #home-center h1 {
@@ -243,5 +244,7 @@ a:visited {
 }
 
 .beerImgText {
-  color: $background-color;
+  color: white;
+  background-color: $background-color;
+  padding: 5px;
 }

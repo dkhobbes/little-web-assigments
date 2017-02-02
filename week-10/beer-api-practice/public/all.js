@@ -223,6 +223,15 @@ if (window.BeerRouter === undefined) {
           zoom: 5
         });
 
+        var bounds = new google.maps.LatLngBounds();
+        //  Go through each...
+        for (var i = 0, LtLgLen = allLatlng.length; i < LtLgLen; i++) {
+          //  And increase the bounds to take this point
+          bounds.extend(allLatlng[i]);
+        }
+        //  Fit these bounds to the map
+        map.fitBounds(bounds);
+
         {/*  var contentString = '<div id="content">'+
                  '<h1 id="firstHeading">brewery.streetAdress</h1>'+
                  '<h3>' + ['Address'] + '</h3>' +
@@ -304,7 +313,7 @@ if (window.BeerRouter === undefined) {
         // if (evt.keyCode === 13) {
         // var zip =input.value
         $.ajax({
-          url: "/api/zipCodeLocations/" + this.myInput.value
+          url: "/api/state/" + this.myInput.value
         }).done(function (data) {
 
           var dataAsObjects = JSON.parse(data);
@@ -423,7 +432,7 @@ if (window.BeerRouter === undefined) {
                   { type: 'submit', className: 'learnButton', onClick: function onClick(evt) {
                       _this6.getTheData(evt);
                     } },
-                  'Search By Zip code'
+                  'Search for State'
                 )
               )
             )

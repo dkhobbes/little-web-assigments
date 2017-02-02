@@ -22,8 +22,8 @@ app.get('/api/zipCodeLocations/:zip', function(req,res) {
   })
 })
 
-app.get('/api/texas', function(req,res) {
-  request('http://api.brewerydb.com/v2/locations?key=f4b03113073283a320e1c5d0630a4d0d&region=texas', function (error,response, body) {
+app.get('/api/state/:state', function(req,res) {
+  request('http://api.brewerydb.com/v2/locations?key=f4b03113073283a320e1c5d0630a4d0d&region=' + req.params.state, function (error,response, body) {
     console.log('status code', response.statusCode);
     if (!error && response.statusCode == 200) {
       res.send(body);
