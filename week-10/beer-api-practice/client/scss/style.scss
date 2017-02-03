@@ -51,8 +51,7 @@ html, body {
   }
 
 	#control input[type=text]{
-		width: 60%;
-		height: 30px;
+		width: 70%;
 		font-size: 16px;
 		background-color: rgba(240, 234, 235, 1.0);
 		border: 1px solid black;
@@ -111,7 +110,7 @@ html, body {
   padding: 5px;
   float: left;
   border: 2px solid $background-color;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   margin: 10px;
 }
 
@@ -247,4 +246,14 @@ a:visited {
   color: white;
   background-color: $background-color;
   padding: 5px;
+}
+
+.learnButton {
+  width: 70%;
+  font-size: 12px;
+  background-color: rgba(240, 234, 235, 1.0);
+  border: 1px solid black;
+  margin-left: 30px;
+  margin-top: 10px;
+  padding: 10px;
 }

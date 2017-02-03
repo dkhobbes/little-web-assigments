@@ -75,8 +75,7 @@ html, body {
   color: white; }
 
 #control input[type=text] {
-  width: 60%;
-  height: 30px;
+  width: 70%;
   font-size: 16px;
   background-color: #f0eaeb;
   border: 1px solid black;
@@ -125,7 +124,7 @@ html, body {
   padding: 5px;
   float: left;
   border: 2px solid #303e4d;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   margin: 10px; }
 
 header {
@@ -238,5 +237,14 @@ a:visited {
   color: white;
   background-color: #303e4d;
   padding: 5px; }
+
+.learnButton {
+  width: 70%;
+  font-size: 12px;
+  background-color: #f0eaeb;
+  border: 1px solid black;
+  margin-left: 30px;
+  margin-top: 10px;
+  padding: 10px; }
 
 /*# sourceMappingURL=style.css.map */
