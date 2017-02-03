@@ -5,7 +5,7 @@ $background-color: rgba(48, 62, 77, 1.0);
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
-  height: 750px;
+  height: 780px;
   width: 85%;
 }
 /* Optional: Makes the sample page fill the window. */
@@ -41,7 +41,7 @@ html, body {
 		float: left;
 		color: black;
 		width: 15%;
-    height: 750px;
+    height: 780px;
     background-color: $background-color;
 	}
 
@@ -165,7 +165,7 @@ a:visited {
   float: left;
   color: black;
   width: 15%;
-  height: 750px;
+  height: 780px;
   background-color:  $background-color;
 }
 
@@ -182,7 +182,7 @@ a:visited {
 #home-picture {
   background-image: url('images/beerToasting.jpg');
   background-size: cover;
-  height: 730px;
+  height: 780px;
   width: 100%;
 
 }
@@ -222,7 +222,7 @@ a:visited {
 }
 
 .ibu-content {
-  height: 400px;
+  height: 900px;
   // set to container height
   width: 80%;
   border-radius: 25px;

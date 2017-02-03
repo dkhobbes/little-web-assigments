@@ -223,15 +223,6 @@ if (window.BeerRouter === undefined) {
           zoom: 5
         });
 
-        var bounds = new google.maps.LatLngBounds();
-        //  Go through each...
-        for (var i = 0, LtLgLen = allLatlng.length; i < LtLgLen; i++) {
-          //  And increase the bounds to take this point
-          bounds.extend(allLatlng[i]);
-        }
-        //  Fit these bounds to the map
-        map.fitBounds(bounds);
-
         {/*  var contentString = '<div id="content">'+
                  '<h1 id="firstHeading">brewery.streetAdress</h1>'+
                  '<h3>' + ['Address'] + '</h3>' +
@@ -422,7 +413,7 @@ if (window.BeerRouter === undefined) {
               React.createElement(
                 'div',
                 { className: 'zipSearch' },
-                React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter your zip code', onKeyUp: function onKeyUp(evt) {
+                React.createElement('input', { id: 'textZip', type: 'text', placeholder: 'enter state', onKeyUp: function onKeyUp(evt) {
                     _this6.keyUp(evt);
                   }, ref: function ref(input) {
                     _this6.myInput = input;

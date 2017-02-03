@@ -23,14 +23,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         zoom: 5
       });
 
-      var bounds = new google.maps.LatLngBounds ();
-								//  Go through each...
-								for (var i = 0, LtLgLen = allLatlng.length; i < LtLgLen; i++) {
-								  //  And increase the bounds to take this point
-								  bounds.extend (allLatlng[i]);
-								}
-								//  Fit these bounds to the map
-								map.fitBounds (bounds);
+
 
     {/*  var contentString = '<div id="content">'+
             '<h1 id="firstHeading">brewery.streetAdress</h1>'+
@@ -146,7 +139,7 @@ if (window.BeerRouter === undefined) {window.BeerRouter = {}; }
         <form method="get" id="chooseZip">
           {/*<button type="submit" className="learnButton">Use current location</button>*/}
           <div className="zipSearch">
-    				<input id="textZip" type="text" placeholder="enter your zip code" onKeyUp={(evt) => { this.keyUp(evt); }} ref={(input) => { this.myInput = input; }} />
+    				<input id="textZip" type="text" placeholder="enter state" onKeyUp={(evt) => { this.keyUp(evt); }} ref={(input) => { this.myInput = input; }} />
     				<button type="submit" className="learnButton" onClick={(evt)=>{this.getTheData(evt); }} >Search for State</button>
   			  </div>
         </form>
