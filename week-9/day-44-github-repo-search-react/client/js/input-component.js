@@ -34,6 +34,7 @@ class InputComponent extends React.Component {
     console.log('render', this.state);
 
     return <div className="search-bar">
+    <h1 className="title-intro">Search for a github user </h1>
     <input onKeyUp={(evt) => { this.keyUpHappening(evt); }} ref={(input) => { this.myInput = input; }} />
     <iframe src="https://developer.github.com/changes/"></iframe>
     <ul className="results">

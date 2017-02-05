@@ -54,6 +54,11 @@ window.SW = window.SW || {};
         return React.createElement(
           'div',
           { className: 'search-bar' },
+          React.createElement(
+            'h1',
+            { className: 'title-intro' },
+            'Search for a github user '
+          ),
           React.createElement('input', { onKeyUp: function onKeyUp(evt) {
               _this3.keyUpHappening(evt);
             }, ref: function ref(input) {

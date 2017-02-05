@@ -50,14 +50,22 @@ table {
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 22px;
-  font-weight: bold; }
+  font-weight: bold;
+  background-color: lightgray;
+  margin-right: 25px; }
+
+.title-intro {
+  margin-left: 5%;
+  margin-bottom: 10px; }
 
 .search-bar {
   margin-left: 5%; }
 
 .results {
   max-width: 20%;
-  margin-top: 10px; }
+  margin-top: 10px;
+  height: auto;
+  overflow: auto; }
 
 .box {
   border: 1px solid black;
@@ -69,10 +77,10 @@ table {
 
 iframe {
   height: 1000px;
-  width: 900px;
+  width: 70%;
   float: right;
   margin-right: 25px;
-  margin-top: 10px;
+  margin-top: 30px;
   border: 2px solid black;
   margin-bottom: 75px; }
 
