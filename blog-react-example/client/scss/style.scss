@@ -1,0 +1,27 @@
+@import 'reset';
+
+#eyebrow-nav {
+  height: 20px;
+  max-width: 100%;
+  background-color: #000;
+}
+
+#main-nav {
+  padding: 30px;
+  height: 20px;
+  max-width: 100%;
+  background-color: #2F8;
+}
+
+section {
+  height: 500px;
+  width: 100%;
+}
+
+section div {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: lightblue;
+}
