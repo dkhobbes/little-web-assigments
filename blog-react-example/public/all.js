@@ -132,8 +132,25 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    ReactRouter.Link,
+                    { to: '/' },
+                    "Home"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "About"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "My books"
+                )
               )
             ),
             React.createElement(
@@ -142,12 +159,41 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  "New releases"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Popular"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Categories"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Recent Posts"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Author Interviews"
+                )
               )
+            )
+          ),
+          React.createElement(
+            "section",
+            null,
+            React.createElement(
+              "div",
+              null,
+              "example post"
             )
           )
         );
@@ -197,8 +243,25 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    ReactRouter.Link,
+                    { to: '/' },
+                    "Home"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "About"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "My books"
+                )
               )
             ),
             React.createElement(
@@ -207,12 +270,41 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  "New releases"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Popular"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Categories"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Recent Posts"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Author Interviews"
+                )
               )
+            )
+          ),
+          React.createElement(
+            "section",
+            null,
+            React.createElement(
+              "div",
+              null,
+              "example post"
             )
           )
         );
@@ -262,8 +354,25 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    ReactRouter.Link,
+                    { to: '/' },
+                    "Home"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "About"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "My books"
+                )
               )
             ),
             React.createElement(
@@ -272,12 +381,41 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  "New releases"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Popular"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Categories"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Recent Posts"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Author Interviews"
+                )
               )
+            )
+          ),
+          React.createElement(
+            "section",
+            null,
+            React.createElement(
+              "div",
+              null,
+              "example post"
             )
           )
         );
@@ -327,8 +465,25 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    ReactRouter.Link,
+                    { to: '/' },
+                    "Home"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "About"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "My books"
+                )
               )
             ),
             React.createElement(
@@ -337,12 +492,41 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  "New releases"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Popular"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Categories"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Recent Posts"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Author Interviews"
+                )
               )
+            )
+          ),
+          React.createElement(
+            "section",
+            null,
+            React.createElement(
+              "div",
+              null,
+              "example post"
             )
           )
         );
@@ -392,8 +576,25 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    ReactRouter.Link,
+                    { to: '/' },
+                    "Home"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "About"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "My books"
+                )
               )
             ),
             React.createElement(
@@ -402,12 +603,41 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  "New releases"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Popular"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Categories"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Recent Posts"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Author Interviews"
+                )
               )
+            )
+          ),
+          React.createElement(
+            "section",
+            null,
+            React.createElement(
+              "div",
+              null,
+              "example post"
             )
           )
         );
@@ -457,8 +687,16 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  "About"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "My books"
+                )
               )
             ),
             React.createElement(
@@ -467,26 +705,37 @@ if (window.BlogTest === undefined) {
               React.createElement(
                 "ul",
                 null,
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null),
-                React.createElement("li", null)
+                React.createElement(
+                  "li",
+                  null,
+                  "New releases"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Popular"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Categories"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Recent Posts"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Author Interviews"
+                )
               )
             )
           ),
           React.createElement(
             "section",
             null,
-            React.createElement(
-              "div",
-              { className: "tabs" },
-              React.createElement(
-                ReactRouter.Link,
-                { to: '/' },
-                "home"
-              )
-            ),
             React.createElement(
               "div",
               { className: "tabs" },
